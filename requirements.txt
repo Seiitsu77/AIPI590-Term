@@ -1,0 +1,5 @@
+# Reading the Anime Compass ALS artifact (data/anime_compass/*.npz)
+numpy>=2.0
+# experiments/
+scipy>=1.11
+scikit-learn>=1.4
