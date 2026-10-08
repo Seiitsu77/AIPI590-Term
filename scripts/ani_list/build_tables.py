@@ -8,6 +8,9 @@ Offline: reads data/ani_list/raw/ and writes to data/ani_list/:
                         365 days before to 120 days after the premiere
     relations.csv       one row per related entry (SOURCE, PREQUEL, SEQUEL, ...)
     external_links.csv  one row per external link (official site, Twitter, streaming, ...)
+    prequel_popularity.csv  one row per (title, prequel/parent): the prequel's popularity on
+                        its last trend row before the title's premiere day (written only
+                        after download_prequel_popularity.py has run)
 
 Dates are Japan dates (AniList stamps trend rows at 00:00 JST). days_from_premiere
 is negative before the start date; day 0 is the premiere day itself, so strictly
@@ -74,6 +77,7 @@ RELATION_COLUMNS = [
     "target_title", "target_start_date",
 ]  # fmt: skip
 EXTERNAL_COLUMNS = ["anilist_id", "site", "type", "language", "url"]
+PREQUEL_COLUMNS = ["anilist_id", "prequel_anilist_id", "date", "days_from_premiere", "popularity"]
 
 
 def fuzzy_date(value: dict[str, Any] | None) -> str:
@@ -221,6 +225,21 @@ def add_trend_summary(row: dict[str, Any], premiere: date, record: dict[str, Any
         row["popularity_1y"] = year1[0].get("popularity")
 
 
+def prequel_rows(raw_dir: Path) -> list[dict[str, Any]]:
+    """Prequel popularity as of the day before each title's premiere; empty row values if none was tracked."""
+    rows = []
+    for path in sorted((raw_dir / "prequel_popularity").glob("*.json"), key=lambda p: int(p.stem)):
+        record = json.loads(path.read_text(encoding="utf-8"))
+        premiere = jst_date(record["variables"]["premiere"])
+        for prequel, trends in record["response"].items():
+            row = {"anilist_id": int(path.stem), "prequel_anilist_id": int(prequel)}
+            if trends:
+                day = jst_date(trends[0]["date"])
+                row.update(date=day.isoformat(), days_from_premiere=(day - premiere).days, popularity=trends[0]["popularity"])
+            rows.append(row)
+    return rows
+
+
 def write_csv(path: Path, columns: list[str], rows: list[dict[str, Any]]) -> None:
     with path.open("w", encoding="utf-8", newline="") as file:
         writer = csv.DictWriter(file, fieldnames=columns)
@@ -283,6 +302,10 @@ def main() -> int:
     write_csv(args.out / "trends.csv", TREND_COLUMNS, all_trends)
     write_csv(args.out / "relations.csv", RELATION_COLUMNS, relation_rows)
     write_csv(args.out / "external_links.csv", EXTERNAL_COLUMNS, external_rows)
+    prequels = prequel_rows(raw_dir)
+    if prequels:
+        write_csv(args.out / "prequel_popularity.csv", PREQUEL_COLUMNS, prequels)
+        print(f"prequel_popularity.csv  {len(prequels)} rows")
 
     with_trends = sum(1 for row in anime_rows if row["trends_status"] == "ok")
     print(f"anime.csv           {len(anime_rows)} rows ({with_trends} with trends)")

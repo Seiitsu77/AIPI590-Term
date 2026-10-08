@@ -1,0 +1,1 @@
+{"url": "https://graphql.anilist.co", "variables": {"premiere": 1666450800, "prequels": [114535]}, "status": 200, "fetched_at": "2026-10-08T23:17:08+00:00", "response": {"114535": [{"date": 1666364400, "popularity": 181354}]}}
