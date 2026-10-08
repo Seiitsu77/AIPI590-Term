@@ -14,3 +14,4 @@
 # data/ani_list/*.csv
 # !data/ani_list/coverage.csv
 # data/jikan/*.csv
+__pycache__/
