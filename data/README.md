@@ -1,10 +1,11 @@
 # 数据说明
 
-原始数据和 CSV 都不进 git，只有汇总的 `ani_list/coverage.csv` 例外。远程仓库是公开的，原因见文末"使用条款"。下面的命令可以在本地重建全部数据。
+原始数据和 CSV 都已经提交进仓库（仓库是公开的，见文末"使用条款"）。除了 `ani_list_sample_2016_2020/`，其他数据都可以用下面的命令从头重建。
 
 | 目录 | 来源 | 内容 |
 |---|---|---|
 | `ani_list/` | [AniList GraphQL API](https://docs.anilist.co) | 2021 冬 – 2025 秋每季的番剧列表、metadata，以及 TV 番开播前 365 天到开播后 120 天的**每日**人气 |
+| `ani_list_sample_2016_2020/` | AniList（Qingyi 抓取） | 2016–2020 年首播的 10 部 TV 番，每部是**完整**的 trends 历史，用来看 trends 能回溯到多早。`trends.csv` 的列和 `ani_list/trends.csv` 相同。详见该目录的 README；生成脚本在 Qingyi 本地，还没有放进仓库 |
 | `anime_offline_database/` | [manami-project/anime-offline-database](https://github.com/manami-project/anime-offline-database) | 约 4.1 万部番的跨站 ID 映射（MAL、AniList、Kitsu、AniDB、ANN 等）和基础 metadata |
 | `jikan/` | [Jikan](https://jikan.moe)（非官方 MAL API） | MAL 的 metadata 和评分分布。2026-10-07 时 API 宕机，还没下载 |
 
@@ -53,6 +54,7 @@ label 的候选：
 ## 已知的数据问题
 
 - **日期是日本时间。** AniList 在日本时间零点给 trends 打时间戳。day 0 是首播当天，严格的开播前数据要用 `<= -1`。
+- **`popularity` 从 2018-03-20 才开始有**（Qingyi 的样本发现，已核实）。更早的行只有 `trending`，`in_progress` 从 2017-01-13 开始有。所以用 AniList 开播前人气的队列，首播时间最早只能到 2019 年左右。2021–2025 队列的数据最早是 2019-12-08，一行都不缺 popularity。
 - **偶尔有重复的天。** 两行完全相同，建表时已经去重。
 - **会跳过某些天。** 冷门番更常见：全量 926 部里，最冷门五分之一的中位数是缺 49 天，最热门五分之一是 1 天。缺口前后 popularity 通常变了，所以要用前后两天**插值**；直接用前一天的值补只能得到下界。缺多少天记在 `anime.csv:trend_missing_days`。
 - **少数番开播前没有任何记录。** 全量 926 部里有 13 部（1%），试抓看到的都是儿童向或小众番。这本身就带信息，建议保留这些番，加一个标记列，不要丢掉。
@@ -60,6 +62,6 @@ label 的候选：
 
 ## 使用条款
 
-- **AniList**：非商业使用免费。条款禁止大规模收集数据，也禁止把 API 当作数据存储；对课程作业这类纯教育用途比较宽松。所以我们只抓项目需要的队列，原始数据和 CSV 都不放进公开仓库。
+- **AniList**：非商业使用免费。条款禁止大规模收集数据，也禁止把 API 当作数据存储；对课程作业这类纯教育用途比较宽松。我们只抓了项目需要的队列。注意仓库是公开的，而这些数据也提交在里面。
 - **anime-offline-database**：ODbL 1.0 + DbCL 1.0。使用时要署名"anime-offline-database by manami-project"；衍生出的数据库要用 ODbL 共享。
 - **Jikan / MAL**：Jikan 是从 MAL 页面爬数据的非官方 API，要遵守它的限速（每秒 3 次、每分钟 60 次）。
