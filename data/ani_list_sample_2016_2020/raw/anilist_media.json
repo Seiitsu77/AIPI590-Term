@@ -1,0 +1,3668 @@
+{
+ "Page": {
+  "media": [
+   {
+    "id": 21349,
+    "idMal": 31588,
+    "siteUrl": "https://anilist.co/anime/21349",
+    "title": {
+     "romaji": "ALL OUT!!",
+     "english": "All Out!!",
+     "native": "ALL OUT!!"
+    },
+    "synonyms": [
+     "オールアウト!!"
+    ],
+    "format": "TV",
+    "status": "FINISHED",
+    "source": "MANGA",
+    "countryOfOrigin": "JP",
+    "isAdult": false,
+    "isLicensed": true,
+    "season": "FALL",
+    "seasonYear": 2016,
+    "seasonInt": 164,
+    "startDate": {
+     "year": 2016,
+     "month": 10,
+     "day": 7
+    },
+    "endDate": {
+     "year": 2017,
+     "month": 3,
+     "day": 31
+    },
+    "episodes": 25,
+    "duration": 24,
+    "genres": [
+     "Sports"
+    ],
+    "tags": [
+     {
+      "name": "Primarily Male Cast",
+      "category": "Cast-Main Cast",
+      "rank": 90,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Rugby",
+      "category": "Theme-Game-Sport",
+      "rank": 88,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Male Protagonist",
+      "category": "Cast-Main Cast",
+      "rank": 79,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "School Club",
+      "category": "Setting-Scene",
+      "rank": 79,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "School",
+      "category": "Setting-Scene",
+      "rank": 60,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Seinen",
+      "category": "Demographic",
+      "rank": 40,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Cute Boys Doing Cute Things",
+      "category": "Theme-Slice of Life",
+      "rank": 20,
+      "isMediaSpoiler": false
+     }
+    ],
+    "averageScore": 66,
+    "meanScore": 66,
+    "popularity": 26095,
+    "favourites": 232,
+    "trending": 0,
+    "hashtag": "#allout_anime",
+    "description": "Gion Kenji is short and perpetually pissed off about it. Iwashimizu Sumiaki is tall but timid. Although it's bullies that bring this unlikely pair together on the first day of high school, it's the rugby club that will make them friends.",
+    "updatedAt": 1791403327,
+    "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21349-xW0QyvN2ZFdF.jpg",
+    "coverImage": {
+     "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21349-J2C50KiPF5Rv.png",
+     "color": "#e44335"
+    },
+    "trailer": {
+     "id": "9JrG5mXMiBg",
+     "site": "youtube"
+    },
+    "studios": {
+     "edges": [
+      {
+       "isMain": true,
+       "node": {
+        "name": "MADHOUSE",
+        "isAnimationStudio": true
+       }
+      },
+      {
+       "isMain": true,
+       "node": {
+        "name": "TMS Entertainment",
+        "isAnimationStudio": true
+       }
+      },
+      {
+       "isMain": false,
+       "node": {
+        "name": "Kodansha",
+        "isAnimationStudio": false
+       }
+      },
+      {
+       "isMain": false,
+       "node": {
+        "name": "Telecom Animation Film",
+        "isAnimationStudio": true
+       }
+      },
+      {
+       "isMain": false,
+       "node": {
+        "name": "Asmik Ace",
+        "isAnimationStudio": false
+       }
+      },
+      {
+       "isMain": false,
+       "node": {
+        "name": "Mainichi Broadcasting System",
+        "isAnimationStudio": false
+       }
+      },
+      {
+       "isMain": false,
+       "node": {
+        "name": "Sony Music Entertainment",
+        "isAnimationStudio": false
+       }
+      },
+      {
+       "isMain": false,
+       "node": {
+        "name": "TMS Music",
+        "isAnimationStudio": false
+       }
+      }
+     ]
+    },
+    "relations": {
+     "edges": [
+      {
+       "relationType": "ADAPTATION",
+       "node": {
+        "idMal": 70739,
+        "type": "MANGA",
+        "format": "MANGA"
+       }
+      }
+     ]
+    },
+    "externalLinks": [
+     {
+      "site": "Official Site",
+      "type": "INFO",
+      "language": null
+     },
+     {
+      "site": "Twitter",
+      "type": "SOCIAL",
+      "language": null
+     }
+    ],
+    "rankings": [
+     {
+      "rank": 81,
+      "type": "RATED",
+      "allTime": false,
+      "year": 2016,
+      "season": null,
+      "context": "highest rated"
+     },
+     {
+      "rank": 88,
+      "type": "POPULAR",
+      "allTime": false,
+      "year": 2016,
+      "season": null,
+      "context": "most popular"
+     },
+     {
+      "rank": 22,
+      "type": "RATED",
+      "allTime": false,
+      "year": 2016,
+      "season": "FALL",
+      "context": "highest rated"
+     },
+     {
+      "rank": 22,
+      "type": "POPULAR",
+      "allTime": false,
+      "year": 2016,
+      "season": "FALL",
+      "context": "most popular"
+     }
+    ],
+    "stats": {
+     "scoreDistribution": [
+      {
+       "score": 10,
+       "amount": 86
+      },
+      {
+       "score": 20,
+       "amount": 98
+      },
+      {
+       "score": 30,
+       "amount": 244
+      },
+      {
+       "score": 40,
+       "amount": 471
+      },
+      {
+       "score": 50,
+       "amount": 1145
+      },
+      {
+       "score": 60,
+       "amount": 1810
+      },
+      {
+       "score": 70,
+       "amount": 2879
+      },
+      {
+       "score": 80,
+       "amount": 1782
+      },
+      {
+       "score": 90,
+       "amount": 844
+      },
+      {
+       "score": 100,
+       "amount": 442
+      }
+     ],
+     "statusDistribution": [
+      {
+       "status": "CURRENT",
+       "amount": 1645
+      },
+      {
+       "status": "PLANNING",
+       "amount": 7236
+      },
+      {
+       "status": "COMPLETED",
+       "amount": 13208
+      },
+      {
+       "status": "DROPPED",
+       "amount": 2821
+      },
+      {
+       "status": "PAUSED",
+       "amount": 1185
+      }
+     ]
+    },
+    "nextAiringEpisode": null,
+    "trends": {
+     "nodes": [
+      {
+       "date": 1441983600,
+       "popularity": null,
+       "trending": 12,
+       "averageScore": null,
+       "inProgress": null,
+       "releasing": false,
+       "episode": null
+      },
+      {
+       "date": 1442070000,
+       "popularity": null,
+       "trending": 16,
+       "averageScore": null,
+       "inProgress": null,
+       "releasing": false,
+       "episode": null
+      },
+      {
+       "date": 1442156400,
+       "popularity": null,
+       "trending": 7,
+       "averageScore": null,
+       "inProgress": null,
+       "releasing": false,
+       "episode": null
+      }
+     ]
+    },
+    "staff": {
+     "edges": [
+      {
+       "role": "Original Creator",
+       "node": {
+        "name": {
+         "full": "Shiori Amase"
+        }
+       }
+      },
+      {
+       "role": "Director",
+       "node": {
+        "name": {
+         "full": "Kenichi Shimizu"
+        }
+       }
+      },
+      {
+       "role": "Assistant Director",
+       "node": {
+        "name": {
+         "full": "Shinichirou Ushijima"
+        }
+       }
+      },
+      {
+       "role": "Series Composition",
+       "node": {
+        "name": {
+         "full": "Masahiro Yokotani"
+        }
+       }
+      },
+      {
+       "role": "Character Design",
+       "node": {
+        "name": {
+         "full": "Masanori Shino"
+        }
+       }
+      }
+     ]
+    },
+    "characters": {
+     "edges": [
+      {
+       "role": "MAIN",
+       "node": {
+        "name": {
+         "full": "Kenji Gion"
+        }
+       }
+      },
+      {
+       "role": "MAIN",
+       "node": {
+        "name": {
+         "full": "Sumiaki Iwashimizu"
+        }
+       }
+      },
+      {
+       "role": "SUPPORTING",
+       "node": {
+        "name": {
+         "full": "Takuya Sekizan"
+        }
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": 21390,
+    "idMal": 31737,
+    "siteUrl": "https://anilist.co/anime/21390",
+    "title": {
+     "romaji": "Gakusen Toshi Asterisk 2",
+     "english": "The Asterisk War 2",
+     "native": "学戦都市アスタリスク 2"
+    },
+    "synonyms": [],
+    "format": "TV",
+    "status": "FINISHED",
+    "source": "LIGHT_NOVEL",
+    "countryOfOrigin": "JP",
+    "isAdult": false,
+    "isLicensed": true,
+    "season": "SPRING",
+    "seasonYear": 2016,
+    "seasonInt": 162,
+    "startDate": {
+     "year": 2016,
+     "month": 4,
+     "day": 2
+    },
+    "endDate": {
+     "year": 2016,
+     "month": 6,
+     "day": 18
+    },
+    "episodes": 12,
+    "duration": 24,
+    "genres": [
+     "Action",
+     "Comedy",
+     "Ecchi",
+     "Fantasy",
+     "Romance",
+     "Sci-Fi"
+    ],
+    "tags": [
+     {
+      "name": "Male Protagonist",
+      "category": "Cast-Main Cast",
+      "rank": 85,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Urban Fantasy",
+      "category": "Setting-Universe",
+      "rank": 79,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "School",
+      "category": "Setting-Scene",
+      "rank": 79,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Magic",
+      "category": "Theme-Fantasy",
+      "rank": 76,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Female Harem",
+      "category": "Theme-Romance",
+      "rank": 70,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Primarily Teen Cast",
+      "category": "Cast-Main Cast",
+      "rank": 60,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Artificial Intelligence",
+      "category": "Cast-Traits",
+      "rank": 40,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Female Protagonist",
+      "category": "Cast-Main Cast",
+      "rank": 40,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Robots",
+      "category": "Cast-Traits",
+      "rank": 40,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Guns",
+      "category": "Theme-Action",
+      "rank": 40,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Twins",
+      "category": "Cast-Traits",
+      "rank": 20,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Henshin",
+      "category": "Theme-Fantasy",
+      "rank": 20,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Chimera",
+      "category": "Cast-Traits",
+      "rank": 20,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "School Club",
+      "category": "Setting-Scene",
+      "rank": 20,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "CGI",
+      "category": "Technical",
+      "rank": 10,
+      "isMediaSpoiler": false
+     }
+    ],
+    "averageScore": 67,
+    "meanScore": 67,
+    "popularity": 104726,
+    "favourites": 1034,
+    "trending": 0,
+    "hashtag": "#asteriskwar",
+    "description": "Less than a century ago a meteor collided with the planet's surface and the resulting disaster caused the next generation of humanity to develop a wide variety of amazing abilities. In the center of the meteor's crater lies Rikka, a system of six academies known as the Asterisk. Ayato Amagiri enters the Asterisk as a transfer student hoping to compete in a special battle event known as the Festa. However, he quickly finds himself on the bad side of one of the strongest fighters around—the beautiful but fiery Julis-Alexa von Riessfeld. To stand against her he'll have to rely on his own sword-wielding ability, but when the tables turn, will they be able to team up to take down the competition?\n<br><br>\n(Source: Anime News Network)",
+    "updatedAt": 1791424540,
+    "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21390-Sc4OlDjVKATs.jpg",
+    "coverImage": {
+     "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21390-5MedgrU15Twy.jpg",
+     "color": "#93d6e4"
+    },
+    "trailer": {
+     "id": "28pD4wkg5vM",
+     "site": "youtube"
+    },
+    "studios": {
+     "edges": [
+      {
+       "isMain": true,
+       "node": {
+        "name": "A-1 Pictures",
+        "isAnimationStudio": true
+       }
+      },
+      {
+       "isMain": false,
+       "node": {
+        "name": "flying DOG",
+        "isAnimationStudio": false
+       }
+      },
+      {
+       "isMain": false,
+       "node": {
+        "name": "Aniplex",
+        "isAnimationStudio": false
+       }
+      },
+      {
+       "isMain": false,
+       "node": {
+        "name": "Movic",
+        "isAnimationStudio": false
+       }
+      },
+      {
+       "isMain": false,
+       "node": {
+        "name": "Animax",
+        "isAnimationStudio": false
+       }
+      }
+     ]
+    },
+    "relations": {
+     "edges": [
+      {
+       "relationType": "PREQUEL",
+       "node": {
+        "idMal": 30544,
+        "type": "ANIME",
+        "format": "TV"
+       }
+      },
+      {
+       "relationType": "ADAPTATION",
+       "node": {
+        "idMal": 51459,
+        "type": "MANGA",
+        "format": "NOVEL"
+       }
+      },
+      {
+       "relationType": "ALTERNATIVE",
+       "node": {
+        "idMal": 48369,
+        "type": "MANGA",
+        "format": "MANGA"
+       }
+      }
+     ]
+    },
+    "externalLinks": [
+     {
+      "site": "Official Site",
+      "type": "INFO",
+      "language": null
+     },
+     {
+      "site": "Twitter",
+      "type": "SOCIAL",
+      "language": null
+     },
+     {
+      "site": "Crunchyroll",
+      "type": "STREAMING",
+      "language": null
+     },
+     {
+      "site": "Hulu",
+      "type": "STREAMING",
+      "language": null
+     }
+    ],
+    "rankings": [
+     {
+      "rank": 77,
+      "type": "RATED",
+      "allTime": false,
+      "year": 2016,
+      "season": null,
+      "context": "highest rated"
+     },
+     {
+      "rank": 33,
+      "type": "POPULAR",
+      "allTime": false,
+      "year": 2016,
+      "season": null,
+      "context": "most popular"
+     },
+     {
+      "rank": 25,
+      "type": "RATED",
+      "allTime": false,
+      "year": 2016,
+      "season": "SPRING",
+      "context": "highest rated"
+     },
+     {
+      "rank": 12,
+      "type": "POPULAR",
+      "allTime": false,
+      "year": 2016,
+      "season": "SPRING",
+      "context": "most popular"
+     }
+    ],
+    "stats": {
+     "scoreDistribution": [
+      {
+       "score": 10,
+       "amount": 621
+      },
+      {
+       "score": 20,
+       "amount": 670
+      },
+      {
+       "score": 30,
+       "amount": 1315
+      },
+      {
+       "score": 40,
+       "amount": 2230
+      },
+      {
+       "score": 50,
+       "amount": 4794
+      },
+      {
+       "score": 60,
+       "amount": 8961
+      },
+      {
+       "score": 70,
+       "amount": 15056
+      },
+      {
+       "score": 80,
+       "amount": 10080
+      },
+      {
+       "score": 90,
+       "amount": 4583
+      },
+      {
+       "score": 100,
+       "amount": 2550
+      }
+     ],
+     "statusDistribution": [
+      {
+       "status": "CURRENT",
+       "amount": 3395
+      },
+      {
+       "status": "PLANNING",
+       "amount": 12152
+      },
+      {
+       "status": "COMPLETED",
+       "amount": 85770
+      },
+      {
+       "status": "DROPPED",
+       "amount": 2015
+      },
+      {
+       "status": "PAUSED",
+       "amount": 1394
+      }
+     ]
+    },
+    "nextAiringEpisode": null,
+    "trends": {
+     "nodes": [
+      {
+       "date": 1443538800,
+       "popularity": null,
+       "trending": 32,
+       "averageScore": null,
+       "inProgress": null,
+       "releasing": false,
+       "episode": null
+      },
+      {
+       "date": 1443625200,
+       "popularity": null,
+       "trending": 13,
+       "averageScore": null,
+       "inProgress": null,
+       "releasing": false,
+       "episode": null
+      },
+      {
+       "date": 1443711600,
+       "popularity": null,
+       "trending": 8,
+       "averageScore": null,
+       "inProgress": null,
+       "releasing": false,
+       "episode": null
+      }
+     ]
+    },
+    "staff": {
+     "edges": [
+      {
+       "role": "Original Creator",
+       "node": {
+        "name": {
+         "full": "Yuu Miyazaki"
+        }
+       }
+      },
+      {
+       "role": "Original Character Design",
+       "node": {
+        "name": {
+         "full": "okiura"
+        }
+       }
+      },
+      {
+       "role": "Chief Director",
+       "node": {
+        "name": {
+         "full": "Manabu Ono"
+        }
+       }
+      },
+      {
+       "role": "Director",
+       "node": {
+        "name": {
+         "full": "Kenji Setou"
+        }
+       }
+      },
+      {
+       "role": "Character Design",
+       "node": {
+        "name": {
+         "full": "Tetsuya Kawakami"
+        }
+       }
+      }
+     ]
+    },
+    "characters": {
+     "edges": [
+      {
+       "role": "MAIN",
+       "node": {
+        "name": {
+         "full": "Julis Alexia von Riessfeld"
+        }
+       }
+      },
+      {
+       "role": "MAIN",
+       "node": {
+        "name": {
+         "full": "Ayato Amagiri"
+        }
+       }
+      },
+      {
+       "role": "MAIN",
+       "node": {
+        "name": {
+         "full": "Kirin Toudou"
+        }
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": 21459,
+    "idMal": 31964,
+    "siteUrl": "https://anilist.co/anime/21459",
+    "title": {
+     "romaji": "Boku no Hero Academia",
+     "english": "My Hero Academia",
+     "native": "僕のヒーローアカデミア"
+    },
+    "synonyms": [
+     "BNHA",
+     "MHA",
+     "나의 히어로 아카데미아 1기",
+     "나히아 1기",
+     "אקדמיית הגיבורים שלי",
+     "我的英雄学院",
+     "มายฮีโร่ อคาเดเมีย",
+     "أكاديميتي للأبطال",
+     "Η Δική Μου Ακαδημία Ηρώων",
+     "Akademia bohaterów",
+     "Моя геройская академия",
+     "Hősakadémia",
+     "Học Viện Anh Hùng"
+    ],
+    "format": "TV",
+    "status": "FINISHED",
+    "source": "MANGA",
+    "countryOfOrigin": "JP",
+    "isAdult": false,
+    "isLicensed": true,
+    "season": "SPRING",
+    "seasonYear": 2016,
+    "seasonInt": 162,
+    "startDate": {
+     "year": 2016,
+     "month": 4,
+     "day": 3
+    },
+    "endDate": {
+     "year": 2016,
+     "month": 6,
+     "day": 26
+    },
+    "episodes": 13,
+    "duration": 24,
+    "genres": [
+     "Action",
+     "Adventure",
+     "Comedy"
+    ],
+    "tags": [
+     {
+      "name": "Super Power",
+      "category": "Theme-Fantasy",
+      "rank": 98,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Superhero",
+      "category": "Theme-Fantasy",
+      "rank": 97,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Shounen",
+      "category": "Demographic",
+      "rank": 90,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Primarily Teen Cast",
+      "category": "Cast-Main Cast",
+      "rank": 87,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Male Protagonist",
+      "category": "Cast-Main Cast",
+      "rank": 86,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Crime",
+      "category": "Theme-Other",
+      "rank": 84,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "School",
+      "category": "Setting-Scene",
+      "rank": 82,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Rescue",
+      "category": "Theme-Other",
+      "rank": 80,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Urban Fantasy",
+      "category": "Setting-Universe",
+      "rank": 78,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Ensemble Cast",
+      "category": "Cast-Main Cast",
+      "rank": 76,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Bullying",
+      "category": "Theme-Drama",
+      "rank": 65,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Primarily Male Cast",
+      "category": "Cast-Main Cast",
+      "rank": 62,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Cultivation",
+      "category": "Theme-Fantasy",
+      "rank": 53,
+      "isMediaSpoiler": false
+     }
+    ],
+    "averageScore": 76,
+    "meanScore": 76,
+    "popularity": 880231,
+    "favourites": 29476,
+    "trending": 10,
+    "hashtag": "#heroaca_a",
+    "description": "What would the world be like if 80 percent of the population manifested extraordinary superpowers called “Quirks” at age four? Heroes and villains would be battling it out everywhere! Becoming a hero would mean learning to use your power, but where would you go to study? U.A. High's Hero Program of course! But what would you do if you were one of the 20 percent who were born Quirkless?<br><br>\n\nMiddle school student Izuku Midoriya wants to be a hero more than anything, but he hasn't got an ounce of power in him. With no chance of ever getting into the prestigious U.A. High School for budding heroes, his life is looking more and more like a dead end. Then an encounter with All Might, the greatest hero of them all gives him a chance to change his destiny…<br><br>\n\n(Source: VIZ Media)",
+    "updatedAt": 1791424816,
+    "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21459-yeVkolGKdGUV.jpg",
+    "coverImage": {
+     "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21459-nYh85uj2Fuwr.jpg",
+     "color": "#f1d643"
+    },
+    "trailer": {
+     "id": "AhqVltWDqFA",
+     "site": "youtube"
+    },
+    "studios": {
+     "edges": [
+      {
+       "isMain": true,
+       "node": {
+        "name": "bones",
+        "isAnimationStudio": true
+       }
+      },
+      {
+       "isMain": false,
+       "node": {
+        "name": "Dentsu",
+        "isAnimationStudio": false
+       }
+      },
+      {
+       "isMain": false,
+       "node": {
+        "name": "Mainichi Broadcasting System",
+        "isAnimationStudio": false
+       }
+      },
+      {
+       "isMain": false,
+       "node": {
+        "name": "Toho",
+        "isAnimationStudio": false
+       }
+      },
+      {
+       "isMain": false,
+       "node": {
+        "name": "Movic",
+        "isAnimationStudio": false
+       }
+      }
+     ]
+    },
+    "relations": {
+     "edges": [
+      {
+       "relationType": "ADAPTATION",
+       "node": {
+        "idMal": 75989,
+        "type": "MANGA",
+        "format": "MANGA"
+       }
+      },
+      {
+       "relationType": "SEQUEL",
+       "node": {
+        "idMal": 33486,
+        "type": "ANIME",
+        "format": "TV"
+       }
+      },
+      {
+       "relationType": "SIDE_STORY",
+       "node": {
+        "idMal": 33929,
+        "type": "ANIME",
+        "format": "OVA"
+       }
+      },
+      {
+       "relationType": "SPIN_OFF",
+       "node": {
+        "idMal": 60593,
+        "type": "ANIME",
+        "format": "TV"
+       }
+      }
+     ]
+    },
+    "externalLinks": [
+     {
+      "site": "Official Site",
+      "type": "INFO",
+      "language": "Japanese"
+     },
+     {
+      "site": "Twitter",
+      "type": "SOCIAL",
+      "language": "Japanese"
+     },
+     {
+      "site": "Hulu",
+      "type": "STREAMING",
+      "language": null
+     },
+     {
+      "site": "Crunchyroll",
+      "type": "STREAMING",
+      "language": null
+     },
+     {
+      "site": "Netflix",
+      "type": "STREAMING",
+      "language": null
+     },
+     {
+      "site": "iQ",
+      "type": "STREAMING",
+      "language": null
+     },
+     {
+      "site": "Twitter",
+      "type": "SOCIAL",
+      "language": "French"
+     },
+     {
+      "site": "Twitter",
+      "type": "SOCIAL",
+      "language": "English"
+     }
+    ],
+    "rankings": [
+     {
+      "rank": 5,
+      "type": "POPULAR",
+      "allTime": true,
+      "year": null,
+      "season": null,
+      "context": "most popular all time"
+     },
+     {
+      "rank": 23,
+      "type": "RATED",
+      "allTime": false,
+      "year": 2016,
+      "season": null,
+      "context": "highest rated"
+     },
+     {
+      "rank": 1,
+      "type": "POPULAR",
+      "allTime": false,
+      "year": 2016,
+      "season": null,
+      "context": "most popular"
+     },
+     {
+      "rank": 7,
+      "type": "RATED",
+      "allTime": false,
+      "year": 2016,
+      "season": "SPRING",
+      "context": "highest rated"
+     },
+     {
+      "rank": 1,
+      "type": "POPULAR",
+      "allTime": false,
+      "year": 2016,
+      "season": "SPRING",
+      "context": "most popular"
+     }
+    ],
+    "stats": {
+     "scoreDistribution": [
+      {
+       "score": 10,
+       "amount": 3214
+      },
+      {
+       "score": 20,
+       "amount": 1581
+      },
+      {
+       "score": 30,
+       "amount": 3655
+      },
+      {
+       "score": 40,
+       "amount": 6401
+      },
+      {
+       "score": 50,
+       "amount": 18846
+      },
+      {
+       "score": 60,
+       "amount": 38291
+      },
+      {
+       "score": 70,
+       "amount": 101821
+      },
+      {
+       "score": 80,
+       "amount": 145594
+      },
+      {
+       "score": 90,
+       "amount": 100149
+      },
+      {
+       "score": 100,
+       "amount": 58501
+      }
+     ],
+     "statusDistribution": [
+      {
+       "status": "CURRENT",
+       "amount": 54978
+      },
+      {
+       "status": "PLANNING",
+       "amount": 66535
+      },
+      {
+       "status": "COMPLETED",
+       "amount": 724870
+      },
+      {
+       "status": "DROPPED",
+       "amount": 19124
+      },
+      {
+       "status": "PAUSED",
+       "amount": 14724
+      }
+     ]
+    },
+    "nextAiringEpisode": null,
+    "trends": {
+     "nodes": [
+      {
+       "date": 1446044400,
+       "popularity": null,
+       "trending": 29,
+       "averageScore": null,
+       "inProgress": null,
+       "releasing": false,
+       "episode": null
+      },
+      {
+       "date": 1446130800,
+       "popularity": null,
+       "trending": 17,
+       "averageScore": null,
+       "inProgress": null,
+       "releasing": false,
+       "episode": null
+      },
+      {
+       "date": 1446217200,
+       "popularity": null,
+       "trending": 13,
+       "averageScore": null,
+       "inProgress": null,
+       "releasing": false,
+       "episode": null
+      }
+     ]
+    },
+    "staff": {
+     "edges": [
+      {
+       "role": "Original Creator",
+       "node": {
+        "name": {
+         "full": "Kouhei Horikoshi"
+        }
+       }
+      },
+      {
+       "role": "Director",
+       "node": {
+        "name": {
+         "full": "Kenji Nagasaki"
+        }
+       }
+      },
+      {
+       "role": "Assistant Director",
+       "node": {
+        "name": {
+         "full": "Shouhei Miyake "
+        }
+       }
+      },
+      {
+       "role": "Series Composition",
+       "node": {
+        "name": {
+         "full": "Yousuke Kuroda"
+        }
+       }
+      },
+      {
+       "role": "Literary Arts Assistance",
+       "node": {
+        "name": {
+         "full": "Hitoshi Nagai"
+        }
+       }
+      }
+     ]
+    },
+    "characters": {
+     "edges": [
+      {
+       "role": "MAIN",
+       "node": {
+        "name": {
+         "full": "Katsuki Bakugou"
+        }
+       }
+      },
+      {
+       "role": "MAIN",
+       "node": {
+        "name": {
+         "full": "Izuku Midoriya"
+        }
+       }
+      },
+      {
+       "role": "MAIN",
+       "node": {
+        "name": {
+         "full": "Ochako Uraraka"
+        }
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": 21476,
+    "idMal": 32038,
+    "siteUrl": "https://anilist.co/anime/21476",
+    "title": {
+     "romaji": "SHOW BY ROCK!!#",
+     "english": "Show By Rock!!#",
+     "native": "SHOW BY ROCK!!#"
+    },
+    "synonyms": [
+     "Show by Rock!! 2"
+    ],
+    "format": "TV",
+    "status": "FINISHED",
+    "source": "VIDEO_GAME",
+    "countryOfOrigin": "JP",
+    "isAdult": false,
+    "isLicensed": true,
+    "season": "FALL",
+    "seasonYear": 2016,
+    "seasonInt": 164,
+    "startDate": {
+     "year": 2016,
+     "month": 10,
+     "day": 2
+    },
+    "endDate": {
+     "year": 2016,
+     "month": 12,
+     "day": 18
+    },
+    "episodes": 12,
+    "duration": 24,
+    "genres": [
+     "Comedy",
+     "Fantasy",
+     "Music"
+    ],
+    "tags": [
+     {
+      "name": "Band",
+      "category": "Theme-Arts-Music",
+      "rank": 100,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Kemonomimi",
+      "category": "Cast-Traits",
+      "rank": 84,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Isekai",
+      "category": "Theme-Fantasy",
+      "rank": 80,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Rock Music",
+      "category": "Theme-Arts-Music",
+      "rank": 79,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Female Protagonist",
+      "category": "Cast-Main Cast",
+      "rank": 75,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Ensemble Cast",
+      "category": "Cast-Main Cast",
+      "rank": 70,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Aliens",
+      "category": "Cast-Traits",
+      "rank": 70,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Nekomimi",
+      "category": "Cast-Traits",
+      "rank": 68,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Primarily Female Cast",
+      "category": "Cast-Main Cast",
+      "rank": 66,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Idol",
+      "category": "Cast-Traits",
+      "rank": 60,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Super Robot",
+      "category": "Theme-Sci-Fi-Mecha",
+      "rank": 60,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Yuri",
+      "category": "Theme-Romance",
+      "rank": 50,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "CGI",
+      "category": "Technical",
+      "rank": 44,
+      "isMediaSpoiler": false
+     }
+    ],
+    "averageScore": 69,
+    "meanScore": 69,
+    "popularity": 10379,
+    "favourites": 99,
+    "trending": 0,
+    "hashtag": "#SB69A",
+    "description": "Metropolis of music, MIDICITY. A kitty girl wearing gothic lolita clothing named Cyan is scouted by Maple Arisugawa, the president of a music agency. From there, she meets Chuchu (a pun off of the sound that rabbits make) the honor student rabbit girl, a net geek dog girl named Retoree (from \"Retriever\"), and an alien sheep (?) girl named Moa. Together, they form the band named \"Plasmagica,\" and aim for the top of the world.\n<br><br>\nHowever, the path there is long and tough, and keeping in high spirits is important. By battling against other strange bands, Plasmagica slowly grows toward a top-grade band. In the end, they'll be a band that becomes the driving force of MIDICITY's music industry... Maybe?\n<br><br>\nGonna be a music millionaire!\n<br><br>\n(Source: Anime News Network)",
+    "updatedAt": 1791421308,
+    "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21476-pb4IZU2Dryvq.jpg",
+    "coverImage": {
+     "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21476-nLwZ0ilkBEex.png",
+     "color": "#f1f15d"
+    },
+    "trailer": {
+     "id": "3tPiLCp6tSM",
+     "site": "youtube"
+    },
+    "studios": {
+     "edges": [
+      {
+       "isMain": false,
+       "node": {
+        "name": "Sanrio",
+        "isAnimationStudio": false
+       }
+      },
+      {
+       "isMain": true,
+       "node": {
+        "name": "bones",
+        "isAnimationStudio": true
+       }
+      }
+     ]
+    },
+    "relations": {
+     "edges": [
+      {
+       "relationType": "PREQUEL",
+       "node": {
+        "idMal": 27441,
+        "type": "ANIME",
+        "format": "TV"
+       }
+      },
+      {
+       "relationType": "SIDE_STORY",
+       "node": {
+        "idMal": 32039,
+        "type": "ANIME",
+        "format": "TV_SHORT"
+       }
+      },
+      {
+       "relationType": "SEQUEL",
+       "node": {
+        "idMal": 40763,
+        "type": "ANIME",
+        "format": "TV"
+       }
+      }
+     ]
+    },
+    "externalLinks": [
+     {
+      "site": "Official Site",
+      "type": "INFO",
+      "language": "Japanese"
+     },
+     {
+      "site": "Twitter",
+      "type": "SOCIAL",
+      "language": "Japanese"
+     },
+     {
+      "site": "Crunchyroll",
+      "type": "STREAMING",
+      "language": null
+     }
+    ],
+    "rankings": [
+     {
+      "rank": 64,
+      "type": "RATED",
+      "allTime": false,
+      "year": 2016,
+      "season": null,
+      "context": "highest rated"
+     },
+     {
+      "rank": 17,
+      "type": "RATED",
+      "allTime": false,
+      "year": 2016,
+      "season": "FALL",
+      "context": "highest rated"
+     }
+    ],
+    "stats": {
+     "scoreDistribution": [
+      {
+       "score": 10,
+       "amount": 39
+      },
+      {
+       "score": 20,
+       "amount": 18
+      },
+      {
+       "score": 30,
+       "amount": 57
+      },
+      {
+       "score": 40,
+       "amount": 140
+      },
+      {
+       "score": 50,
+       "amount": 346
+      },
+      {
+       "score": 60,
+       "amount": 616
+      },
+      {
+       "score": 70,
+       "amount": 997
+      },
+      {
+       "score": 80,
+       "amount": 693
+      },
+      {
+       "score": 90,
+       "amount": 386
+      },
+      {
+       "score": 100,
+       "amount": 254
+      }
+     ],
+     "statusDistribution": [
+      {
+       "status": "CURRENT",
+       "amount": 541
+      },
+      {
+       "status": "PLANNING",
+       "amount": 3717
+      },
+      {
+       "status": "COMPLETED",
+       "amount": 5334
+      },
+      {
+       "status": "DROPPED",
+       "amount": 407
+      },
+      {
+       "status": "PAUSED",
+       "amount": 380
+      }
+     ]
+    },
+    "nextAiringEpisode": null,
+    "trends": {
+     "nodes": [
+      {
+       "date": 1447081200,
+       "popularity": null,
+       "trending": 13,
+       "averageScore": null,
+       "inProgress": null,
+       "releasing": false,
+       "episode": null
+      },
+      {
+       "date": 1447167600,
+       "popularity": null,
+       "trending": 5,
+       "averageScore": null,
+       "inProgress": null,
+       "releasing": false,
+       "episode": null
+      },
+      {
+       "date": 1447254000,
+       "popularity": null,
+       "trending": 2,
+       "averageScore": null,
+       "inProgress": null,
+       "releasing": false,
+       "episode": null
+      }
+     ]
+    },
+    "staff": {
+     "edges": [
+      {
+       "role": "Director",
+       "node": {
+        "name": {
+         "full": "Takahiro Ikezoe"
+        }
+       }
+      },
+      {
+       "role": "Series Composition",
+       "node": {
+        "name": {
+         "full": "Touko Machida"
+        }
+       }
+      },
+      {
+       "role": "Theme Song Performance (OP, ED)",
+       "node": {
+        "name": {
+         "full": "Plasmagica"
+        }
+       }
+      },
+      {
+       "role": "Theme Song Performance (OP, ED)",
+       "node": {
+        "name": {
+         "full": "Ayane Sakura"
+        }
+       }
+      },
+      {
+       "role": "Theme Song Performance (OP, ED)",
+       "node": {
+        "name": {
+         "full": "Eri Inagawa"
+        }
+       }
+      }
+     ]
+    },
+    "characters": {
+     "edges": [
+      {
+       "role": "MAIN",
+       "node": {
+        "name": {
+         "full": "Retoree"
+        }
+       }
+      },
+      {
+       "role": "MAIN",
+       "node": {
+        "name": {
+         "full": "Moa"
+        }
+       }
+      },
+      {
+       "role": "MAIN",
+       "node": {
+        "name": {
+         "full": "Chuchu"
+        }
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": 21820,
+    "idMal": 33314,
+    "siteUrl": "https://anilist.co/anime/21820",
+    "title": {
+     "romaji": "Digimon Universe: Appli Monsters",
+     "english": "Digimon Universe App Monsters",
+     "native": "デジモンユニバース アプリモンスターズ"
+    },
+    "synonyms": [],
+    "format": "TV",
+    "status": "FINISHED",
+    "source": "ORIGINAL",
+    "countryOfOrigin": "JP",
+    "isAdult": false,
+    "isLicensed": true,
+    "season": "FALL",
+    "seasonYear": 2016,
+    "seasonInt": 164,
+    "startDate": {
+     "year": 2016,
+     "month": 10,
+     "day": 1
+    },
+    "endDate": {
+     "year": 2017,
+     "month": 9,
+     "day": 30
+    },
+    "episodes": 52,
+    "duration": 24,
+    "genres": [
+     "Action",
+     "Adventure",
+     "Comedy",
+     "Drama",
+     "Fantasy",
+     "Sci-Fi"
+    ],
+    "tags": [
+     {
+      "name": "Artificial Intelligence",
+      "category": "Cast-Traits",
+      "rank": 80,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Kids",
+      "category": "Demographic",
+      "rank": 79,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Boys' Love",
+      "category": "Theme-Romance",
+      "rank": 79,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Virtual World",
+      "category": "Setting-Universe",
+      "rank": 73,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Male Protagonist",
+      "category": "Cast-Main Cast",
+      "rank": 73,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Primarily Child Cast",
+      "category": "Cast-Main Cast",
+      "rank": 70,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Robots",
+      "category": "Cast-Traits",
+      "rank": 60,
+      "isMediaSpoiler": true
+     },
+     {
+      "name": "Henshin",
+      "category": "Theme-Fantasy",
+      "rank": 45,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Anthropomorphism",
+      "category": "Cast-Traits",
+      "rank": 40,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Proxy Battle",
+      "category": "Theme-Other",
+      "rank": 40,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Kaiju",
+      "category": "Theme-Fantasy",
+      "rank": 40,
+      "isMediaSpoiler": true
+     },
+     {
+      "name": "CGI",
+      "category": "Technical",
+      "rank": 33,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Crossdressing",
+      "category": "Cast-Traits",
+      "rank": 20,
+      "isMediaSpoiler": true
+     }
+    ],
+    "averageScore": 62,
+    "meanScore": 63,
+    "popularity": 4932,
+    "favourites": 88,
+    "trending": 0,
+    "hashtag": "#デジモン #digimon",
+    "description": "Everyone in the world uses smartphone apps. But inside them lurks unknown creatures called \"Appli Monsters,\" or \"Appmon.\" The Appmon are AI lifeforms with the ability to think and act, and exist in the boundary between the human world and digital space to allow people and the system to interface and function. But in the vast sea of the internet, the \"last boss AI\" Leviathan takes control of the Appmon with a virus and begins hacking every system, thus starting to control the human world from the world of the net.<br><br>\n\nThe protagonist, Haru Shinkai, is led to acquire the Appli Drive, and uses it to materialize Gatchmon, a search app monster. What is the secret hidden within the Appli Drive? What is the mysterious field that exists between net world where the Appmon exist, and the real world? What is the \"App Combine\" that can combine two Appmons? What is Leviathan's true goal?<br><br>\n\n(Source: Official Website)",
+    "updatedAt": 1791398634,
+    "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21820-V6uWt9q4joXG.jpg",
+    "coverImage": {
+     "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21820-IfERHl3aYZgq.jpg",
+     "color": "#28c9f1"
+    },
+    "trailer": null,
+    "studios": {
+     "edges": [
+      {
+       "isMain": true,
+       "node": {
+        "name": "Toei Animation",
+        "isAnimationStudio": true
+       }
+      }
+     ]
+    },
+    "relations": {
+     "edges": [
+      {
+       "relationType": "PARENT",
+       "node": {
+        "idMal": 552,
+        "type": "ANIME",
+        "format": "TV"
+       }
+      },
+      {
+       "relationType": "ALTERNATIVE",
+       "node": {
+        "idMal": 100767,
+        "type": "MANGA",
+        "format": "MANGA"
+       }
+      },
+      {
+       "relationType": "SPIN_OFF",
+       "node": {
+        "idMal": null,
+        "type": "MANGA",
+        "format": "MANGA"
+       }
+      }
+     ]
+    },
+    "externalLinks": [
+     {
+      "site": "Official Site",
+      "type": "INFO",
+      "language": null
+     },
+     {
+      "site": "Twitter",
+      "type": "SOCIAL",
+      "language": null
+     },
+     {
+      "site": "Crunchyroll",
+      "type": "STREAMING",
+      "language": null
+     }
+    ],
+    "rankings": [],
+    "stats": {
+     "scoreDistribution": [
+      {
+       "score": 10,
+       "amount": 46
+      },
+      {
+       "score": 20,
+       "amount": 35
+      },
+      {
+       "score": 30,
+       "amount": 88
+      },
+      {
+       "score": 40,
+       "amount": 114
+      },
+      {
+       "score": 50,
+       "amount": 186
+      },
+      {
+       "score": 60,
+       "amount": 301
+      },
+      {
+       "score": 70,
+       "amount": 263
+      },
+      {
+       "score": 80,
+       "amount": 250
+      },
+      {
+       "score": 90,
+       "amount": 171
+      },
+      {
+       "score": 100,
+       "amount": 89
+      }
+     ],
+     "statusDistribution": [
+      {
+       "status": "CURRENT",
+       "amount": 401
+      },
+      {
+       "status": "PLANNING",
+       "amount": 1545
+      },
+      {
+       "status": "COMPLETED",
+       "amount": 2129
+      },
+      {
+       "status": "DROPPED",
+       "amount": 551
+      },
+      {
+       "status": "PAUSED",
+       "amount": 306
+      }
+     ]
+    },
+    "nextAiringEpisode": null,
+    "trends": {
+     "nodes": [
+      {
+       "date": 1463756400,
+       "popularity": null,
+       "trending": 2,
+       "averageScore": null,
+       "inProgress": null,
+       "releasing": false,
+       "episode": null
+      },
+      {
+       "date": 1463842800,
+       "popularity": null,
+       "trending": 2,
+       "averageScore": null,
+       "inProgress": null,
+       "releasing": false,
+       "episode": null
+      },
+      {
+       "date": 1464188400,
+       "popularity": null,
+       "trending": 2,
+       "averageScore": null,
+       "inProgress": null,
+       "releasing": false,
+       "episode": null
+      }
+     ]
+    },
+    "staff": {
+     "edges": [
+      {
+       "role": "Original Creator",
+       "node": {
+        "name": {
+         "full": "Akiyoshi Hongou"
+        }
+       }
+      },
+      {
+       "role": "Director",
+       "node": {
+        "name": {
+         "full": "Gou Koga"
+        }
+       }
+      },
+      {
+       "role": "Character Design",
+       "node": {
+        "name": {
+         "full": "Kenichi Oonuki"
+        }
+       }
+      },
+      {
+       "role": "Music",
+       "node": {
+        "name": {
+         "full": "Koutarou Nakagawa"
+        }
+       }
+      },
+      {
+       "role": "Theme Song Performance (OP 1)",
+       "node": {
+        "name": {
+         "full": "Amatsuki"
+        }
+       }
+      }
+     ]
+    },
+    "characters": {
+     "edges": [
+      {
+       "role": "MAIN",
+       "node": {
+        "name": {
+         "full": "Hackmon"
+        }
+       }
+      },
+      {
+       "role": "MAIN",
+       "node": {
+        "name": {
+         "full": "Dokamon"
+        }
+       }
+      },
+      {
+       "role": "MAIN",
+       "node": {
+        "name": {
+         "full": "Haru Shinkai"
+        }
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": 104004,
+    "idMal": 38147,
+    "siteUrl": "https://anilist.co/anime/104004",
+    "title": {
+     "romaji": "Hoshi no Shima no Nyanko",
+     "english": null,
+     "native": "ほしの島のにゃんこ"
+    },
+    "synonyms": [],
+    "format": "TV_SHORT",
+    "status": "FINISHED",
+    "source": "VIDEO_GAME",
+    "countryOfOrigin": "JP",
+    "isAdult": false,
+    "isLicensed": true,
+    "season": "FALL",
+    "seasonYear": 2018,
+    "seasonInt": 184,
+    "startDate": {
+     "year": 2018,
+     "month": 10,
+     "day": 6
+    },
+    "endDate": {
+     "year": 2019,
+     "month": 3,
+     "day": 30
+    },
+    "episodes": 26,
+    "duration": 15,
+    "genres": [
+     "Adventure",
+     "Slice of Life"
+    ],
+    "tags": [
+     {
+      "name": "Animals",
+      "category": "Theme-Other",
+      "rank": 20,
+      "isMediaSpoiler": false
+     }
+    ],
+    "averageScore": null,
+    "meanScore": 36,
+    "popularity": 230,
+    "favourites": 0,
+    "trending": 0,
+    "hashtag": null,
+    "description": "The story centers on the cats Hopi, Toto, and Mao, who set out on the ocean in search of a place to establish a new town. The three friends plan to find the mysterious \"Island of Stars.\" When they happen to chance upon it, they immediately get to work developing the island, but encounter many difficulties in their task.\n<br><br>\n(Source: Anime News Network)",
+    "updatedAt": 1791383190,
+    "bannerImage": null,
+    "coverImage": {
+     "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/104004-2EQv0eFHBrGJ.jpg",
+     "color": "#d6e45d"
+    },
+    "trailer": null,
+    "studios": {
+     "edges": [
+      {
+       "isMain": true,
+       "node": {
+        "name": "Animation Planet",
+        "isAnimationStudio": false
+       }
+      }
+     ]
+    },
+    "relations": {
+     "edges": []
+    },
+    "externalLinks": [],
+    "rankings": [
+     {
+      "rank": 12,
+      "type": "POPULAR",
+      "allTime": false,
+      "year": 2018,
+      "season": "FALL",
+      "context": "most popular"
+     }
+    ],
+    "stats": {
+     "scoreDistribution": [
+      {
+       "score": 10,
+       "amount": 6
+      },
+      {
+       "score": 20,
+       "amount": 11
+      },
+      {
+       "score": 30,
+       "amount": 2
+      },
+      {
+       "score": 40,
+       "amount": 2
+      },
+      {
+       "score": 50,
+       "amount": 4
+      },
+      {
+       "score": 60,
+       "amount": 1
+      },
+      {
+       "score": 70,
+       "amount": 1
+      },
+      {
+       "score": 80,
+       "amount": 1
+      },
+      {
+       "score": 100,
+       "amount": 3
+      }
+     ],
+     "statusDistribution": [
+      {
+       "status": "CURRENT",
+       "amount": 17
+      },
+      {
+       "status": "PLANNING",
+       "amount": 95
+      },
+      {
+       "status": "COMPLETED",
+       "amount": 62
+      },
+      {
+       "status": "DROPPED",
+       "amount": 50
+      },
+      {
+       "status": "PAUSED",
+       "amount": 6
+      }
+     ]
+    },
+    "nextAiringEpisode": null,
+    "trends": {
+     "nodes": [
+      {
+       "date": 1535295600,
+       "popularity": 0,
+       "trending": 1,
+       "averageScore": null,
+       "inProgress": null,
+       "releasing": false,
+       "episode": null
+      },
+      {
+       "date": 1535468400,
+       "popularity": 2,
+       "trending": 1,
+       "averageScore": 0,
+       "inProgress": null,
+       "releasing": false,
+       "episode": null
+      },
+      {
+       "date": 1535641200,
+       "popularity": 3,
+       "trending": 1,
+       "averageScore": 0,
+       "inProgress": null,
+       "releasing": false,
+       "episode": null
+      }
+     ]
+    },
+    "staff": {
+     "edges": [
+      {
+       "role": "Director",
+       "node": {
+        "name": {
+         "full": "Tomomi Maruyama"
+        }
+       }
+      },
+      {
+       "role": "Series Composition",
+       "node": {
+        "name": {
+         "full": "Mariko Kunisawa"
+        }
+       }
+      },
+      {
+       "role": "Music Director",
+       "node": {
+        "name": {
+         "full": "Hiromi Kamekawa"
+        }
+       }
+      }
+     ]
+    },
+    "characters": {
+     "edges": []
+    }
+   },
+   {
+    "id": 107346,
+    "idMal": 36587,
+    "siteUrl": "https://anilist.co/anime/107346",
+    "title": {
+     "romaji": "GRANBLUE FANTASY The Animation Season 2",
+     "english": "Granblue Fantasy: The Animation Season 2",
+     "native": "GRANBLUE FANTASY The Animation Season 2"
+    },
+    "synonyms": [
+     "グランブルーファンタジー The Animation (新作)"
+    ],
+    "format": "TV",
+    "status": "FINISHED",
+    "source": "VIDEO_GAME",
+    "countryOfOrigin": "JP",
+    "isAdult": false,
+    "isLicensed": true,
+    "season": "FALL",
+    "seasonYear": 2019,
+    "seasonInt": 194,
+    "startDate": {
+     "year": 2019,
+     "month": 10,
+     "day": 5
+    },
+    "endDate": {
+     "year": 2019,
+     "month": 12,
+     "day": 28
+    },
+    "episodes": 12,
+    "duration": 24,
+    "genres": [
+     "Adventure",
+     "Fantasy"
+    ],
+    "tags": [
+     {
+      "name": "Magic",
+      "category": "Theme-Fantasy",
+      "rank": 92,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Gods",
+      "category": "Cast-Traits",
+      "rank": 88,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Ensemble Cast",
+      "category": "Cast-Main Cast",
+      "rank": 85,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Shounen",
+      "category": "Demographic",
+      "rank": 79,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Aviation",
+      "category": "Theme-Other-Vehicle",
+      "rank": 60,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Swordplay",
+      "category": "Theme-Action",
+      "rank": 60,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Yandere",
+      "category": "Cast-Traits",
+      "rank": 55,
+      "isMediaSpoiler": true
+     },
+     {
+      "name": "Zombie",
+      "category": "Cast-Traits",
+      "rank": 20,
+      "isMediaSpoiler": true
+     }
+    ],
+    "averageScore": 66,
+    "meanScore": 66,
+    "popularity": 19501,
+    "favourites": 174,
+    "trending": 0,
+    "hashtag": "#アニメグラブル",
+    "description": "A young boy, yearning to take to the skies and reach the Island of the Astrals, suddenly found both his life and his fate linked to a mysterious, blue-haired girl.<br><br>\n \nThey set off on a skyward journey, meeting trusted friends, crewmates, and the massive airship to be their wings along the way. While evading the clutches of the empire and facing off against fearsome primal beasts, the duo felt their bond deepening—their lives changing. <br><br>\n \nBut despite these tribulations, they're still a long way away from their elusive destination. <br><br>\n \nThe boy and girl, accompanied by fellow seekers of adventure, depart once more into the vast blue skies.<br><br>(Source: Crunchyroll)",
+    "updatedAt": 1791424540,
+    "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/107346-hR3d4HR7zFuX.jpg",
+    "coverImage": {
+     "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx107346-KZQFFzxrCH3g.jpg",
+     "color": "#f1c978"
+    },
+    "trailer": {
+     "id": "rZ0Di2UVn2I",
+     "site": "youtube"
+    },
+    "studios": {
+     "edges": [
+      {
+       "isMain": true,
+       "node": {
+        "name": "MAPPA",
+        "isAnimationStudio": true
+       }
+      },
+      {
+       "isMain": false,
+       "node": {
+        "name": "Cygames",
+        "isAnimationStudio": false
+       }
+      }
+     ]
+    },
+    "relations": {
+     "edges": [
+      {
+       "relationType": "PREQUEL",
+       "node": {
+        "idMal": 31629,
+        "type": "ANIME",
+        "format": "TV"
+       }
+      },
+      {
+       "relationType": "SIDE_STORY",
+       "node": {
+        "idMal": 40873,
+        "type": "ANIME",
+        "format": "SPECIAL"
+       }
+      }
+     ]
+    },
+    "externalLinks": [
+     {
+      "site": "Twitter",
+      "type": "SOCIAL",
+      "language": null
+     },
+     {
+      "site": "Official Site",
+      "type": "INFO",
+      "language": null
+     },
+     {
+      "site": "Crunchyroll",
+      "type": "STREAMING",
+      "language": null
+     }
+    ],
+    "rankings": [
+     {
+      "rank": 74,
+      "type": "RATED",
+      "allTime": false,
+      "year": 2019,
+      "season": null,
+      "context": "highest rated"
+     },
+     {
+      "rank": 89,
+      "type": "POPULAR",
+      "allTime": false,
+      "year": 2019,
+      "season": null,
+      "context": "most popular"
+     },
+     {
+      "rank": 22,
+      "type": "RATED",
+      "allTime": false,
+      "year": 2019,
+      "season": "FALL",
+      "context": "highest rated"
+     },
+     {
+      "rank": 29,
+      "type": "POPULAR",
+      "allTime": false,
+      "year": 2019,
+      "season": "FALL",
+      "context": "most popular"
+     }
+    ],
+    "stats": {
+     "scoreDistribution": [
+      {
+       "score": 10,
+       "amount": 56
+      },
+      {
+       "score": 20,
+       "amount": 50
+      },
+      {
+       "score": 30,
+       "amount": 99
+      },
+      {
+       "score": 40,
+       "amount": 230
+      },
+      {
+       "score": 50,
+       "amount": 604
+      },
+      {
+       "score": 60,
+       "amount": 1215
+      },
+      {
+       "score": 70,
+       "amount": 1732
+      },
+      {
+       "score": 80,
+       "amount": 837
+      },
+      {
+       "score": 90,
+       "amount": 453
+      },
+      {
+       "score": 100,
+       "amount": 242
+      }
+     ],
+     "statusDistribution": [
+      {
+       "status": "CURRENT",
+       "amount": 1503
+      },
+      {
+       "status": "PLANNING",
+       "amount": 7643
+      },
+      {
+       "status": "COMPLETED",
+       "amount": 8815
+      },
+      {
+       "status": "DROPPED",
+       "amount": 874
+      },
+      {
+       "status": "PAUSED",
+       "amount": 666
+      }
+     ]
+    },
+    "nextAiringEpisode": null,
+    "trends": {
+     "nodes": [
+      {
+       "date": 1547996400,
+       "popularity": 0,
+       "trending": 10,
+       "averageScore": null,
+       "inProgress": null,
+       "releasing": false,
+       "episode": null
+      },
+      {
+       "date": 1548082800,
+       "popularity": 12,
+       "trending": 16,
+       "averageScore": 0,
+       "inProgress": null,
+       "releasing": false,
+       "episode": null
+      },
+      {
+       "date": 1548169200,
+       "popularity": 28,
+       "trending": 2,
+       "averageScore": 0,
+       "inProgress": null,
+       "releasing": false,
+       "episode": null
+      }
+     ]
+    },
+    "staff": {
+     "edges": [
+      {
+       "role": "Original Creator",
+       "node": {
+        "name": {
+         "full": "Cygames"
+        }
+       }
+      },
+      {
+       "role": "Director",
+       "node": {
+        "name": {
+         "full": "Yui Miura"
+        }
+       }
+      },
+      {
+       "role": "Series Composition",
+       "node": {
+        "name": {
+         "full": "Kiyoko Yoshimura"
+        }
+       }
+      },
+      {
+       "role": "Character Design",
+       "node": {
+        "name": {
+         "full": "Fumihide Sai"
+        }
+       }
+      },
+      {
+       "role": "Art Director",
+       "node": {
+        "name": {
+         "full": "Nobuhito Sue"
+        }
+       }
+      }
+     ]
+    },
+    "characters": {
+     "edges": [
+      {
+       "role": "MAIN",
+       "node": {
+        "name": {
+         "full": "Lyria"
+        }
+       }
+      },
+      {
+       "role": "MAIN",
+       "node": {
+        "name": {
+         "full": "Katalina Alize"
+        }
+       }
+      },
+      {
+       "role": "MAIN",
+       "node": {
+        "name": {
+         "full": "Vyrn"
+        }
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": 110178,
+    "idMal": 39988,
+    "siteUrl": "https://anilist.co/anime/110178",
+    "title": {
+     "romaji": "Isekai Quartet 2",
+     "english": "Isekai Quartet 2",
+     "native": "異世界かるてっと 2"
+    },
+    "synonyms": [
+     "Квартет попаданцев 2"
+    ],
+    "format": "TV_SHORT",
+    "status": "FINISHED",
+    "source": "ORIGINAL",
+    "countryOfOrigin": "JP",
+    "isAdult": false,
+    "isLicensed": true,
+    "season": "WINTER",
+    "seasonYear": 2020,
+    "seasonInt": 201,
+    "startDate": {
+     "year": 2020,
+     "month": 1,
+     "day": 15
+    },
+    "endDate": {
+     "year": 2020,
+     "month": 4,
+     "day": 1
+    },
+    "episodes": 12,
+    "duration": 12,
+    "genres": [
+     "Comedy",
+     "Fantasy",
+     "Slice of Life"
+    ],
+    "tags": [
+     {
+      "name": "Crossover",
+      "category": "Theme-Other",
+      "rank": 100,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Isekai",
+      "category": "Theme-Fantasy",
+      "rank": 96,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Ensemble Cast",
+      "category": "Cast-Main Cast",
+      "rank": 96,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Chibi",
+      "category": "Theme-Other",
+      "rank": 92,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Parody",
+      "category": "Theme-Comedy",
+      "rank": 87,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "School",
+      "category": "Setting-Scene",
+      "rank": 84,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Urban Fantasy",
+      "category": "Setting-Universe",
+      "rank": 79,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Magic",
+      "category": "Theme-Fantasy",
+      "rank": 63,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Female Protagonist",
+      "category": "Cast-Main Cast",
+      "rank": 60,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Male Protagonist",
+      "category": "Cast-Main Cast",
+      "rank": 60,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Demons",
+      "category": "Cast-Traits",
+      "rank": 60,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Military",
+      "category": "Theme-Other-Organisations",
+      "rank": 60,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Skeleton",
+      "category": "Cast-Traits",
+      "rank": 52,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Monster Girl",
+      "category": "Cast-Traits",
+      "rank": 50,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Gods",
+      "category": "Cast-Traits",
+      "rank": 50,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Twins",
+      "category": "Cast-Traits",
+      "rank": 50,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Elf",
+      "category": "Cast-Traits",
+      "rank": 45,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Vampire",
+      "category": "Cast-Traits",
+      "rank": 45,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Kuudere",
+      "category": "Cast-Traits",
+      "rank": 40,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Maids",
+      "category": "Cast-Traits",
+      "rank": 40,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Succubus",
+      "category": "Cast-Traits",
+      "rank": 36,
+      "isMediaSpoiler": false
+     },
+     {
+      "name": "Flash",
+      "category": "Technical",
+      "rank": 20,
+      "isMediaSpoiler": false
+     }
+    ],
+    "averageScore": 72,
+    "meanScore": 72,
+    "popularity": 68400,
+    "favourites": 655,
+    "trending": 0,
+    "hashtag": "#いせかる",
+    "description": "Your favorite isekai characters return for more exciting crossovers in our everyday world! This time the Shield Hero joins in, and he’s brought Raphtalia and Filo along with him. What kind of shenanigans will the crews of Re:Zero, Overlord, KonoSuba, Saga of Tanya the Evil, and now, The Rising of the Shield Hero get into together?<br><br>\n(Source: Funimation)",
+    "updatedAt": 1791410551,
+    "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/110178-aJO1FmMm1o3q.jpg",
+    "coverImage": {
+     "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx110178-UhigZiRQVwLf.jpg",
+     "color": "#ffc943"
+    },
+    "trailer": {
+     "id": "DgAW7Nlcqlw",
+     "site": "youtube"
+    },
+    "studios": {
+     "edges": [
+      {
+       "isMain": true,
+       "node": {
+        "name": "Studio PuYUKAI",
+        "isAnimationStudio": true
+       }
+      }
+     ]
+    },
+    "relations": {
+     "edges": [
+      {
+       "relationType": "PREQUEL",
+       "node": {
+        "idMal": 38472,
+        "type": "ANIME",
+        "format": "TV_SHORT"
+       }
+      },
+      {
+       "relationType": "CHARACTER",
+       "node": {
+        "idMal": 29803,
+        "type": "ANIME",
+        "format": "TV"
+       }
+      },
+      {
+       "relationType": "CHARACTER",
+       "node": {
+        "idMal": 31240,
+        "type": "ANIME",
+        "format": "TV"
+       }
+      },
+      {
+       "relationType": "CHARACTER",
+       "node": {
+        "idMal": 30831,
+        "type": "ANIME",
+        "format": "TV"
+       }
+      },
+      {
+       "relationType": "CHARACTER",
+       "node": {
+        "idMal": 32615,
+        "type": "ANIME",
+        "format": "TV"
+       }
+      },
+      {
+       "relationType": "CHARACTER",
+       "node": {
+        "idMal": 35790,
+        "type": "ANIME",
+        "format": "TV"
+       }
+      },
+      {
+       "relationType": "CHARACTER",
+       "node": {
+        "idMal": 38659,
+        "type": "ANIME",
+        "format": "TV"
+       }
+      },
+      {
+       "relationType": "SEQUEL",
+       "node": {
+        "idMal": 41567,
+        "type": "ANIME",
+        "format": "MOVIE"
+       }
+      }
+     ]
+    },
+    "externalLinks": [
+     {
+      "site": "Twitter",
+      "type": "SOCIAL",
+      "language": "Japanese"
+     },
+     {
+      "site": "Official Site",
+      "type": "INFO",
+      "language": "Japanese"
+     },
+     {
+      "site": "Crunchyroll",
+      "type": "STREAMING",
+      "language": null
+     },
+     {
+      "site": "YouTube",
+      "type": "STREAMING",
+      "language": null
+     },
+     {
+      "site": "Bilibili TV",
+      "type": "STREAMING",
+      "language": null
+     }
+    ],
+    "rankings": [
+     {
+      "rank": 27,
+      "type": "RATED",
+      "allTime": true,
+      "year": null,
+      "season": null,
+      "context": "highest rated all time"
+     },
+     {
+      "rank": 11,
+      "type": "POPULAR",
+      "allTime": true,
+      "year": null,
+      "season": null,
+      "context": "most popular all time"
+     },
+     {
+      "rank": 3,
+      "type": "RATED",
+      "allTime": false,
+      "year": 2020,
+      "season": null,
+      "context": "highest rated"
+     },
+     {
+      "rank": 1,
+      "type": "POPULAR",
+      "allTime": false,
+      "year": 2020,
+      "season": null,
+      "context": "most popular"
+     },
+     {
+      "rank": 2,
+      "type": "RATED",
+      "allTime": false,
+      "year": 2020,
+      "season": "WINTER",
+      "context": "highest rated"
+     },
+     {
+      "rank": 1,
+      "type": "POPULAR",
+      "allTime": false,
+      "year": 2020,
+      "season": "WINTER",
+      "context": "most popular"
+     }
+    ],
+    "stats": {
+     "scoreDistribution": [
+      {
+       "score": 10,
+       "amount": 157
+      },
+      {
+       "score": 20,
+       "amount": 122
+      },
+      {
+       "score": 30,
+       "amount": 284
+      },
+      {
+       "score": 40,
+       "amount": 568
+      },
+      {
+       "score": 50,
+       "amount": 2041
+      },
+      {
+       "score": 60,
+       "amount": 4384
+      },
+      {
+       "score": 70,
+       "amount": 11151
+      },
+      {
+       "score": 80,
+       "amount": 9136
+      },
+      {
+       "score": 90,
+       "amount": 3808
+      },
+      {
+       "score": 100,
+       "amount": 1957
+      }
+     ],
+     "statusDistribution": [
+      {
+       "status": "CURRENT",
+       "amount": 3337
+      },
+      {
+       "status": "PLANNING",
+       "amount": 10543
+      },
+      {
+       "status": "COMPLETED",
+       "amount": 51621
+      },
+      {
+       "status": "DROPPED",
+       "amount": 1494
+      },
+      {
+       "status": "PAUSED",
+       "amount": 1405
+      }
+     ]
+    },
+    "nextAiringEpisode": null,
+    "trends": {
+     "nodes": [
+      {
+       "date": 1561474800,
+       "popularity": 0,
+       "trending": 1797,
+       "averageScore": null,
+       "inProgress": null,
+       "releasing": false,
+       "episode": null
+      },
+      {
+       "date": 1561561200,
+       "popularity": 396,
+       "trending": 305,
+       "averageScore": 0,
+       "inProgress": 7,
+       "releasing": false,
+       "episode": null
+      },
+      {
+       "date": 1561647600,
+       "popularity": 1806,
+       "trending": 119,
+       "averageScore": 0,
+       "inProgress": 28,
+       "releasing": false,
+       "episode": null
+      }
+     ]
+    },
+    "staff": {
+     "edges": [
+      {
+       "role": "Original Creator",
+       "node": {
+        "name": {
+         "full": "Natsume Akatsuki"
+        }
+       }
+      },
+      {
+       "role": "Original Creator",
+       "node": {
+        "name": {
+         "full": "Carlo Zen"
+        }
+       }
+      },
+      {
+       "role": "Original Creator",
+       "node": {
+        "name": {
+         "full": "Aneko Yusagi"
+        }
+       }
+      },
+      {
+       "role": "Original Creator",
+       "node": {
+        "name": {
+         "full": "Light Tsuchihi"
+        }
+       }
+      },
+      {
+       "role": "Original Creator",
+       "node": {
+        "name": {
+         "full": "Kugane Maruyama"
+        }
+       }
+      }
+     ]
+    },
+    "characters": {
+     "edges": [
+      {
+       "role": "MAIN",
+       "node": {
+        "name": {
+         "full": "Emilia"
+        }
+       }
+      },
+      {
+       "role": "MAIN",
+       "node": {
+        "name": {
+         "full": "Subaru Natsuki"
+        }
+       }
+      },
+      {
+       "role": "MAIN",
+       "node": {
+        "name": {
+         "full": "Momonga"
+        }
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": 110788,
+    "idMal": 40166,
+    "siteUrl": "https://anilist.co/anime/110788",
+    "title": {
+     "romaji": "Zoids Wild ZERO",
+     "english": null,
+     "native": "ゾイドワイルド ZERO"
+    },
+    "synonyms": [],
+    "format": "TV",
+    "status": "FINISHED",
+    "source": "OTHER",
+    "countryOfOrigin": "JP",
+    "isAdult": false,
+    "isLicensed": true,
+    "season": "FALL",
+    "seasonYear": 2019,
+    "seasonInt": 194,
+    "startDate": {
+     "year": 2019,
+     "month": 10,
+     "day": 4
+    },
+    "endDate": {
+     "year": 2020,
+     "month": 10,
+     "day": 16
+    },
+    "episodes": 50,
+    "duration": 24,
+    "genres": [
+     "Action",
+     "Adventure",
+     "Comedy",
+     "Mecha",
+     "Sci-Fi"
+    ],
+    "tags": [
+     {
+      "name": "Real Robot",
+      "category": "Theme-Sci-Fi-Mecha",
+      "rank": 60,
+      "isMediaSpoiler": false
+     }
+    ],
+    "averageScore": 67,
+    "meanScore": 73,
+    "popularity": 1675,
+    "favourites": 20,
+    "trending": 0,
+    "hashtag": "#ゾイドワイルドZERO",
+    "description": "Second season of <i>Zoids Wild</i>.",
+    "updatedAt": 1791379895,
+    "bannerImage": null,
+    "coverImage": {
+     "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx110788-2CGGh39Z2yUJ.png",
+     "color": "#e4781a"
+    },
+    "trailer": {
+     "id": "ZHUjY0Rxfao",
+     "site": "youtube"
+    },
+    "studios": {
+     "edges": [
+      {
+       "isMain": true,
+       "node": {
+        "name": "OLM",
+        "isAnimationStudio": true
+       }
+      },
+      {
+       "isMain": false,
+       "node": {
+        "name": "Takara Tomy",
+        "isAnimationStudio": false
+       }
+      }
+     ]
+    },
+    "relations": {
+     "edges": [
+      {
+       "relationType": "ALTERNATIVE",
+       "node": {
+        "idMal": 112949,
+        "type": "MANGA",
+        "format": "MANGA"
+       }
+      },
+      {
+       "relationType": "PREQUEL",
+       "node": {
+        "idMal": 37395,
+        "type": "ANIME",
+        "format": "TV"
+       }
+      },
+      {
+       "relationType": "ALTERNATIVE",
+       "node": {
+        "idMal": 124824,
+        "type": "MANGA",
+        "format": "MANGA"
+       }
+      },
+      {
+       "relationType": "PARENT",
+       "node": {
+        "idMal": 42885,
+        "type": "ANIME",
+        "format": "ONA"
+       }
+      },
+      {
+       "relationType": "SEQUEL",
+       "node": {
+        "idMal": 42885,
+        "type": "ANIME",
+        "format": "ONA"
+       }
+      }
+     ]
+    },
+    "externalLinks": [
+     {
+      "site": "Official Site",
+      "type": "INFO",
+      "language": null
+     },
+     {
+      "site": "Twitter",
+      "type": "SOCIAL",
+      "language": null
+     }
+    ],
+    "rankings": [
+     {
+      "rank": 68,
+      "type": "RATED",
+      "allTime": false,
+      "year": 2019,
+      "season": null,
+      "context": "highest rated"
+     },
+     {
+      "rank": 20,
+      "type": "RATED",
+      "allTime": false,
+      "year": 2019,
+      "season": "FALL",
+      "context": "highest rated"
+     }
+    ],
+    "stats": {
+     "scoreDistribution": [
+      {
+       "score": 10,
+       "amount": 17
+      },
+      {
+       "score": 20,
+       "amount": 10
+      },
+      {
+       "score": 30,
+       "amount": 10
+      },
+      {
+       "score": 40,
+       "amount": 8
+      },
+      {
+       "score": 50,
+       "amount": 18
+      },
+      {
+       "score": 60,
+       "amount": 29
+      },
+      {
+       "score": 70,
+       "amount": 18
+      },
+      {
+       "score": 80,
+       "amount": 11
+      },
+      {
+       "score": 90,
+       "amount": 33
+      },
+      {
+       "score": 100,
+       "amount": 87
+      }
+     ],
+     "statusDistribution": [
+      {
+       "status": "CURRENT",
+       "amount": 228
+      },
+      {
+       "status": "PLANNING",
+       "amount": 969
+      },
+      {
+       "status": "COMPLETED",
+       "amount": 301
+      },
+      {
+       "status": "DROPPED",
+       "amount": 117
+      },
+      {
+       "status": "PAUSED",
+       "amount": 60
+      }
+     ]
+    },
+    "nextAiringEpisode": null,
+    "trends": {
+     "nodes": [
+      {
+       "date": 1564498800,
+       "popularity": 0,
+       "trending": 1,
+       "averageScore": null,
+       "inProgress": null,
+       "releasing": false,
+       "episode": null
+      },
+      {
+       "date": 1564585200,
+       "popularity": 2,
+       "trending": 7,
+       "averageScore": 0,
+       "inProgress": 1,
+       "releasing": false,
+       "episode": null
+      },
+      {
+       "date": 1564671600,
+       "popularity": 10,
+       "trending": 4,
+       "averageScore": 0,
+       "inProgress": 1,
+       "releasing": false,
+       "episode": null
+      }
+     ]
+    },
+    "staff": {
+     "edges": [
+      {
+       "role": "Director",
+       "node": {
+        "name": {
+         "full": "Takao Kato"
+        }
+       }
+      },
+      {
+       "role": "Series Composition",
+       "node": {
+        "name": {
+         "full": "Kenichi Araki"
+        }
+       }
+      },
+      {
+       "role": "Character Design",
+       "node": {
+        "name": {
+         "full": "Tadashi Sakazaki"
+        }
+       }
+      },
+      {
+       "role": "Sound Director",
+       "node": {
+        "name": {
+         "full": "Hiroki Matsuoka"
+        }
+       }
+      },
+      {
+       "role": "Music",
+       "node": {
+        "name": {
+         "full": "Yoshihisa Hirano"
+        }
+       }
+      }
+     ]
+    },
+    "characters": {
+     "edges": [
+      {
+       "role": "MAIN",
+       "node": {
+        "name": {
+         "full": "Leo Conrad"
+        }
+       }
+      },
+      {
+       "role": "MAIN",
+       "node": {
+        "name": {
+         "full": "Buzz Cunningham"
+        }
+       }
+      },
+      {
+       "role": "MAIN",
+       "node": {
+        "name": {
+         "full": "Christopher Giller"
+        }
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": 121199,
+    "idMal": 42144,
+    "siteUrl": "https://anilist.co/anime/121199",
+    "title": {
+     "romaji": "Jinju Mao: Xinnian de Maoxian",
+     "english": "Jing-Ju Cats 2",
+     "native": "京剧猫之信念的冒险"
+    },
+    "synonyms": [
+     "Beijing Opera Cats 2"
+    ],
+    "format": "ONA",
+    "status": "FINISHED",
+    "source": "ORIGINAL",
+    "countryOfOrigin": "CN",
+    "isAdult": false,
+    "isLicensed": true,
+    "season": null,
+    "seasonYear": null,
+    "seasonInt": null,
+    "startDate": {
+     "year": 2017,
+     "month": 7,
+     "day": 10
+    },
+    "endDate": {
+     "year": 2017,
+     "month": 8,
+     "day": 14
+    },
+    "episodes": 52,
+    "duration": 12,
+    "genres": [
+     "Action",
+     "Adventure",
+     "Comedy",
+     "Fantasy"
+    ],
+    "tags": [],
+    "averageScore": null,
+    "meanScore": 46,
+    "popularity": 85,
+    "favourites": 1,
+    "trending": 0,
+    "hashtag": null,
+    "description": "The second season of <i>Jingju Mao</i>.\n",
+    "updatedAt": 1790768698,
+    "bannerImage": null,
+    "coverImage": {
+     "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx121199-p3YA6OPNRut6.jpg",
+     "color": "#f1500d"
+    },
+    "trailer": {
+     "id": "GUueGHJDbBw",
+     "site": "youtube"
+    },
+    "studios": {
+     "edges": [
+      {
+       "isMain": true,
+       "node": {
+        "name": "Dazzling Star",
+        "isAnimationStudio": true
+       }
+      }
+     ]
+    },
+    "relations": {
+     "edges": [
+      {
+       "relationType": "PREQUEL",
+       "node": {
+        "idMal": null,
+        "type": "ANIME",
+        "format": "ONA"
+       }
+      },
+      {
+       "relationType": "SEQUEL",
+       "node": {
+        "idMal": 42146,
+        "type": "ANIME",
+        "format": "ONA"
+       }
+      }
+     ]
+    },
+    "externalLinks": [
+     {
+      "site": "Official Site",
+      "type": "INFO",
+      "language": null
+     },
+     {
+      "site": "Tencent Video",
+      "type": "STREAMING",
+      "language": null
+     },
+     {
+      "site": "Bilibili",
+      "type": "STREAMING",
+      "language": null
+     }
+    ],
+    "rankings": [],
+    "stats": {
+     "scoreDistribution": [
+      {
+       "score": 30,
+       "amount": 1
+      },
+      {
+       "score": 40,
+       "amount": 11
+      },
+      {
+       "score": 50,
+       "amount": 2
+      },
+      {
+       "score": 70,
+       "amount": 2
+      },
+      {
+       "score": 80,
+       "amount": 1
+      },
+      {
+       "score": 100,
+       "amount": 1
+      }
+     ],
+     "statusDistribution": [
+      {
+       "status": "CURRENT",
+       "amount": 5
+      },
+      {
+       "status": "PLANNING",
+       "amount": 26
+      },
+      {
+       "status": "COMPLETED",
+       "amount": 33
+      },
+      {
+       "status": "DROPPED",
+       "amount": 21
+      },
+      {
+       "status": "PAUSED",
+       "amount": 0
+      }
+     ]
+    },
+    "nextAiringEpisode": null,
+    "trends": {
+     "nodes": [
+      {
+       "date": 1594566000,
+       "popularity": 0,
+       "trending": 3,
+       "averageScore": null,
+       "inProgress": null,
+       "releasing": false,
+       "episode": null
+      },
+      {
+       "date": 1594652400,
+       "popularity": 3,
+       "trending": 1,
+       "averageScore": 0,
+       "inProgress": null,
+       "releasing": false,
+       "episode": null
+      },
+      {
+       "date": 1594825200,
+       "popularity": 4,
+       "trending": 2,
+       "averageScore": 0,
+       "inProgress": null,
+       "releasing": false,
+       "episode": null
+      }
+     ]
+    },
+    "staff": {
+     "edges": []
+    },
+    "characters": {
+     "edges": []
+    }
+   }
+  ]
+ }
+}

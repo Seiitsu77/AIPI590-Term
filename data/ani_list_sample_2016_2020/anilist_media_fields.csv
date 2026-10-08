@@ -1,0 +1,56 @@
+field,type,requested,description
+id,Int!,True,The id of the media
+idMal,Int,True,The mal id of the media
+title,MediaTitle,True,The official titles of the media in various languages
+type,MediaType,False,The type of the media; anime or manga
+format,MediaFormat,True,The format the media was released in
+status,MediaStatus,True,The current releasing status of the media
+description,String,True,Short description of the media's story and characters
+startDate,FuzzyDate,True,The first official release date of the media
+endDate,FuzzyDate,True,The last official release date of the media
+season,MediaSeason,True,The season the media was initially released in
+seasonYear,Int,True,The season year the media was initially released in
+seasonInt,Int,True,The year & season the media was initially released in
+episodes,Int,True,The amount of episodes the anime has when complete
+duration,Int,True,The general length of each anime episode in minutes
+chapters,Int,False,The amount of chapters the manga has when complete
+volumes,Int,False,The amount of volumes the manga has when complete
+countryOfOrigin,CountryCode,True,Where the media was created. (ISO 3166-1 alpha-2)
+isLicensed,Boolean,True,If the media is officially licensed or a self-published doujin release
+source,MediaSource,True,Source type the media was adapted from.
+hashtag,String,True,Official Twitter hashtags for the media
+trailer,MediaTrailer,True,Media trailer or advertisement
+updatedAt,Int,True,When the media's data was last updated
+coverImage,MediaCoverImage,True,The cover images of the media
+bannerImage,String,True,The banner image of the media
+genres,[String],True,The genres of the media
+synonyms,[String],True,Alternative titles of the media
+averageScore,Int,True,A weighted average score of all the user's scores of the media
+meanScore,Int,True,Mean score of all the user's scores of the media
+popularity,Int,True,The number of users with the media on their list
+isLocked,Boolean,False,Locked media may not be added to lists our favorited. This may be due to the entry pending for deletion or other reasons.
+trending,Int,True,The amount of related activity in the past hour
+favourites,Int,True,The amount of user's who have favourited the media
+tags,[MediaTag],True,List of tags that describes elements and themes of the media
+relations,MediaConnection,True,Other media in the same or connecting franchise
+characters,CharacterConnection,True,The characters in the media
+staff,StaffConnection,True,The staff who produced the media
+studios,StudioConnection,True,The companies who produced the media
+isFavourite,Boolean!,False,If the media is marked as favourite by the current authenticated user
+isFavouriteBlocked,Boolean!,False,If the media is blocked from being added to favourites
+isAdult,Boolean,True,If the media is intended only for 18+ adult audiences
+nextAiringEpisode,AiringSchedule,True,The media's next episode airing schedule
+airingSchedule,AiringScheduleConnection,False,The media's entire airing schedule
+trends,MediaTrendConnection,True,The media's daily trend stats
+externalLinks,[MediaExternalLink],True,External links to another site related to the media
+streamingEpisodes,[MediaStreamingEpisode],False,Data and links to legal streaming episodes on external sites
+rankings,[MediaRank],True,The ranking of the media in a particular time span and format compared to other media
+mediaListEntry,MediaList,False,The authenticated user's media list entry for the media
+reviews,ReviewConnection,False,User reviews of the media
+recommendations,RecommendationConnection,False,User recommendations for similar media
+stats,MediaStats,True,
+siteUrl,String,True,The url for the media page on the AniList website
+autoCreateForumThread,Boolean,False,If the media should have forum thread automatically created for it on airing episode release
+isRecommendationBlocked,Boolean,False,If the media is blocked from being recommended to/from
+isReviewBlocked,Boolean,False,If the media is blocked from being reviewed
+modNotes,String,False,Notes for site moderators
