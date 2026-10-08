@@ -1,16 +1,16 @@
 .venv/*
 .env
-# Raw Jikan responses (thousands of JSON files); rebuild with scripts/download_jikan.py
-data/jikan/raw/
+# # Raw Jikan responses (thousands of JSON files); rebuild with scripts/download_jikan.py
+# data/jikan/raw/
 
-# Raw API responses and releases; rebuild with scripts/ani_list/ and scripts/anime_offline_database/
-data/ani_list/raw/
-data/anime_offline_database/raw/
-# 25 MB of CSV that build_tables.py regenerates in seconds
-data/anime_offline_database/*.csv
-*.log
-# The remote repo is public: keep AniList/MAL data out of it (AniList API terms forbid
-# using the API as a data store). Teammates rebuild locally with the scripts.
-data/ani_list/*.csv
-!data/ani_list/coverage.csv
-data/jikan/*.csv
+# # Raw API responses and releases; rebuild with scripts/ani_list/ and scripts/anime_offline_database/
+# data/ani_list/raw/
+# data/anime_offline_database/raw/
+# # 25 MB of CSV that build_tables.py regenerates in seconds
+# data/anime_offline_database/*.csv
+# *.log
+# # The remote repo is public: keep AniList/MAL data out of it (AniList API terms forbid
+# # using the API as a data store). Teammates rebuild locally with the scripts.
+# data/ani_list/*.csv
+# !data/ani_list/coverage.csv
+# data/jikan/*.csv
