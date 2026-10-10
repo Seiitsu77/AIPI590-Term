@@ -1,0 +1,39 @@
+{
+  "note": "Frozen models scored on cold_val by the dry run made before the model selection was committed. The frozen models were refitted on data that includes cold_val, so these numbers are IN-SAMPLE. They are kept only as a like-for-like reference for the AUC comparison across periods, and are not results.",
+  "source": "artifacts/dry_run_validation.json (not committed), written by: python src/final_test.py --dry-run-on-validation",
+  "users": 20000,
+  "titles": 99,
+  "users_with_liked_and_disliked": 4910,
+  "metrics": {
+    "M0a_raw": {
+      "ndcg_at_10": 0.33538076044753523,
+      "recall_at_10": 0.3727961924615822,
+      "observed_auc": 0.5739241328547428,
+      "item_coverage_at_10": 0.10101010101010101
+    },
+    "M0a_norm": {
+      "ndcg_at_10": 0.3419212564778873,
+      "recall_at_10": 0.379112294480805,
+      "observed_auc": 0.5802999963363897,
+      "item_coverage_at_10": 0.10101010101010101
+    },
+    "M0b": {
+      "ndcg_at_10": 0.32878314137954623,
+      "recall_at_10": 0.4055798214919446,
+      "observed_auc": 0.5686401303875402,
+      "item_coverage_at_10": 0.10101010101010101
+    },
+    "M1": {
+      "ndcg_at_10": 0.42147996188158604,
+      "recall_at_10": 0.5283624324874693,
+      "observed_auc": 0.6732034163935257,
+      "item_coverage_at_10": 0.9393939393939394
+    },
+    "M2": {
+      "ndcg_at_10": 0.48441255721593607,
+      "recall_at_10": 0.5880956607076677,
+      "observed_auc": 0.6655012081048398,
+      "item_coverage_at_10": 0.5858585858585859
+    }
+  }
+}

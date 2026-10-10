@@ -16,12 +16,14 @@ Usage:
 from __future__ import annotations
 
 import json
+import subprocess
 
 import pandas as pd
 
 from common import MANIFEST, ROOT
 
 RESULTS = ROOT / "results"
+FREEZE_COMMIT = "37defa8"  # the commit that first contains PRE_REGISTRATION.md
 MODEL_LABEL = {"M0a_raw": "M0a-raw", "M0a_norm": "M0a-norm", "M0b": "M0b", "M1": "M1", "M2": "M2"}
 MODEL_WHAT = {
     "M0a_raw": "AniList popularity 原值排序",
@@ -70,6 +72,8 @@ def main() -> None:
     selection = json.loads((ROOT / "MODEL_SELECTION.json").read_text(encoding="utf-8"))
     manifest = json.loads((MANIFEST / "split_manifest.json").read_text(encoding="utf-8"))
     pre = json.loads((RESULTS / "pre_run_checks.json").read_text(encoding="utf-8"))
+    # Frozen models on validation, from the dry run: in-sample, used only as a like-for-like reference.
+    reference = json.loads((RESULTS / "validation_in_sample_reference.json").read_text(encoding="utf-8"))
     names = pd.read_csv(MANIFEST / "item_roles.csv").set_index("anime_id")["Name"]
     p, aux, late = r["primary"], r["auxiliary_warm_history_users"], r["supplementary_cold_test_late"]
     m, c, s = p["metrics"], p["comparisons"], p["sensitivity"]
@@ -93,10 +97,12 @@ def main() -> None:
     add(f"- **主假设 H1 得到支持，证据等级 {h1['evidence_level']}。** 在个性化内容模型上加入开播前的 AniList 和 Wikipedia 关注度，cold-test 上的用户平均 NDCG@10 从 {m['M1']['ndcg_at_10']:.4f} 升到 {m['M2']['ndcg_at_10']:.4f}，"
         f"差值 {h1['delta']:+.4f}，用户配对 bootstrap 的 95% 区间 {ci(h1)}。逐一去掉 {n_titles} 部番中的任何一部，差值都保持为正（{h1['leave_one_title_out']['min_delta']:+.4f} 到 {h1['leave_one_title_out']['max_delta']:+.4f}）。")  # fmt: skip
     add(f"- **代价是覆盖率下降。** 进入过至少一个用户前 10 名的番，从 M1 的 {m['M1']['item_coverage_at_10']:.1%} 降到 M2 的 {m['M2']['item_coverage_at_10']:.1%}。M2 仍然远高于非个性化模型的 {m['M0b']['item_coverage_at_10']:.1%}。")
-    add(f"- **Observed-only AUC 在测试集上没有下降，但这一点和验证集不一致。** 测试集上 M2 是 {m['M2']['observed_auc']:.4f}，M1 是 {m['M1']['observed_auc']:.4f}；验证集上是 M2 {val['M2']['observed_auc']:.4f}、M1 {val['M1']['observed_auc']:.4f}，方向相反。"
-        f"测试集上 AUC 最高的是 M0a-norm（{m['M0a_norm']['observed_auc']:.4f}）。")  # fmt: skip
+    auc_gap = {name: block["M2"]["observed_auc"] - block["M1"]["observed_auc"] for name, block in (("val", val), ("test", m), ("late", late["metrics"]))}
+    add(f"- **加入关注度对 Observed-only AUC 的影响不稳定，不能当作改善来报告。** M2 减 M1 的差：验证集（2019 Q4–2020 Q1 的番）{auc_gap['val']:+.4f}，cold-test（2020 Q2–Q3）{auc_gap['test']:+.4f}，2020 Q4 {auc_gap['late']:+.4f}。"
+        f"符号和幅度都随时间段变化。cold-test 上 AUC 最高的是 M0a-norm（{m['M0a_norm']['observed_auc']:.4f}），不是 M2。详见第 6 节。")  # fmt: skip
     s2 = c["secondary_vs_M0b"]
-    add(f"- **内容特征在关注度之上也有增量，但小得多，而且取决于测试集里有哪些番。** M2 比 M0b 高 {s2['delta']:+.4f}，用户层面的区间 {ci(s2)}；作品重采样的区间 {ci(s2, 'title_bootstrap_interval95')} 包含 0。"
+    add(f"- **内容特征在关注度之上也有增量，但小得多，支持也弱于 H1。** M2 比 M0b 高 {s2['delta']:+.4f}，用户层面的区间 {ci(s2)}。按冻结的规则它的证据等级也是 {s2['evidence_level']}，"
+        f"但作品重采样的区间 {ci(s2, 'title_bootstrap_interval95')} 包含 0，而 H1 的两种区间都在 0 以上。两者不应被读成同样强的证据，见第 2 节的规则核对。"
         f"分组看，这个增量在新作上是 {s['new_titles']['comparisons']['secondary_vs_M0b']['delta']:+.4f}，在续作上是 {s['sequels']['comparisons']['secondary_vs_M0b']['delta']:+.4f}。")  # fmt: skip
     add(f"- **只靠内容的个性化模型 M1，和关注度排序大致持平。** M1 的 NDCG@10 是 {m['M1']['ndcg_at_10']:.4f}，M0a-raw {m['M0a_raw']['ndcg_at_10']:.4f}，M0a-norm {m['M0a_norm']['ndcg_at_10']:.4f}，M0b {m['M0b']['ndcg_at_10']:.4f}。"
         "单独使用时两类信息的效果接近，合在一起才明显更好。M1 和这些模型的比较没有预注册，见第 9 节。")  # fmt: skip
@@ -120,12 +126,32 @@ def main() -> None:
         block = c[key]
         loo = block["leave_one_title_out"]
         rows.append([label, f"{block['delta']:+.4f}", ci(block), f"{loo['min_delta']:+.4f} 到 {loo['max_delta']:+.4f}", str(loo["deletions_with_delta_at_or_below_zero"]),
-                     block["evidence_level"], ci(block, "title_bootstrap_interval95")])  # fmt: skip
-    add(table(["比较", "Δ NDCG@10", "用户配对 bootstrap 95% 区间", "逐一去掉一部番后 Δ 的范围", "使 Δ ≤ 0 的番数", "证据等级", "作品重采样区间（只报告）"], rows))
+                     block["evidence_level"], ci(block, "title_bootstrap_interval95"), "是" if block["title_bootstrap_interval95"][0] > 0 else "**否**"])  # fmt: skip
+    add(table(["比较", "Δ NDCG@10", "用户配对 bootstrap 95% 区间", "逐一去掉一部番后 Δ 的范围", "使 Δ ≤ 0 的番数", "证据等级（冻结规则）", "作品重采样区间（只报告）", "该区间在 0 以上"], rows))
     add("")
     add("- **证据等级**是预注册里事先定义的分级：A 表示 Δ > 0、用户层面的区间下界 > 0、并且去掉任何一部番后 Δ 仍 > 0。它不是显著性检验的结论，也不保证能推广到别的番或别的用户。")
-    add(f"- **作品重采样区间**描述结果对\"测试季碰巧有哪些番\"的依赖。{n_titles} 部番来自 2020 年的两个季度，不是未来新番的随机样本，所以它不作为总体泛化的保证。H1 的这个区间不含 0 但很宽；S2 的包含 0。")
+    add(f"- **作品重采样区间**描述结果对\"测试季碰巧有哪些番\"的依赖。{n_titles} 部番来自 2020 年的两个季度，不是未来新番的随机样本，所以它不作为总体泛化的保证，也不进入证据等级。")
     add(f"- 对 H1 影响最大的单部番是《{names[h1['leave_one_title_out']['most_influential_title']]}》。")
+    add("")
+    add("### 规则核对：同样是 A，支持程度不同")
+    add("")
+    levels = [v["evidence_level"] for v in c.values()]
+    short = {"H1_primary": "H1", "secondary_vs_M0a_raw": "S1a", "secondary_vs_M0a_norm": "S1b", "secondary_vs_M0b": "S2"}
+    frozen_at = subprocess.run(["git", "-C", str(ROOT), "log", "-1", "--format=%cI", FREEZE_COMMIT], capture_output=True, text=True, check=False).stdout.strip()
+    add(f"冻结的规则在 commit `{FREEZE_COMMIT}`（{frozen_at}）里，早于模型训练，也早于正式测试（{r['run_utc']}）。`PRE_REGISTRATION.md` 和 `final_test.py` 从冻结到现在都没有改动过。"
+        "按这条规则，A 只看两件事：用户配对 bootstrap 的区间，和逐一去掉一部番的结果。作品重采样区间在冻结版里写的是\"只报告\"，不参与分级。所以" + ("四个比较都是 " + levels[0] if len(set(levels)) == 1 else "四个比较的等级依次是 " + "、".join(levels)) + "，这不是测试之后改的定义。")  # fmt: skip
+    add("")
+    weak = [short[k] for k, v in c.items() if v["title_bootstrap_interval95"][0] <= 0]
+    s1b = c["secondary_vs_M0a_norm"]["title_bootstrap_interval95"]
+    add("但 A 并不等于证据一样强：")
+    add("")
+    add(f"- **H1** 的用户区间和作品重采样区间都在 0 以上，是四个比较里支持最充分的。")
+    add(f"- **{'、'.join(weak)}** 的作品重采样区间包含 0。它在用户层面成立，对单部番的删除也稳健，但换一批番是否成立没有得到支持。"
+        f"S1b 的作品重采样区间下界是 {s1b[0]:+.4f}，几乎贴着 0。")  # fmt: skip
+    add("")
+    add("**和冻结前草稿的差别。** 冻结前审阅过的第一版草稿用的是\"通过 / 部分通过 / 不通过\"，其中\"通过\"要求用户区间和作品区间的下界都大于 0。"
+        "冻结前按审阅意见第 4 条（保留用户 bootstrap，增加逐一去掉一部番，作品重采样只报告且不作为泛化保证，三档改称证据等级）改成了现在的定义。A、B、C 的具体条件是 AI 按这条意见起草的；项目负责人授权修订完成后自行冻结，所以这几句条件在冻结前没有再单独确认，是在冻结后的汇报里列出、随后获批执行测试的。"
+        f"如果按那版草稿的更严格条件，H1 属于\"通过\"，{'、'.join(weak)} 只属于\"部分通过\"。这一句只是对照，不改变按冻结规则给出的等级。")  # fmt: skip
     add("")
     add("**次要比较的解读限制**（预注册第 1 节）：S1 不能单独解释为个性化的纯粹贡献，因为 M2 和 M0a 之间还差着学习到的权重、Wikipedia 信号和番层面的内容先验。S2 固定了关注度特征和学习器，差别是全部 6 个内容特征，其中 2 个只和番有关，所以它说明的是\"内容特征整体\"的增量。")
     add("")
@@ -182,13 +208,25 @@ def main() -> None:
         ["Item coverage@10，cold-test", f"{m['M1']['item_coverage_at_10']:.3f}", f"{m['M2']['item_coverage_at_10']:.3f}", f"{m['M2']['item_coverage_at_10'] - m['M1']['item_coverage_at_10']:+.3f}", f"{m['M0b']['item_coverage_at_10']:.3f}"],
         ["Item coverage@10，验证集", f"{val['M1']['item_coverage_at_10']:.3f}", f"{val['M2']['item_coverage_at_10']:.3f}", f"{val['M2']['item_coverage_at_10'] - val['M1']['item_coverage_at_10']:+.3f}", f"{val['M0b']['item_coverage_at_10']:.3f}"],
         ["Item coverage@10，2020 Q4", f"{late['metrics']['M1']['item_coverage_at_10']:.3f}", f"{late['metrics']['M2']['item_coverage_at_10']:.3f}", f"{late['metrics']['M2']['item_coverage_at_10'] - late['metrics']['M1']['item_coverage_at_10']:+.3f}", f"{late['metrics']['M0b']['item_coverage_at_10']:.3f}"],
-        ["Observed-only AUC，cold-test", f"{m['M1']['observed_auc']:.4f}", f"{m['M2']['observed_auc']:.4f}", f"{m['M2']['observed_auc'] - m['M1']['observed_auc']:+.4f}", f"{m['M0b']['observed_auc']:.4f}"],
-        ["Observed-only AUC，验证集", f"{val['M1']['observed_auc']:.4f}", f"{val['M2']['observed_auc']:.4f}", f"{val['M2']['observed_auc'] - val['M1']['observed_auc']:+.4f}", f"{val['M0b']['observed_auc']:.4f}"],
-        ["Observed-only AUC，2020 Q4", f"{late['metrics']['M1']['observed_auc']:.4f}", f"{late['metrics']['M2']['observed_auc']:.4f}", f"{late['metrics']['M2']['observed_auc'] - late['metrics']['M1']['observed_auc']:+.4f}", f"{late['metrics']['M0b']['observed_auc']:.4f}"],
     ]))  # fmt: skip
     add("")
-    add("- **覆盖率：在三个数据集上都下降。** 加入关注度后，推荐集中到更少的番上。这是稳定的现象。")
-    add("- **AUC：三个数据集的方向不一致。** 验证集上 M2 低于 M1，cold-test 和 2020 Q4 上 M2 高于 M1。验证集的数字来自只用 cold-train 拟合的模型，另外两个来自冻结后的模型，所以不能逐项对比；能说的只是\"加入关注度会不会损害在看过的番里区分喜欢和不喜欢的能力\"这个问题，本实验没有给出一致的答案。")
+    add("**覆盖率在三个数据集上都下降。** 加入关注度后，推荐集中到更少的番上。这是稳定的现象。")
+    add("")
+    add("**Observed-only AUC 不稳定。** 下表把三个时间段放在一起，所有模型都列出：")
+    add("")
+    periods = [
+        ("验证集，2019 Q4–2020 Q1，只用 cold-train 拟合的模型（留出）", val),
+        ("验证集，同上，冻结模型（**样本内**，仅作对照）", reference["metrics"]),
+        ("cold-test，2020 Q2–Q3，冻结模型", m),
+        ("2020 Q4，冻结模型", late["metrics"]),
+    ]
+    add(table(["数据", *[MODEL_LABEL[k] for k in MODEL_LABEL], "M2 − M1"],
+              [[label, *[f"{block[k]['observed_auc']:.4f}" for k in MODEL_LABEL], f"{block['M2']['observed_auc'] - block['M1']['observed_auc']:+.4f}"] for label, block in periods]))  # fmt: skip
+    add("")
+    add(f"- **加入关注度后 AUC 的变化，符号随时间段改变。** 在 2019 Q4–2020 Q1 的番上 M2 低于 M1，在 2020 Q2–Q3 和 2020 Q4 的番上 M2 高于 M1。")
+    add("- **这不是模型版本不同造成的。** 第二行用的就是冻结模型，它们在验证集的番上仍然是 M2 低于 M1。这一行是样本内分数，偏乐观，而且对特征更多的 M2 更有利；即便如此 M2 仍然低于 M1。同一组模型在不同时间段的番上给出了相反的结论。")
+    add(f"- **AUC 的水平本身也随时间段大幅变化。** 例如 M0a-norm 在验证集上是 {val['M0a_norm']['observed_auc']:.4f}，在 cold-test 上是 {m['M0a_norm']['observed_auc']:.4f}。在 2020 Q2–Q3，热度本身就能很好地区分喜欢和不喜欢，在前两个季度则不能。")
+    add("- **结论：** 本实验不支持\"加入关注度能提高在已评分作品里区分喜欢和不喜欢的能力\"。cold-test 上的提升不能单独拿出来展示；对已评分作品的喜好区分能力在时间段之间不稳定。")
     add("")
 
     add("## 7. 怎么理解另类数据的增量")
@@ -243,6 +281,7 @@ def main() -> None:
     add("5. 测试之后，`src/check_boundaries.py` 的允许名单里加了 `pre_run_check.py`。后者为了校验 SHA-256 会引用评分文件的路径，但不读任何一行；不加的话边界检查会因为这个新文件而报错。")
     add("6. 测试完成后又调用了一次 `final_test.py`，用来确认锁文件生效。它在读取任何标签之前就被拒绝了。")
     add("7. 第 9 节的两点是事后解读，标注为探索性。")
+    add("8. 本报告在首次提交后按审阅意见修订过一次：第 2 节增加了规则核对，说明同为 A 的比较支持程度不同；第 6 节把 AUC 在三个时间段的结果并列，并加入冻结模型在验证集上的样本内对照（`results/validation_in_sample_reference.json`，取自测试前的 dry run）。结果文件、证据等级的定义和任何数字都没有改动。")
     add("")
 
     add("## 11. 局限")
