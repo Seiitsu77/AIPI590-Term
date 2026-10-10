@@ -22,6 +22,13 @@ Usage:
     python scripts/ani_list/download.py --seasons 2021-winter 2024-fall   # pilot
     python scripts/ani_list/download.py                                   # 2021-winter .. 2025-fall
     python scripts/ani_list/download.py --formats TV ONA --limit 5
+    python scripts/ani_list/download.py --seasons 2026-fall 2027-winter --out data/ani_list_live \\
+        --provisional-start --refresh-listings                            # live seasons
+
+--provisional-start is for upcoming seasons, where many titles are announced only
+as "January". Their trends are anchored on the 1st of the month and saved with
+premiere_provisional: true; once a refreshed listing shows the exact day, the
+next run refetches them against the real date.
 """
 
 from __future__ import annotations
@@ -166,12 +173,13 @@ def _retry_after_seconds(exc: urllib.error.HTTPError) -> float:
         return 0.0
 
 
-def save_record(path: Path, variables: dict[str, Any], status: int, body: Any) -> None:
+def save_record(path: Path, variables: dict[str, Any], status: int, body: Any, extra: dict | None = None) -> None:
     record = {
         "url": GRAPHQL_URL,
         "variables": variables,
         "status": status,
         "fetched_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        **(extra or {}),
         "response": body,
     }
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -195,19 +203,37 @@ def season_range(start: tuple[int, str], end: tuple[int, str]) -> list[tuple[int
     return [(index // 4, SEASONS[index % 4]) for index in range(first, last + 1)]
 
 
-def premiere_timestamp(media: dict[str, Any]) -> int | None:
-    """00:00 JST on the start date, the same clock AniList stamps trend rows with."""
+def is_provisional(media: dict[str, Any]) -> bool:
+    """Year and month are known but not the day, as for titles announced for "January"."""
     start = media.get("startDate") or {}
-    if not (start.get("year") and start.get("month") and start.get("day")):
-        return None
-    return int(datetime(start["year"], start["month"], start["day"], tzinfo=JST).timestamp())
+    return bool(start.get("year") and start.get("month") and not start.get("day"))
 
 
-def fetch_season_listing(client: AniListClient, raw_dir: Path, year: int, season: str) -> list[dict[str, Any]]:
+def premiere_timestamp(media: dict[str, Any], provisional: bool = False) -> int | None:
+    """00:00 JST on the start date, the same clock AniList stamps trend rows with.
+
+    With provisional=True, a start date known only to the month is anchored on the
+    1st of that month. Rows fetched before that day are still all pre-air.
+    """
+    start = media.get("startDate") or {}
+    if start.get("year") and start.get("month") and start.get("day"):
+        return int(datetime(start["year"], start["month"], start["day"], tzinfo=JST).timestamp())
+    if provisional and is_provisional(media):
+        return int(datetime(start["year"], start["month"], 1, tzinfo=JST).timestamp())
+    return None
+
+
+def fetch_season_listing(
+    client: AniListClient, raw_dir: Path, year: int, season: str, refresh: bool = False
+) -> list[dict[str, Any]]:
+    folder = raw_dir / "seasons" / f"{year}-{season}"
+    if refresh:
+        for stale in folder.glob("page-*.json"):  # a refreshed listing may have fewer pages
+            stale.unlink()
     media: list[dict[str, Any]] = []
     page = 1
     while True:
-        path = raw_dir / "seasons" / f"{year}-{season}" / f"page-{page:02d}.json"
+        path = folder / f"page-{page:02d}.json"
         if path.exists():
             body = json.loads(path.read_text(encoding="utf-8"))["response"]
         else:
@@ -236,7 +262,26 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--limit", type=int, help="Fetch trends for at most this many titles (for a smoke test).")
     parser.add_argument("--out", type=Path, default=DEFAULT_OUT, help="Output directory (default: data/ani_list).")
+    parser.add_argument(
+        "--provisional-start",
+        action="store_true",
+        help="Also fetch trends for titles whose start date is known only to the month, anchored on the 1st. "
+        "Saved as provisional and refetched once the listing shows the exact day. For upcoming seasons only.",
+    )
+    parser.add_argument(
+        "--refresh-listings",
+        action="store_true",
+        help="Re-download the season listings instead of using the cached pages (picks up newly announced dates).",
+    )
     return parser.parse_args()
+
+
+def needs_trends(path: Path, item: dict[str, Any]) -> bool:
+    """No trends saved yet, or saved against a provisional start date that is now exact."""
+    if not path.exists():
+        return True
+    record = json.loads(path.read_text(encoding="utf-8"))
+    return bool(record.get("premiere_provisional")) and not is_provisional(item)
 
 
 def main() -> int:
@@ -251,21 +296,25 @@ def main() -> int:
         todo: list[dict[str, Any]] = []
         no_start_date = 0
         for year, season in seasons:
-            media = fetch_season_listing(client, raw_dir, year, season)
+            media = fetch_season_listing(client, raw_dir, year, season, refresh=args.refresh_listings)
             selected = [item for item in media if item.get("format") in formats]
-            dated = [item for item in selected if premiere_timestamp(item) is not None]
+            dated = [item for item in selected if premiere_timestamp(item, args.provisional_start) is not None]
             no_start_date += len(selected) - len(dated)
             todo.extend(dated)
-            print(f"{year}-{season}: {len(media)} listed, {len(dated)} {'/'.join(args.formats)} with a start date")
+            provisional = sum(is_provisional(item) for item in dated)
+            print(
+                f"{year}-{season}: {len(media)} listed, {len(dated)} {'/'.join(args.formats)} with a start date"
+                + (f" ({provisional} provisional, month only)" if provisional else "")
+            )
         if no_start_date:
             print(f"Skipping {no_start_date} titles without a full start date (no premiere to anchor trends on)")
 
         todo = todo[: args.limit] if args.limit else todo
-        missing = [item for item in todo if not (raw_dir / "trends" / f"{item['id']}.json").exists()]
+        missing = [item for item in todo if needs_trends(raw_dir / "trends" / f"{item['id']}.json", item)]
         print(f"\n{len(todo)} titles, {len(missing)} trend requests to make (~{len(missing) * MIN_INTERVAL_S / 60:.0f} min)")
 
         for index, item in enumerate(missing, start=1):
-            premiere = premiere_timestamp(item)
+            premiere = premiere_timestamp(item, args.provisional_start)
             variables = {
                 "id": item["id"],
                 "lo": premiere - PRE_DAYS * DAY - 1,
@@ -273,7 +322,8 @@ def main() -> int:
                 "year1": premiere + 364 * DAY,
             }
             status, body = client.query(TRENDS_QUERY, variables)
-            save_record(raw_dir / "trends" / f"{item['id']}.json", variables, status, body)
+            extra = {"premiere": premiere, "premiere_provisional": is_provisional(item)}
+            save_record(raw_dir / "trends" / f"{item['id']}.json", variables, status, body, extra)
 
             note = f"HTTP {status}"
             if status == 200:

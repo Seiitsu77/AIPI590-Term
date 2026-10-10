@@ -15,11 +15,12 @@ Run without python -I: it imports the client from download.py next to it.
 
 Usage:
     python scripts/ani_list/download_prequel_popularity.py
+    python scripts/ani_list/download_prequel_popularity.py --out data/ani_list_live
 """
 
 from __future__ import annotations
 
-import csv
+import argparse
 import json
 import sys
 from pathlib import Path
@@ -34,8 +35,11 @@ def load_pairs(out: Path) -> dict[int, dict]:
     titles: dict[int, dict] = {}
     for page in sorted((out / "raw" / "seasons").glob("*/page-*.json")):
         for media in json.loads(page.read_text(encoding="utf-8"))["response"]["data"]["Page"]["media"]:
-            if not (out / "raw" / "trends" / f"{media['id']}.json").exists():
+            trend_path = out / "raw" / "trends" / f"{media['id']}.json"
+            if not trend_path.exists():
                 continue
+            # The trends record holds the anchor actually used, including a provisional 1st-of-month one.
+            premiere = json.loads(trend_path.read_text(encoding="utf-8")).get("premiere") or premiere_timestamp(media)
             prequels = sorted(
                 {
                     edge["node"]["id"]
@@ -44,13 +48,15 @@ def load_pairs(out: Path) -> dict[int, dict]:
                 }
             )
             if prequels:
-                titles[media["id"]] = {"premiere": premiere_timestamp(media), "prequels": prequels}
+                titles[media["id"]] = {"premiere": premiere, "prequels": prequels}
     return titles
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description="Fetch prequel popularity as of the day before each premiere.")
+    parser.add_argument("--out", type=Path, default=DEFAULT_OUT, help="AniList data directory (default: data/ani_list).")
+    out = parser.parse_args().out
     sys.stdout.reconfigure(line_buffering=True)
-    out = DEFAULT_OUT
     raw_dir = out / "raw" / "prequel_popularity"
     titles = load_pairs(out)
     todo = [anilist_id for anilist_id in titles if not (raw_dir / f"{anilist_id}.json").exists()]

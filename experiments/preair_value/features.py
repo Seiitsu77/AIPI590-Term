@@ -79,7 +79,8 @@ def value_at(rows: list[tuple[int, float]], day: int, horizon: int) -> float:
 
 
 def main() -> None:
-    anime = [row for row in read_csv(ANILIST / "anime.csv") if row["trends_status"] == "ok"]
+    # The pre-registered cohort is TV only; other formats got trends later for other uses.
+    anime = [row for row in read_csv(ANILIST / "anime.csv") if row["trends_status"] == "ok" and row["format"] == "TV"]
     premiere = {row["anilist_id"]: date.fromisoformat(row["start_date"]) for row in anime}
 
     trends: dict[str, list[tuple[int, float, float]]] = defaultdict(list)

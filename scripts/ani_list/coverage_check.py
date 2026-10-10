@@ -127,6 +127,9 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Check AniList trend coverage by popularity quintile.")
     parser.add_argument("--data", type=Path, default=DEFAULT_ANILIST, help="AniList data directory.")
     parser.add_argument("--offline-db", type=Path, default=DEFAULT_OFFLINE_DB, help="anime-offline-database anime.csv.")
+    parser.add_argument(
+        "--formats", nargs="+", default=["TV"], help="Formats to check (default: TV). Non-default sets write coverage_<formats>.csv."
+    )
     return parser.parse_args()
 
 
@@ -137,7 +140,8 @@ def main() -> int:
         print("Run scripts/ani_list/build_tables.py first.", file=sys.stderr)
         return 1
 
-    anime = [row for row in read_csv(anime_path) if row["trends_status"] != "not fetched"]
+    anime = [row for row in read_csv(anime_path) if row["trends_status"] != "not fetched" and row["format"] in args.formats]
+    suffix = "" if args.formats == ["TV"] else "_" + "_".join(args.formats).lower()
     earliest_day: dict[str, int] = {}
     for trend in read_csv(trends_path):
         day = int(trend["days_from_premiere"])
@@ -145,7 +149,7 @@ def main() -> int:
 
     report = coverage_rows(anime, earliest_day)
     columns = list(report[0])
-    with (args.data / "coverage.csv").open("w", encoding="utf-8", newline="") as file:
+    with (args.data / f"coverage{suffix}.csv").open("w", encoding="utf-8", newline="") as file:
         writer = csv.DictWriter(file, fieldnames=columns)
         writer.writeheader()
         writer.writerows(report)
@@ -155,7 +159,7 @@ def main() -> int:
     print("|" + "---|" * len(columns))
     for row in report:
         print("| " + " | ".join(str(row[column]) for column in columns) + " |")
-    print(f"\nSaved {args.data / 'coverage.csv'}")
+    print(f"\nSaved {args.data / f'coverage{suffix}.csv'}")
 
     id_crosscheck(anime, args.offline_db)
     return 0

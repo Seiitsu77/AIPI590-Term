@@ -11,6 +11,9 @@ Offline: reads data/ani_list/raw/ and writes to data/ani_list/:
     prequel_popularity.csv  one row per (title, prequel/parent): the prequel's popularity on
                         its last trend row before the title's premiere day (written only
                         after download_prequel_popularity.py has run)
+    catalog.csv         one row per old anime in the Anime Compass ALS model, same columns
+                        as anime.csv with the trend columns empty (written only after
+                        download_catalog.py has run)
 
 Dates are Japan dates (AniList stamps trend rows at 00:00 JST). days_from_premiere
 is negative before the start date; day 0 is the premiere day itself, so strictly
@@ -30,6 +33,12 @@ titles and flag them rather than dropping them.
 
 Everything in anime.csv except the trend summary is the snapshot at
 listing_fetched_at, i.e. post-air. relations.csv mixes ANIME and MANGA targets.
+
+premiere_provisional is 1 for upcoming titles announced only to the month
+(download.py --provisional-start): their days_from_premiere count from the 1st
+of that month, so day -1 is the last day of the previous month, not the eve of
+the real premiere. It is 0 when trends are anchored on the exact start date and
+empty when no trends were fetched.
 
 Usage:
     python scripts/ani_list/build_tables.py
@@ -57,7 +66,7 @@ STATUSES = ("CURRENT", "PLANNING", "COMPLETED", "DROPPED", "PAUSED")
 ANIME_COLUMNS = [
     "anilist_id", "mal_id", "title_romaji", "title_english", "title_native",
     "format", "status", "source", "country", "episodes", "duration_min",
-    "season", "season_year", "listed_season", "start_date", "end_date",
+    "season", "season_year", "listed_season", "start_date", "premiere_provisional", "end_date",
     "genres", "tags", "main_studios", "other_studios", "staff",
     "trailer_site", "trailer_id", "hashtag",
     "popularity", "favourites", "average_score", "mean_score",
@@ -240,6 +249,16 @@ def prequel_rows(raw_dir: Path) -> list[dict[str, Any]]:
     return rows
 
 
+def catalog_rows(raw_dir: Path) -> list[dict[str, Any]]:
+    """Old ALS anime looked up by MAL ID, as anime.csv rows without trends; one row per AniList id."""
+    rows: dict[int, dict[str, Any]] = {}
+    for path in sorted((raw_dir / "catalog").glob("batch-*.json")):
+        record = json.loads(path.read_text(encoding="utf-8"))
+        for media in record["response"]["data"]["Page"]["media"]:
+            rows.setdefault(media["id"], media_row(media, "", record["fetched_at"]))
+    return [rows[anilist_id] for anilist_id in sorted(rows)]
+
+
 def write_csv(path: Path, columns: list[str], rows: list[dict[str, Any]]) -> None:
     with path.open("w", encoding="utf-8", newline="") as file:
         writer = csv.DictWriter(file, fieldnames=columns)
@@ -266,8 +285,14 @@ def main() -> int:
         row = media_row(media, listed_season, fetched_at)
         premiere = full_date(media.get("startDate"))
         trend_path = raw_dir / "trends" / f"{media['id']}.json"
-        if premiere and trend_path.exists():
-            record = json.loads(trend_path.read_text(encoding="utf-8"))
+        record = json.loads(trend_path.read_text(encoding="utf-8")) if trend_path.exists() else None
+        if record is not None and premiere is None and record.get("premiere_provisional"):
+            # Start date known only to the month: days_from_premiere counts from the 1st of that month.
+            premiere = jst_date(record["premiere"])
+            row["premiere_provisional"] = 1
+        elif record is not None and premiere is not None:
+            row["premiere_provisional"] = 0
+        if premiere and record is not None:
             rows = trend_rows(media["id"], premiere, record["response"]["data"]) if record["status"] == 200 else []
             add_trend_summary(row, premiere, record, rows)
             all_trends.extend(rows)
@@ -306,6 +331,10 @@ def main() -> int:
     if prequels:
         write_csv(args.out / "prequel_popularity.csv", PREQUEL_COLUMNS, prequels)
         print(f"prequel_popularity.csv  {len(prequels)} rows")
+    catalog = catalog_rows(raw_dir)
+    if catalog:
+        write_csv(args.out / "catalog.csv", ANIME_COLUMNS, catalog)
+        print(f"catalog.csv         {len(catalog)} rows")
 
     with_trends = sum(1 for row in anime_rows if row["trends_status"] == "ok")
     print(f"anime.csv           {len(anime_rows)} rows ({with_trends} with trends)")

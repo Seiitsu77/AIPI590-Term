@@ -43,7 +43,11 @@ def season_key(listed_season: str) -> tuple[int, int]:
 
 
 def main() -> None:
-    cohort = [row for row in csv.DictReader(ANILIST_ANIME.open(encoding="utf-8")) if row["trends_status"] == "ok"]
+    cohort = [
+        row
+        for row in csv.DictReader(ANILIST_ANIME.open(encoding="utf-8"))
+        if row["trends_status"] == "ok" and row["format"] == "TV"
+    ]
     catalog = {int(item["id"]): item for item in json.loads(CATALOG.read_text(encoding="utf-8"))}
 
     for row in cohort:
