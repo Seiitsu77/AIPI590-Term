@@ -1,0 +1,62 @@
+Cohort: 1024 titles, 1023 MAL ids
+1. Wikidata: 909 MAL ids have an item; 1870 related items
+2. Sitelinks: 967 items have en/ja/zh articles; 2514 distinct articles
+3. Redirects: 7070 redirects to those articles
+4. Pageviews: 9584 article/redirect series to check
+Cohort: 1024 titles, 1023 MAL ids
+1. Wikidata: 909 MAL ids have an item; 1870 related items
+2. Sitelinks: 967 items have en/ja/zh articles; 2514 distinct articles
+3. Redirects: 7070 redirects to those articles
+4. Pageviews: 2514 article series to check
+   [1000/2514] {'cached': 45, 'fetched': 955}
+   [2000/2514] {'cached': 81, 'fetched': 1919}
+   [2514/2514] {'cached': 99, 'fetched': 2415}
+Done.
+Cohort: 1024 titles, 1023 MAL ids
+1. Wikidata: 909 MAL ids have an item; 1870 related items
+2. Sitelinks: 967 items have en/ja/zh articles; 2514 distinct articles
+3. Redirects: 7070 redirects to those articles
+4. Pageviews: 2514 article series + 7070 redirect series to check
+   [1000/9584] {'cached': 1000, 'fetched': 0}
+   [2000/9584] {'cached': 2000, 'fetched': 0}
+   [3000/9584] {'cached': 2574, 'fetched': 426}
+   [4000/9584] {'cached': 2634, 'fetched': 1366}
+   [5000/9584] {'cached': 2689, 'fetched': 2311}
+   [6000/9584] {'cached': 2802, 'fetched': 3198}
+   [7000/9584] {'cached': 2897, 'fetched': 4103}
+Cohort: 1024 titles, 1023 MAL ids
+1. Wikidata: 909 MAL ids have an item; 1870 related items
+2. Sitelinks: 967 items have en/ja/zh articles; 2514 distinct articles
+3. Redirects: 7070 redirects to those articles
+4. Pageviews: 2514 article series + 7070 redirect series to check
+   [1000/9584] {'cached': 1000, 'fetched': 0}
+   [2000/9584] {'cached': 1999, 'fetched': 1}
+   [3000/9584] {'cached': 2999, 'fetched': 1}
+   [4000/9584] {'cached': 3999, 'fetched': 1}
+   [5000/9584] {'cached': 4999, 'fetched': 1}
+   [6000/9584] {'cached': 5999, 'fetched': 1}
+   [7000/9584] {'cached': 6999, 'fetched': 1}
+   [8000/9584] {'cached': 7999, 'fetched': 1}
+   [9000/9584] {'cached': 8510, 'fetched': 490}
+   [9584/9584] {'cached': 8543, 'fetched': 1041}
+Done.
+Cohort: 2059 titles, 2054 MAL ids
+1. Wikidata: 1286 MAL ids have an item; 2540 related items
+2. Sitelinks: 1371 items have en/ja/zh articles; 3489 distinct articles
+3. Redirects: 10189 redirects to those articles
+4. Pageviews: 3489 article series + 10127 redirect series to check
+   [1000/13616] {'cached': 1000, 'fetched': 0}
+   [2000/13616] {'cached': 1997, 'fetched': 3}
+   [3000/13616] {'cached': 2996, 'fetched': 4}
+   [4000/13616] {'cached': 3996, 'fetched': 4}
+   [5000/13616] {'cached': 4996, 'fetched': 4}
+   [6000/13616] {'cached': 5996, 'fetched': 4}
+   [7000/13616] {'cached': 6996, 'fetched': 4}
+   [8000/13616] {'cached': 7996, 'fetched': 4}
+   [9000/13616] {'cached': 8996, 'fetched': 4}
+   [10000/13616] {'cached': 9996, 'fetched': 4}
+   [11000/13616] {'cached': 10995, 'fetched': 5}
+   [12000/13616] {'cached': 11995, 'fetched': 5}
+   [13000/13616] {'cached': 12995, 'fetched': 5}
+   [13616/13616] {'cached': 13609, 'fetched': 7}
+Done.
