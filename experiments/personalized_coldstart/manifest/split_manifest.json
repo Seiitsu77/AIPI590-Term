@@ -1,0 +1,248 @@
+{
+  "status": "frozen",
+  "written_utc": "2026-10-10T22:05:31+00:00",
+  "inputs": {
+    "ratings": {
+      "path": "C:\\Study\\Toy project\\archive\\rating_complete.csv",
+      "sha256": "b60519348a90bd5e02c25355b374f7ca055a0637a237f0e163447953b13ffaa0",
+      "bytes": 817897580,
+      "rows": 57633278,
+      "users": 310059,
+      "has_timestamps": false
+    },
+    "mal_catalog": {
+      "path": "anime_coldstart/data/raw/anime.csv",
+      "sha256": "6e6d723f3e021e084a281d1ec557a0a10dfb9721d256b87596e02c27eb1f77e9",
+      "snapshot": "early 2021"
+    },
+    "serving_catalog": {
+      "path": "C:\\Study\\Toy project\\data\\processed\\anime_catalog_serving.json",
+      "sha256": "4b11cf3e5f3d015ed071232e569068248af709e7979e561194b451e3ac716bf3",
+      "titles": 18064
+    }
+  },
+  "definitions": {
+    "positive": "rating >= 8",
+    "negative": "rating <= 5",
+    "warm": "premiere year known and < 2019",
+    "cold_roles": {
+      "cold_train": [
+        "2019-01-01",
+        "2019-09-30"
+      ],
+      "cold_val": [
+        "2019-10-01",
+        "2020-03-31"
+      ],
+      "cold_test": [
+        "2020-04-01",
+        "2020-09-30"
+      ],
+      "cold_test_late": [
+        "2020-10-01",
+        "2020-12-31"
+      ]
+    },
+    "min_warm_positives": 5,
+    "seed": 20261010,
+    "user_group": "SplitMix64(user_id + seed) mod 3 -> ranker_train / validation / test",
+    "development_user_cap": 20000,
+    "development_user_choice": "eligible users with the smallest SplitMix64(user_id + seed + 1)"
+  },
+  "titles_by_role": {
+    "warm": {
+      "titles": 14217,
+      "positives": 29065457
+    },
+    "cold_train": {
+      "titles": 144,
+      "positives": 754176
+    },
+    "cold_val": {
+      "titles": 99,
+      "positives": 336959
+    },
+    "cold_test": {
+      "titles": 67,
+      "positives": 239586
+    },
+    "cold_test_late": {
+      "titles": 48,
+      "positives": 92865
+    },
+    "excluded_recent": {
+      "titles": 845,
+      "positives": 385936
+    },
+    "excluded_undated": {
+      "titles": 130,
+      "positives": 431
+    }
+  },
+  "als_training_set": {
+    "titles_with_a_positive": 14041,
+    "positives": 29065457,
+    "users_with_a_positive": 307829,
+    "share_of_catalog_positives": 0.9414
+  },
+  "users": {
+    "cold_train": {
+      "user_group": "ranker_train",
+      "users_in_group": 103081,
+      "eligible_in_group": 42096,
+      "users_used": 20000,
+      "positives": 118190,
+      "negatives": 17557,
+      "users_with_positive_and_negative": 5757,
+      "user_item_pairs": 2880000,
+      "median_warm_positives": 93.0
+    },
+    "cold_val": {
+      "user_group": "validation",
+      "users_in_group": 103496,
+      "eligible_in_group": 30392,
+      "users_used": 20000,
+      "positives": 74636,
+      "negatives": 13076,
+      "users_with_positive_and_negative": 4910,
+      "user_item_pairs": 1980000,
+      "median_warm_positives": 107.0
+    },
+    "cold_test": {
+      "user_group": "test",
+      "users_in_group": 103482,
+      "eligible_in_group": 24284,
+      "users_used": 24284,
+      "positives": 79337,
+      "negatives": 14058,
+      "users_with_positive_and_negative": 6116,
+      "user_item_pairs": 1627028,
+      "median_warm_positives": 109.0
+    },
+    "cold_test_late": {
+      "user_group": "test",
+      "users_in_group": 103482,
+      "eligible_in_group": 13280,
+      "users_used": 13280,
+      "positives": 30829,
+      "negatives": 5155,
+      "users_with_positive_and_negative": 2355,
+      "user_item_pairs": 637440,
+      "median_warm_positives": 127.0
+    }
+  },
+  "warm_history_users": {
+    "validation": {
+      "users": 96505,
+      "of_those_with_a_positive_on": {
+        "cold_val": 30392
+      }
+    },
+    "test": {
+      "users": 96354,
+      "of_those_with_a_positive_on": {
+        "cold_test": 24284
+      }
+    }
+  },
+  "leakage_checks": {
+    "all_passed": true,
+    "every_rated_title_has_exactly_one_role": true,
+    "cold_roles_have_the_expected_number_of_titles": {
+      "cold_train": true,
+      "cold_val": true,
+      "cold_test": true,
+      "cold_test_late": true
+    },
+    "latest_premiere_year_in_als_training": 2018,
+    "no_title_from_2019_on_in_als_training": true,
+    "no_undated_title_in_als_training": true,
+    "als_training_titles_overlapping_kept_out_titles": 0,
+    "cold_roles_pairwise_disjoint": true,
+    "development_and_test_users_disjoint": true,
+    "late_test_users_are_from_the_test_group_only": true,
+    "warm_history_test_users_with_a_positive_equal_the_eligible_test_users": true
+  },
+  "franchise_overlap": {
+    "cold_train": {
+      "titles": 144,
+      "with_an_earlier_franchise_title": 47,
+      "earlier_title_is_warm": 46,
+      "earlier_titles_only_kept_out_of_als": 1,
+      "earlier_title_in_another_cold_role": 1,
+      "with_a_warm_promo_like_entry": 7
+    },
+    "cold_val": {
+      "titles": 99,
+      "with_an_earlier_franchise_title": 32,
+      "earlier_title_is_warm": 24,
+      "earlier_titles_only_kept_out_of_als": 8,
+      "earlier_title_in_another_cold_role": 8,
+      "with_a_warm_promo_like_entry": 1
+    },
+    "cold_test": {
+      "titles": 67,
+      "with_an_earlier_franchise_title": 22,
+      "earlier_title_is_warm": 15,
+      "earlier_titles_only_kept_out_of_als": 7,
+      "earlier_title_in_another_cold_role": 13,
+      "with_a_warm_promo_like_entry": 0
+    },
+    "cold_test_late": {
+      "titles": 48,
+      "with_an_earlier_franchise_title": 14,
+      "earlier_title_is_warm": 14,
+      "earlier_titles_only_kept_out_of_als": 0,
+      "earlier_title_in_another_cold_role": 4,
+      "with_a_warm_promo_like_entry": 0
+    }
+  },
+  "files": {
+    "item_roles.csv": "c417015f29c12a46b2df0e81b974988ce96a320bdfbce16aaaee3db23aa3d17e",
+    "users_cold_train.csv": "ed4c03c81764c011b516c2eb70ce6f5589fa578c6fcaf098d9d16dcb2924c613",
+    "users_cold_val.csv": "99968ff7787c96e1dc83ae85ed769ee3b4e7a17e5953cad9108eb72e9e9838f8",
+    "users_cold_test.csv": "b774d13f4da9ac9c552726b5ccc51418be428a9ea0501ab0d36c7f8e9ab98012",
+    "users_cold_test_late.csv": "190d440391882202a2c17c13edca74b968d43d65fc5fa90605afc9dbf70653e6"
+  },
+  "files_not_committed": [
+    "users_cold_test.csv",
+    "users_cold_test_late.csv",
+    "users_cold_train.csv",
+    "users_cold_val.csv"
+  ],
+  "alt_data_inputs": {
+    "anilist_trends": {
+      "path": "experiments/alt_data_coldstart/outputs/personalized_coldstart/candidate_trends.parquet",
+      "sha256": "cd17ec8abbb8043300528e21ef1471d700c8046a9b8719b90d13cfceaaae0afa"
+    },
+    "anilist_meta": {
+      "path": "experiments/alt_data_coldstart/outputs/personalized_coldstart/candidate_anilist_meta.csv",
+      "sha256": "0202169ca172b65ee9b21c9c4ce098270281505411c2e69db7b34d28cd762a75"
+    },
+    "anilist_items": {
+      "path": "experiments/alt_data_coldstart/outputs/personalized_coldstart/candidate_items.csv",
+      "sha256": "68fbbd1c25b1913a705bf02b0036007dee1f06e20f22c1bf4c052c8a2f328be1"
+    },
+    "wiki_views": {
+      "path": "anime_coldstart/data/pageviews_daily.npz",
+      "sha256": "9b5d6a275caf7beb821c59e097743f0c17b6157f8fe7566bf8f7b6955149a905"
+    },
+    "wiki_index": {
+      "path": "anime_coldstart/data/pageviews_index.csv",
+      "sha256": "42027ce1aebc9f1a952f0638af2cd7ea6423385abd58bb671cd9d5e018b6ec43"
+    },
+    "wiki_map": {
+      "path": "anime_coldstart/data/mal_wikipedia_map.csv",
+      "sha256": "67126f5b24efea688fcc898e6afde6399f5a0ec64cdeb3711cc8a0b583580662"
+    },
+    "wiki_extra": {
+      "path": "anime_coldstart/data/mal_wikipedia_extra_articles.csv",
+      "sha256": "bdf90a55751b9b307c7cc7ac6a67ad0f33da9994a63b164e82c1567b23612fee"
+    }
+  },
+  "derived_files": {
+    "day_zero.csv": "7b59f280b8842cf894c73b1cf32a93bac7875e0c13a4f1accc679e7aff729bb2",
+    "wikipedia_article_audit.csv": "ea72e59b2087b4d5f77908ed45e86da37ea310861ffe0cccf7badd45a8df7fb0",
+    "wikipedia_article_audit.json": "399f9f594d019a6833b842185145fdbedee9edcff35251418080e28426bea510"
+  }
+}

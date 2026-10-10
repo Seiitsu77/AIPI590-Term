@@ -1,0 +1,42 @@
+{
+  "rule": "an article whose first revision is later than day -2 of a title is excluded from that title's pageviews; so is a page that no longer exists",
+  "cold_titles": 358,
+  "cold_titles_with_a_mapped_article": 259,
+  "title_article_links": 908,
+  "distinct_articles": 824,
+  "links_created_after_cutoff": 159,
+  "of_those_with_views_recorded_before_they_existed": 2,
+  "views_removed_by_the_rule": 115720,
+  "share_of_all_window_views_removed": 0.00659,
+  "links_to_pages_missing_today": 0,
+  "links_excluded": 159,
+  "excluded_by_relation": {
+    "own": 64,
+    "parent_P179|series": 48,
+    "parent_P144|source": 38,
+    "parent_P8345": 7,
+    "parent_P144|series_source": 2
+  },
+  "links_by_relation": {
+    "parent_P144|source": 369,
+    "own": 187,
+    "series_source": 114,
+    "parent_P144|series_source": 106,
+    "parent_P179|series": 83,
+    "parent_P8345": 42,
+    "source": 3,
+    "parent_P144": 3,
+    "parent_P361": 1
+  },
+  "titles_losing_every_article": 5,
+  "titles_whose_signal_becomes_zero": 0,
+  "titles_with_views_before_and_after_the_rule": {
+    "before": 252,
+    "after": 252
+  },
+  "articles_shared_by_3_or_more_cold_titles": {
+    "en:Re:Zero": 3,
+    "ja:Re:ゼロから始める異世界生活": 3,
+    "zh:Re:從零開始的異世界生活": 3
+  }
+}

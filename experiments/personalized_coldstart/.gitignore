@@ -1,0 +1,5 @@
+artifacts/
+__pycache__/
+*.pyc
+# Per-user id lists are rebuilt from the rule (make_split_manifest.py --verify), never committed.
+manifest/users_*.csv
