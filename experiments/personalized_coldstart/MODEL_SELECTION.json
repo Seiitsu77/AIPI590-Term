@@ -1,0 +1,311 @@
+{
+  "written_utc": "2026-10-10T22:32:17+00:00",
+  "status": "models frozen; the final test has not been run",
+  "selection_rule": "highest mean user NDCG@10 on validation at four decimals, ties to the smaller C",
+  "c_grid": [
+    0.01,
+    0.1,
+    1.0,
+    10.0
+  ],
+  "chosen_c": {
+    "M0b": 0.01,
+    "M1": 1.0,
+    "M2": 0.1
+  },
+  "validation_search": {
+    "M0b": {
+      "0.01": {
+        "ndcg_at_10": 0.3381611980742647,
+        "recall_at_10": 0.4143788295706111,
+        "observed_auc": 0.5509988551768801,
+        "item_coverage_at_10": 0.10101010101010101
+      },
+      "0.1": {
+        "ndcg_at_10": 0.3381611980742647,
+        "recall_at_10": 0.4143788295706111,
+        "observed_auc": 0.5525997400096462,
+        "item_coverage_at_10": 0.10101010101010101
+      },
+      "1.0": {
+        "ndcg_at_10": 0.33482349846567105,
+        "recall_at_10": 0.4143788295706111,
+        "observed_auc": 0.5470821844548023,
+        "item_coverage_at_10": 0.10101010101010101
+      },
+      "10.0": {
+        "ndcg_at_10": 0.33482349846567105,
+        "recall_at_10": 0.4143788295706111,
+        "observed_auc": 0.5470821844548023,
+        "item_coverage_at_10": 0.10101010101010101
+      }
+    },
+    "M1": {
+      "0.01": {
+        "ndcg_at_10": 0.3927955002937771,
+        "recall_at_10": 0.4979704458540338,
+        "observed_auc": 0.6652693277126366,
+        "item_coverage_at_10": 0.8585858585858586
+      },
+      "0.1": {
+        "ndcg_at_10": 0.39393592701567226,
+        "recall_at_10": 0.4991803588677345,
+        "observed_auc": 0.6630484291468861,
+        "item_coverage_at_10": 0.8484848484848485
+      },
+      "1.0": {
+        "ndcg_at_10": 0.39416684128120294,
+        "recall_at_10": 0.49935613366891374,
+        "observed_auc": 0.6629749815937497,
+        "item_coverage_at_10": 0.8484848484848485
+      },
+      "10.0": {
+        "ndcg_at_10": 0.39417018668778875,
+        "recall_at_10": 0.49936446700224696,
+        "observed_auc": 0.6629613722360775,
+        "item_coverage_at_10": 0.8484848484848485
+      }
+    },
+    "M2": {
+      "0.01": {
+        "ndcg_at_10": 0.463250098665095,
+        "recall_at_10": 0.5705816537831176,
+        "observed_auc": 0.6335736578882223,
+        "item_coverage_at_10": 0.48484848484848486
+      },
+      "0.1": {
+        "ndcg_at_10": 0.4642628295390723,
+        "recall_at_10": 0.571560175390527,
+        "observed_auc": 0.6338965325914412,
+        "item_coverage_at_10": 0.48484848484848486
+      },
+      "1.0": {
+        "ndcg_at_10": 0.4642934267198685,
+        "recall_at_10": 0.5713961592122607,
+        "observed_auc": 0.6337673888848339,
+        "item_coverage_at_10": 0.48484848484848486
+      },
+      "10.0": {
+        "ndcg_at_10": 0.46431110052437163,
+        "recall_at_10": 0.571434254450356,
+        "observed_auc": 0.6337365676185238,
+        "item_coverage_at_10": 0.48484848484848486
+      }
+    }
+  },
+  "validation_at_chosen_c": {
+    "M0b": {
+      "ndcg_at_10": 0.3381611980742647,
+      "recall_at_10": 0.4143788295706111,
+      "observed_auc": 0.5509988551768801,
+      "item_coverage_at_10": 0.10101010101010101
+    },
+    "M1": {
+      "ndcg_at_10": 0.39416684128120294,
+      "recall_at_10": 0.49935613366891374,
+      "observed_auc": 0.6629749815937497,
+      "item_coverage_at_10": 0.8484848484848485
+    },
+    "M2": {
+      "ndcg_at_10": 0.4642628295390723,
+      "recall_at_10": 0.571560175390527,
+      "observed_auc": 0.6338965325914412,
+      "item_coverage_at_10": 0.48484848484848486
+    },
+    "M0a_raw": {
+      "ndcg_at_10": 0.33538076044753523,
+      "recall_at_10": 0.3727961924615822,
+      "observed_auc": 0.5739241328547428,
+      "item_coverage_at_10": 0.10101010101010101
+    },
+    "M0a_norm": {
+      "ndcg_at_10": 0.3419212564778873,
+      "recall_at_10": 0.379112294480805,
+      "observed_auc": 0.5802999963363897,
+      "item_coverage_at_10": 0.10101010101010101
+    }
+  },
+  "validation_note": "scores of the models fitted on cold_train only; the frozen models below were refitted on cold_train + cold_val and have no held-out development score",
+  "validation_set": {
+    "users": 20000,
+    "titles": 99,
+    "pairs": 1980000,
+    "positives": 74636
+  },
+  "frozen_models": {
+    "M0b": {
+      "features": [
+        "al_pop_pct",
+        "al_trend_pct",
+        "al_growth_pct",
+        "wiki_views_pct",
+        "al_missing",
+        "al_growth_missing",
+        "wiki_missing"
+      ],
+      "C": 0.01,
+      "scaler_mean": [
+        0.5102880669397459,
+        0.5102880669397459,
+        0.5102880709869749,
+        0.5102880687180738,
+        0.12345679012345678,
+        0.18518518518518517,
+        0.3045267489711934
+      ],
+      "scaler_scale": [
+        0.27022312002718757,
+        0.27022312002718757,
+        0.260543500642334,
+        0.24073265673737843,
+        0.3289608048018328,
+        0.38844772154450063,
+        0.4602067015290294
+      ],
+      "coefficients": [
+        -0.4222483878821974,
+        1.6162539389490205,
+        -0.30314830277905086,
+        0.238170929249829,
+        -1.086298683053595,
+        -0.9019316838883321,
+        -0.06196864732519408
+      ],
+      "intercept": -4.8374266220344095,
+      "lbfgs_iterations": 15,
+      "fit_pairs": 4860000,
+      "fit_positives": 192826
+    },
+    "M1": {
+      "features": [
+        "content_dot",
+        "content_cos",
+        "prequel_dot",
+        "has_warm_prequel",
+        "content_norm",
+        "prequel_log_pos"
+      ],
+      "C": 1.0,
+      "scaler_mean": [
+        0.057237413474588085,
+        0.12386051538532881,
+        0.017913394995068367,
+        0.2839506172839506,
+        0.09720463511139277,
+        2.009135400807416
+      ],
+      "scaler_scale": [
+        0.06723681081086133,
+        0.10918304459965705,
+        0.08055763401925409,
+        0.450913144882708,
+        0.02219404192536406,
+        3.577700034419781
+      ],
+      "coefficients": [
+        -0.40248565847324974,
+        1.139197475137229,
+        0.3849753069116838,
+        -2.296358527166095,
+        0.7905395834890105,
+        1.409720116161774
+      ],
+      "intercept": -4.405184827156348,
+      "lbfgs_iterations": 19,
+      "fit_pairs": 4860000,
+      "fit_positives": 192826
+    },
+    "M2": {
+      "features": [
+        "content_dot",
+        "content_cos",
+        "prequel_dot",
+        "has_warm_prequel",
+        "content_norm",
+        "prequel_log_pos",
+        "al_pop_pct",
+        "al_trend_pct",
+        "al_growth_pct",
+        "wiki_views_pct",
+        "al_missing",
+        "al_growth_missing",
+        "wiki_missing"
+      ],
+      "C": 0.1,
+      "scaler_mean": [
+        0.057237413474588085,
+        0.12386051538532881,
+        0.017913394995068367,
+        0.2839506172839506,
+        0.09720463511139277,
+        2.009135400807416,
+        0.5102880669397459,
+        0.5102880669397459,
+        0.5102880709869749,
+        0.5102880687180738,
+        0.12345679012345678,
+        0.18518518518518517,
+        0.3045267489711934
+      ],
+      "scaler_scale": [
+        0.06723681081086133,
+        0.10918304459965705,
+        0.08055763401925409,
+        0.450913144882708,
+        0.02219404192536406,
+        3.577700034419781,
+        0.27022312002718757,
+        0.27022312002718757,
+        0.260543500642334,
+        0.24073265673737843,
+        0.3289608048018328,
+        0.38844772154450063,
+        0.4602067015290294
+      ],
+      "coefficients": [
+        -0.24276607339308606,
+        0.9345362629597769,
+        0.3522551145361024,
+        -0.6112579128353257,
+        0.3497963600763354,
+        -0.15337248837949874,
+        -0.5391392283626227,
+        1.3280058538131847,
+        -0.3671768600287509,
+        0.4225870341795255,
+        -0.7820156721924043,
+        -0.7584107063775005,
+        0.015226141933322517
+      ],
+      "intercept": -5.222118231171793,
+      "lbfgs_iterations": 27,
+      "fit_pairs": 4860000,
+      "fit_positives": 192826
+    }
+  },
+  "baselines": {
+    "M0a_raw": "rank by al_pop; titles without the AniList signal last",
+    "M0a_norm": "rank by al_pop_pct; titles without the AniList signal last"
+  },
+  "inputs": {
+    "manifest_sha256": "91376fe99c02b696543f52e416f79698a42aa23510302a7a44b023246f1aa0ba",
+    "als_experiment.npz": "efa437093dbf3af7788e1ee0e26c6b563fce417a52713a083263b04578fe9e62",
+    "item_features.parquet": "5bc97af2bba2dabd4a55ff4f132aee3009ee09568d37a5426d0bc9eeb805f025",
+    "item_vectors.npz": "8865e0570638ce4fe66e099d5c8c830b8cfa67da31cff3561c695bed70df5170",
+    "user_vectors.npz": "b66cbeff90b33acefe4cd7904d8d6196eee37565fa4bc425788ed8b3b8ed3ad0",
+    "day_zero.csv": "7b59f280b8842cf894c73b1cf32a93bac7875e0c13a4f1accc679e7aff729bb2"
+  },
+  "environment": {
+    "python": "3.13.15",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "pyarrow": "25.0.1",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1"
+  },
+  "code": {
+    "commit": "836016b570bb99be1a5afa699e400fa5da49e623",
+    "experiment_folder_clean": true,
+    "uncommitted": []
+  }
+}
