@@ -1,0 +1,3 @@
+# Files whose SHA-256 is pinned in the manifest must stay byte-exact on every checkout.
+manifest/* -text
+requirements.lock -text
