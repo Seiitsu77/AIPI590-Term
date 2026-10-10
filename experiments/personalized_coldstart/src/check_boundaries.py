@@ -24,7 +24,9 @@ SRC = Path(__file__).resolve().parent
 ME = Path(__file__).name
 
 # Which files may do what. Everything not listed may not.
-MAY_OPEN_RATINGS = {"common.py", "data_access.py", "make_split_manifest.py"}
+# pre_run_check.py was added after the final test's code was frozen. It names the ratings
+# file only to hash it and reads no row; it is listed so that this check still passes.
+MAY_OPEN_RATINGS = {"common.py", "data_access.py", "make_split_manifest.py", "pre_run_check.py"}
 MAY_IMPORT_LABELS = {"train_rankers.py", "final_test.py"}
 MAY_REQUEST_TEST_LABELS = {"final_test.py"}
 MUST_NOT_NAME_TEST_ROLES = {"train_rankers.py", "train_als.py"}

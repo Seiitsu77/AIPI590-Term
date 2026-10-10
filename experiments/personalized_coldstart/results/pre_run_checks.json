@@ -1,0 +1,212 @@
+{
+  "checked_utc": "2026-10-10T22:42:02+00:00",
+  "head": "45e290554076e071c02dcb3fa97e4e9d47bd8447",
+  "all_passed": true,
+  "checks": {
+    "head_is_the_model_selection_commit": {
+      "passed": true,
+      "detail": "45e290554076e071c02dcb3fa97e4e9d47bd8447"
+    },
+    "frozen_commits_are_ancestors_of_head": {
+      "passed": true,
+      "detail": {
+        "protocol": "37defa8",
+        "training_code": "836016b",
+        "model_selection": "45e2905"
+      }
+    },
+    "experiment_folder_has_no_uncommitted_change": {
+      "passed": true,
+      "detail": ""
+    },
+    "only_gitattributes_and_model_selection_changed_since_the_freeze": {
+      "passed": true,
+      "detail": [
+        "experiments/personalized_coldstart/.gitattributes",
+        "experiments/personalized_coldstart/MODEL_SELECTION.json"
+      ]
+    },
+    "models_were_trained_from_the_training_code_commit": {
+      "passed": true,
+      "detail": "836016b570bb99be1a5afa699e400fa5da49e623"
+    },
+    "manifest_is_frozen": {
+      "passed": true,
+      "detail": "frozen"
+    },
+    "manifest_leakage_checks_passed": {
+      "passed": true,
+      "detail": {
+        "every_rated_title_has_exactly_one_role": true,
+        "cold_roles_have_the_expected_number_of_titles": {
+          "cold_train": true,
+          "cold_val": true,
+          "cold_test": true,
+          "cold_test_late": true
+        },
+        "latest_premiere_year_in_als_training": 2018,
+        "no_title_from_2019_on_in_als_training": true,
+        "no_undated_title_in_als_training": true,
+        "als_training_titles_overlapping_kept_out_titles": 0,
+        "cold_roles_pairwise_disjoint": true,
+        "development_and_test_users_disjoint": true,
+        "late_test_users_are_from_the_test_group_only": true,
+        "warm_history_test_users_with_a_positive_equal_the_eligible_test_users": true
+      }
+    },
+    "manifest_digest_equals_the_one_the_models_were_trained_with": {
+      "passed": true,
+      "detail": "91376fe99c02b696543f52e416f79698a42aa23510302a7a44b023246f1aa0ba"
+    },
+    "manifest_rebuilt_from_the_rule_matches": {
+      "passed": true,
+      "detail": "\"titles_by_role\",\n  \"als_training_set\",\n  \"users\",\n  \"warm_history_users\",\n  \"leakage_checks\",\n  \"franchise_overlap\",\n  \"files\",\n  \"alt_data_inputs\",\n  \"derived_files\"\n ],\n \"sections_differing\": []\n}"
+    },
+    "raw_input_digests": {
+      "passed": true,
+      "detail": {
+        "ratings": "b60519348a90bd5e",
+        "mal_catalog": "6e6d723f3e021e08",
+        "serving_catalog": "4b11cf3e5f3d015e"
+      }
+    },
+    "alt_data_input_digests": {
+      "passed": true,
+      "detail": [
+        "anilist_items",
+        "anilist_meta",
+        "anilist_trends",
+        "wiki_extra",
+        "wiki_index",
+        "wiki_map",
+        "wiki_views"
+      ]
+    },
+    "derived_file_digests": {
+      "passed": true,
+      "detail": [
+        "day_zero.csv",
+        "wikipedia_article_audit.csv",
+        "wikipedia_article_audit.json"
+      ]
+    },
+    "item_roles_and_user_list_digests": {
+      "passed": true,
+      "detail": [
+        "item_roles.csv",
+        "users_cold_test.csv",
+        "users_cold_test_late.csv",
+        "users_cold_train.csv",
+        "users_cold_val.csv"
+      ]
+    },
+    "model_and_feature_artifact_digests": {
+      "passed": true,
+      "detail": {
+        "als_experiment.npz": "efa437093dbf3af7",
+        "item_features.parquet": "5bc97af2bba2dabd",
+        "item_vectors.npz": "8865e0570638ce4f",
+        "user_vectors.npz": "b66cbeff90b33ace",
+        "day_zero.csv": "7b59f280b8842cf8"
+      }
+    },
+    "als_is_the_experimental_model_trained_on_warm_titles": {
+      "passed": true,
+      "detail": {
+        "role": "experiment",
+        "latest_premiere_year": 2018,
+        "positives": 29065457
+      }
+    },
+    "als_digest_in_feature_checks_matches": {
+      "passed": true,
+      "detail": "efa437093dbf3af7"
+    },
+    "feature_digests_in_feature_checks_match": {
+      "passed": true,
+      "detail": [
+        "day_zero.csv",
+        "item_features.parquet",
+        "item_vectors.npz",
+        "user_vectors.npz"
+      ]
+    },
+    "no_attention_data_later_than_the_cutoff": {
+      "passed": true,
+      "detail": {
+        "cutoff_day": -2,
+        "latest_anilist_japan_day_read": -2,
+        "latest_wikipedia_utc_day_read": -2,
+        "anilist_window": [
+          -30,
+          -2
+        ],
+        "growth_reference_window": [
+          -37,
+          -30
+        ],
+        "wikipedia_window": [
+          -31,
+          -2
+        ]
+      }
+    },
+    "content_mapper_trained_on_warm_titles_only": {
+      "passed": true,
+      "detail": 6806
+    },
+    "user_vectors_built_from_warm_positives_only": {
+      "passed": true,
+      "detail": {
+        "built_from": "positives on warm titles only",
+        "users": 288960,
+        "fold_in_vs_trained_mean_cosine": 0.9997,
+        "users_compared": 1883
+      }
+    },
+    "feature_rows_carry_the_manifest_roles": {
+      "passed": true,
+      "detail": {
+        "cold_train": 144,
+        "cold_val": 99,
+        "cold_test": 67,
+        "cold_test_late": 48
+      }
+    },
+    "frozen_models_use_only_registered_features": {
+      "passed": true,
+      "detail": {
+        "M0b": 0.01,
+        "M1": 1.0,
+        "M2": 0.1
+      }
+    },
+    "boundary_checks": {
+      "passed": true,
+      "detail": [
+        "PASS  ratings_file: only ['common.py', 'data_access.py', 'ma",
+        "PASS  labels_import: only ['final_test.py', 'train_rankers.p",
+        "PASS  test_label_request: only ['final_test.py'] may pass fi",
+        "PASS  test_roles_in_development: ['train_als.py', 'train_ran",
+        "PASS  interaction_file_reads: no other file names a user-int",
+        "PASS  test_labels_refused_without_final_test_flag: labels(te",
+        "PASS  final_test_gate: informational: whether the final test"
+      ]
+    },
+    "final_test_gate_open_and_not_yet_run": {
+      "passed": true,
+      "detail": "model selection is committed and the final test has not been run"
+    },
+    "library_versions_equal_those_used_for_training": {
+      "passed": true,
+      "detail": {
+        "python": "3.13.15",
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "pyarrow": "25.0.1",
+        "scipy": "1.18.1",
+        "scikit-learn": "1.9.1"
+      }
+    }
+  }
+}

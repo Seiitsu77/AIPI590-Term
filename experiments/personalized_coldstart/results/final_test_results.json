@@ -1,0 +1,620 @@
+{
+  "run_utc": "2026-10-10T22:42:06+00:00",
+  "code": {
+    "commit": "45e290554076e071c02dcb3fa97e4e9d47bd8447",
+    "experiment_folder_clean": true,
+    "uncommitted": []
+  },
+  "starts_before_this_one": [],
+  "primary": {
+    "users": 24284,
+    "titles": 67,
+    "positives": 79337,
+    "users_with_liked_and_disliked": 6116,
+    "metrics": {
+      "M0a_raw": {
+        "ndcg_at_10": 0.4931415249300447,
+        "recall_at_10": 0.6878483034705626,
+        "observed_auc": 0.7385886668878938,
+        "item_coverage_at_10": 0.14925373134328357
+      },
+      "M0a_norm": {
+        "ndcg_at_10": 0.5061693347182366,
+        "recall_at_10": 0.6447413204992452,
+        "observed_auc": 0.8068318447561762,
+        "item_coverage_at_10": 0.14925373134328357
+      },
+      "M0b": {
+        "ndcg_at_10": 0.5404271061922106,
+        "recall_at_10": 0.68158840873473,
+        "observed_auc": 0.7748898948721792,
+        "item_coverage_at_10": 0.14925373134328357
+      },
+      "M1": {
+        "ndcg_at_10": 0.4989716793477605,
+        "recall_at_10": 0.649860737295837,
+        "observed_auc": 0.7114211142776786,
+        "item_coverage_at_10": 0.9253731343283582
+      },
+      "M2": {
+        "ndcg_at_10": 0.572100342313764,
+        "recall_at_10": 0.7437726788505937,
+        "observed_auc": 0.794539933008403,
+        "item_coverage_at_10": 0.6268656716417911
+      }
+    },
+    "comparisons": {
+      "H1_primary": {
+        "delta": 0.07312866296600366,
+        "user_bootstrap_ci95": [
+          0.0709639514999381,
+          0.07534643887533836
+        ],
+        "leave_one_title_out": {
+          "min_delta": 0.04802054895332064,
+          "max_delta": 0.11000393067496483,
+          "deletions_with_delta_at_or_below_zero": 0,
+          "most_influential_title": 39587
+        },
+        "evidence_level": "A",
+        "title_bootstrap_interval95": [
+          0.012205148064154424,
+          0.16301950010476593
+        ]
+      },
+      "secondary_vs_M0a_raw": {
+        "delta": 0.07895881738371938,
+        "user_bootstrap_ci95": [
+          0.07654866526111179,
+          0.08120667498148226
+        ],
+        "leave_one_title_out": {
+          "min_delta": 0.050180643169258465,
+          "max_delta": 0.12093772815491571,
+          "deletions_with_delta_at_or_below_zero": 0,
+          "most_influential_title": 39587
+        },
+        "evidence_level": "A",
+        "title_bootstrap_interval95": [
+          0.012143229155955877,
+          0.1951190989911398
+        ]
+      },
+      "secondary_vs_M0a_norm": {
+        "delta": 0.06593100759552757,
+        "user_bootstrap_ci95": [
+          0.06386753857516586,
+          0.06792320920983781
+        ],
+        "leave_one_title_out": {
+          "min_delta": 0.05643118574461892,
+          "max_delta": 0.0884760750975202,
+          "deletions_with_delta_at_or_below_zero": 0,
+          "most_influential_title": 40591
+        },
+        "evidence_level": "A",
+        "title_bootstrap_interval95": [
+          5.6720002870286907e-05,
+          0.16979153064716618
+        ]
+      },
+      "secondary_vs_M0b": {
+        "delta": 0.03167323612155358,
+        "user_bootstrap_ci95": [
+          0.02882936241365578,
+          0.03456704507635092
+        ],
+        "leave_one_title_out": {
+          "min_delta": 0.023872401827769507,
+          "max_delta": 0.09028837604460255,
+          "deletions_with_delta_at_or_below_zero": 0,
+          "most_influential_title": 40591
+        },
+        "evidence_level": "A",
+        "title_bootstrap_interval95": [
+          -0.024506731732384043,
+          0.16173868157694957
+        ]
+      }
+    },
+    "sensitivity": {
+      "top_10_most_liked_removed": {
+        "titles": 57,
+        "users": 12470,
+        "metrics": {
+          "M0a_raw": {
+            "ndcg_at_10": 0.375805945160889,
+            "recall_at_10": 0.5663353138730594,
+            "observed_auc": 0.6916634769947941,
+            "item_coverage_at_10": 0.17543859649122806
+          },
+          "M0a_norm": {
+            "ndcg_at_10": 0.41491165031728755,
+            "recall_at_10": 0.7459124846844889,
+            "observed_auc": 0.7460288841456902,
+            "item_coverage_at_10": 0.17543859649122806
+          },
+          "M0b": {
+            "ndcg_at_10": 0.41483647589513506,
+            "recall_at_10": 0.6875364073777676,
+            "observed_auc": 0.7339270189205369,
+            "item_coverage_at_10": 0.17543859649122806
+          },
+          "M1": {
+            "ndcg_at_10": 0.4039534828311252,
+            "recall_at_10": 0.5882479516005003,
+            "observed_auc": 0.583660776811826,
+            "item_coverage_at_10": 0.9298245614035088
+          },
+          "M2": {
+            "ndcg_at_10": 0.48354881867825816,
+            "recall_at_10": 0.712557182587674,
+            "observed_auc": 0.6904762806001981,
+            "item_coverage_at_10": 0.631578947368421
+          }
+        },
+        "comparisons": {
+          "H1_primary": {
+            "delta": 0.07959533584713288,
+            "user_bootstrap_ci95": [
+              0.07529948968874595,
+              0.08381908448383002
+            ]
+          },
+          "secondary_vs_M0a_raw": {
+            "delta": 0.10774287351736916,
+            "user_bootstrap_ci95": [
+              0.10260147586039213,
+              0.1129590408384816
+            ]
+          },
+          "secondary_vs_M0a_norm": {
+            "delta": 0.06863716836097063,
+            "user_bootstrap_ci95": [
+              0.06414672851179817,
+              0.0729247981179723
+            ]
+          },
+          "secondary_vs_M0b": {
+            "delta": 0.06871234278312303,
+            "user_bootstrap_ci95": [
+              0.06519710322795816,
+              0.07219236702927848
+            ]
+          }
+        },
+        "removed_titles": [
+          40591,
+          39587,
+          40221,
+          39547,
+          40839,
+          40496,
+          40540,
+          40716,
+          38555,
+          41353
+        ]
+      },
+      "titles_with_anilist_signal": {
+        "titles": 62,
+        "users": 24282,
+        "metrics": {
+          "M0a_raw": {
+            "ndcg_at_10": 0.49318214279718336,
+            "recall_at_10": 0.6879049584663183,
+            "observed_auc": 0.7385284558138924,
+            "item_coverage_at_10": 0.16129032258064516
+          },
+          "M0a_norm": {
+            "ndcg_at_10": 0.5062110256279407,
+            "recall_at_10": 0.6447944249651457,
+            "observed_auc": 0.8067948216162103,
+            "item_coverage_at_10": 0.16129032258064516
+          },
+          "M0b": {
+            "ndcg_at_10": 0.5404716187617017,
+            "recall_at_10": 0.6816445481308864,
+            "observed_auc": 0.774844001142265,
+            "item_coverage_at_10": 0.16129032258064516
+          },
+          "M1": {
+            "ndcg_at_10": 0.4990794234449694,
+            "recall_at_10": 0.6500492340198281,
+            "observed_auc": 0.7114251555362463,
+            "item_coverage_at_10": 0.9354838709677419
+          },
+          "M2": {
+            "ndcg_at_10": 0.5721474636663968,
+            "recall_at_10": 0.7438339400876295,
+            "observed_auc": 0.7944902546265907,
+            "item_coverage_at_10": 0.6774193548387096
+          }
+        },
+        "comparisons": {
+          "H1_primary": {
+            "delta": 0.07306804022142752,
+            "user_bootstrap_ci95": [
+              0.07083547514027079,
+              0.07533620215445679
+            ]
+          },
+          "secondary_vs_M0a_raw": {
+            "delta": 0.07896532086921346,
+            "user_bootstrap_ci95": [
+              0.07645117525820103,
+              0.08125999270669117
+            ]
+          },
+          "secondary_vs_M0a_norm": {
+            "delta": 0.06593643803845613,
+            "user_bootstrap_ci95": [
+              0.06391466581038795,
+              0.06796954648890628
+            ]
+          },
+          "secondary_vs_M0b": {
+            "delta": 0.03167584490469513,
+            "user_bootstrap_ci95": [
+              0.029015161639494833,
+              0.034598669140781246
+            ]
+          }
+        }
+      },
+      "new_titles": {
+        "titles": 45,
+        "users": 16243,
+        "metrics": {
+          "M0a_raw": {
+            "ndcg_at_10": 0.41077048018108325,
+            "recall_at_10": 0.640506317977395,
+            "observed_auc": 0.5884104280568689,
+            "item_coverage_at_10": 0.2222222222222222
+          },
+          "M0a_norm": {
+            "ndcg_at_10": 0.49857987637113244,
+            "recall_at_10": 0.7821153790670301,
+            "observed_auc": 0.7008072596150927,
+            "item_coverage_at_10": 0.2222222222222222
+          },
+          "M0b": {
+            "ndcg_at_10": 0.46520557472871327,
+            "recall_at_10": 0.7446531175511037,
+            "observed_auc": 0.6532744342257777,
+            "item_coverage_at_10": 0.2222222222222222
+          },
+          "M1": {
+            "ndcg_at_10": 0.3558435284849092,
+            "recall_at_10": 0.5627205092542173,
+            "observed_auc": 0.5518726234527116,
+            "item_coverage_at_10": 1.0
+          },
+          "M2": {
+            "ndcg_at_10": 0.4963048096242221,
+            "recall_at_10": 0.7861201863823722,
+            "observed_auc": 0.6499571445905916,
+            "item_coverage_at_10": 0.7111111111111111
+          }
+        },
+        "comparisons": {
+          "H1_primary": {
+            "delta": 0.14046128113931286,
+            "user_bootstrap_ci95": [
+              0.13640037764876017,
+              0.14472755765148054
+            ]
+          },
+          "secondary_vs_M0a_raw": {
+            "delta": 0.08553432944313884,
+            "user_bootstrap_ci95": [
+              0.08089414185823454,
+              0.09019036144092968
+            ]
+          },
+          "secondary_vs_M0a_norm": {
+            "delta": -0.0022750667469103912,
+            "user_bootstrap_ci95": [
+              -0.007369792233684045,
+              0.0026435424466294067
+            ]
+          },
+          "secondary_vs_M0b": {
+            "delta": 0.031099234895508854,
+            "user_bootstrap_ci95": [
+              0.02724893447016265,
+              0.034906948869476644
+            ]
+          }
+        }
+      },
+      "sequels": {
+        "titles": 22,
+        "users": 20046,
+        "metrics": {
+          "M0a_raw": {
+            "ndcg_at_10": 0.6845830538806392,
+            "recall_at_10": 0.9897223705103082,
+            "observed_auc": 0.6112138538967807,
+            "item_coverage_at_10": 0.45454545454545453
+          },
+          "M0a_norm": {
+            "ndcg_at_10": 0.7271754287715051,
+            "recall_at_10": 0.9897223705103082,
+            "observed_auc": 0.7616269344927881,
+            "item_coverage_at_10": 0.45454545454545453
+          },
+          "M0b": {
+            "ndcg_at_10": 0.7623787814024744,
+            "recall_at_10": 0.9885584350078513,
+            "observed_auc": 0.8209086532257264,
+            "item_coverage_at_10": 0.45454545454545453
+          },
+          "M1": {
+            "ndcg_at_10": 0.7159717096751316,
+            "recall_at_10": 0.9697487283576777,
+            "observed_auc": 0.621996386630533,
+            "item_coverage_at_10": 0.8181818181818182
+          },
+          "M2": {
+            "ndcg_at_10": 0.7583978531315602,
+            "recall_at_10": 0.9749999514104574,
+            "observed_auc": 0.8293956043956046,
+            "item_coverage_at_10": 0.7727272727272727
+          }
+        },
+        "comparisons": {
+          "H1_primary": {
+            "delta": 0.04242614345642852,
+            "user_bootstrap_ci95": [
+              0.04045825397654335,
+              0.04440509481541504
+            ]
+          },
+          "secondary_vs_M0a_raw": {
+            "delta": 0.07381479925092092,
+            "user_bootstrap_ci95": [
+              0.07144297432466998,
+              0.0760575060138233
+            ]
+          },
+          "secondary_vs_M0a_norm": {
+            "delta": 0.031222424360055137,
+            "user_bootstrap_ci95": [
+              0.029372352482469142,
+              0.032977489862783003
+            ]
+          },
+          "secondary_vs_M0b": {
+            "delta": -0.0039809282709143395,
+            "user_bootstrap_ci95": [
+              -0.00729185705970406,
+              -0.0005088871850335713
+            ]
+          }
+        }
+      }
+    },
+    "titles_without_any_attention_signal": [
+      {
+        "anime_id": 41638,
+        "positives": 0,
+        "mean_rank": {
+          "M0a_raw": 63.0,
+          "M0a_norm": 63.0,
+          "M0b": 63.0,
+          "M1": 54.40784055345083,
+          "M2": 64.66257618184812
+        }
+      },
+      {
+        "anime_id": 41686,
+        "positives": 1,
+        "mean_rank": {
+          "M0a_raw": 64.0,
+          "M0a_norm": 64.0,
+          "M0b": 64.0,
+          "M1": 65.92295338494482,
+          "M2": 66.73575193543074
+        }
+      },
+      {
+        "anime_id": 41951,
+        "positives": 0,
+        "mean_rank": {
+          "M0a_raw": 65.0,
+          "M0a_norm": 65.0,
+          "M0b": 65.0,
+          "M1": 49.83421182671718,
+          "M2": 64.09561851424806
+        }
+      },
+      {
+        "anime_id": 42090,
+        "positives": 0,
+        "mean_rank": {
+          "M0a_raw": 66.0,
+          "M0a_norm": 66.0,
+          "M0b": 66.0,
+          "M1": 46.41315269313128,
+          "M2": 62.853319057815845
+        }
+      },
+      {
+        "anime_id": 42145,
+        "positives": 1,
+        "mean_rank": {
+          "M0a_raw": 67.0,
+          "M0a_norm": 67.0,
+          "M0b": 67.0,
+          "M1": 42.68333058804151,
+          "M2": 62.86686707296985
+        }
+      }
+    ]
+  },
+  "auxiliary_warm_history_users": {
+    "membership": "test group, at least five warm positives; no cold_test label decides who is in",
+    "users": 96354,
+    "share_with_a_liked_title": 0.2520289764825539,
+    "metrics": {
+      "M0a_raw": {
+        "ndcg_at_10": 0.12428595378916502,
+        "recall_at_10": 0.17335770389894697,
+        "item_coverage_at_10": 0.14925373134328357,
+        "disliked_titles_in_top_10_per_user": 0.06360919110779002
+      },
+      "M0a_norm": {
+        "ndcg_at_10": 0.1275693393558924,
+        "recall_at_10": 0.16249349510143501,
+        "item_coverage_at_10": 0.14925373134328357,
+        "disliked_titles_in_top_10_per_user": 0.04216742428959877
+      },
+      "M0b": {
+        "ndcg_at_10": 0.13620329043705132,
+        "recall_at_10": 0.1717800290357866,
+        "item_coverage_at_10": 0.14925373134328357,
+        "disliked_titles_in_top_10_per_user": 0.05922950785644602
+      },
+      "M1": {
+        "ndcg_at_10": 0.12575532163979716,
+        "recall_at_10": 0.16378373647686767,
+        "item_coverage_at_10": 0.9253731343283582,
+        "disliked_titles_in_top_10_per_user": 0.05423749922162027
+      },
+      "M2": {
+        "ndcg_at_10": 0.14418586371865671,
+        "recall_at_10": 0.1874522669864024,
+        "item_coverage_at_10": 0.6716417910447762,
+        "disliked_titles_in_top_10_per_user": 0.0605786993793719
+      }
+    },
+    "comparisons": {
+      "H1_primary": {
+        "delta": 0.01843054207885955,
+        "user_bootstrap_ci95": [
+          0.01781248764669381,
+          0.019021691111833768
+        ]
+      },
+      "secondary_vs_M0a_raw": {
+        "delta": 0.019899909929491675,
+        "user_bootstrap_ci95": [
+          0.019265196373614204,
+          0.02053219740520785
+        ]
+      },
+      "secondary_vs_M0a_norm": {
+        "delta": 0.016616524362764305,
+        "user_bootstrap_ci95": [
+          0.016048420965161268,
+          0.017149938659994122
+        ]
+      },
+      "secondary_vs_M0b": {
+        "delta": 0.007982573281605407,
+        "user_bootstrap_ci95": [
+          0.007285752330601947,
+          0.008694551607814207
+        ]
+      }
+    },
+    "note": "NDCG and recall here equal the conditional values times the share of users with a liked title, because the others score 0 under every model"
+  },
+  "supplementary_cold_test_late": {
+    "users": 13280,
+    "titles": 48,
+    "positives": 30829,
+    "users_with_liked_and_disliked": 2355,
+    "metrics": {
+      "M0a_raw": {
+        "ndcg_at_10": 0.4372724893176081,
+        "recall_at_10": 0.5690196292905588,
+        "observed_auc": 0.640380953097166,
+        "item_coverage_at_10": 0.20833333333333334
+      },
+      "M0a_norm": {
+        "ndcg_at_10": 0.4372724893176081,
+        "recall_at_10": 0.5690196292905588,
+        "observed_auc": 0.640380953097166,
+        "item_coverage_at_10": 0.20833333333333334
+      },
+      "M0b": {
+        "ndcg_at_10": 0.45629206564865343,
+        "recall_at_10": 0.6026738708417374,
+        "observed_auc": 0.6317495420194785,
+        "item_coverage_at_10": 0.20833333333333334
+      },
+      "M1": {
+        "ndcg_at_10": 0.35381690523748227,
+        "recall_at_10": 0.6089221563355386,
+        "observed_auc": 0.6591382064910611,
+        "item_coverage_at_10": 0.9375
+      },
+      "M2": {
+        "ndcg_at_10": 0.49968261987178764,
+        "recall_at_10": 0.6776393663057804,
+        "observed_auc": 0.680689333176784,
+        "item_coverage_at_10": 0.7708333333333334
+      }
+    },
+    "comparisons": {
+      "H1_primary": {
+        "delta": 0.1458657146343054,
+        "user_bootstrap_ci95": [
+          0.14191455775718925,
+          0.14974777187620247
+        ],
+        "leave_one_title_out": {
+          "min_delta": 0.08235600373737928,
+          "max_delta": 0.16200582073639236,
+          "deletions_with_delta_at_or_below_zero": 0,
+          "most_influential_title": 40776
+        },
+        "evidence_level": "A"
+      },
+      "secondary_vs_M0a_raw": {
+        "delta": 0.06241013055417952,
+        "user_bootstrap_ci95": [
+          0.058104394301383186,
+          0.06698047488285104
+        ],
+        "leave_one_title_out": {
+          "min_delta": 0.04001488715403956,
+          "max_delta": 0.09374079198523028,
+          "deletions_with_delta_at_or_below_zero": 0,
+          "most_influential_title": 40776
+        },
+        "evidence_level": "A"
+      },
+      "secondary_vs_M0a_norm": {
+        "delta": 0.06241013055417952,
+        "user_bootstrap_ci95": [
+          0.058104394301383186,
+          0.06698047488285104
+        ],
+        "leave_one_title_out": {
+          "min_delta": 0.04001488715403956,
+          "max_delta": 0.09374079198523028,
+          "deletions_with_delta_at_or_below_zero": 0,
+          "most_influential_title": 40776
+        },
+        "evidence_level": "A"
+      },
+      "secondary_vs_M0b": {
+        "delta": 0.043390554223134266,
+        "user_bootstrap_ci95": [
+          0.039033821669523384,
+          0.04770556205642456
+        ],
+        "leave_one_title_out": {
+          "min_delta": 0.03560574180477222,
+          "max_delta": 0.09330978545976665,
+          "deletions_with_delta_at_or_below_zero": 0,
+          "most_influential_title": 40776
+        },
+        "evidence_level": "A"
+      }
+    }
+  }
+}
