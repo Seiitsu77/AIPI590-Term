@@ -1,0 +1,628 @@
+{
+  "ratings_file": {
+    "path": "C:\\Study\\Toy project\\archive\\rating_complete.csv",
+    "bytes": 817897580,
+    "sha256": "b60519348a90bd5e02c25355b374f7ca055a0637a237f0e163447953b13ffaa0",
+    "header": "user_id,anime_id,rating",
+    "has_timestamp_column": false,
+    "rows": 57633278,
+    "users": 310059,
+    "items": 16872,
+    "duplicate_user_item_pairs": 0,
+    "rating_counts": {
+      "1": 333419,
+      "2": 405556,
+      "3": 696048,
+      "4": 1455102,
+      "5": 3436250,
+      "6": 6849293,
+      "7": 13325549,
+      "8": 14642156,
+      "9": 9773857,
+      "10": 6716048
+    },
+    "rows_in_catalog": 56726861,
+    "positives_in_catalog": 30875410,
+    "negatives_in_catalog": 6054274
+  },
+  "definitions": {
+    "positive": "rating >= 8",
+    "negative": "rating <= 5",
+    "warm_before": "2019-01-01",
+    "split": {
+      "cold_train": [
+        "2019-01-01",
+        "2019-09-30"
+      ],
+      "cold_val": [
+        "2019-10-01",
+        "2020-03-31"
+      ],
+      "cold_test": [
+        "2020-04-01",
+        "2020-09-30"
+      ],
+      "cold_censored": [
+        "2020-10-01",
+        "2020-12-31"
+      ]
+    }
+  },
+  "items_by_role": {
+    "cold_censored": {
+      "items": 48,
+      "items_with_positive": 47,
+      "ratings": 194422,
+      "positives": 92865,
+      "negatives": 22532
+    },
+    "cold_test": {
+      "items": 67,
+      "items_with_positive": 64,
+      "ratings": 458369,
+      "positives": 239586,
+      "negatives": 51673
+    },
+    "cold_train": {
+      "items": 144,
+      "items_with_positive": 139,
+      "ratings": 1285545,
+      "positives": 754176,
+      "negatives": 119910
+    },
+    "cold_val": {
+      "items": 99,
+      "items_with_positive": 92,
+      "ratings": 657836,
+      "positives": 336959,
+      "negatives": 67948
+    },
+    "post_cutoff_other": {
+      "items": 845,
+      "items_with_positive": 761,
+      "ratings": 772190,
+      "positives": 385936,
+      "negatives": 93456
+    },
+    "undated": {
+      "items": 130,
+      "items_with_positive": 125,
+      "ratings": 2671,
+      "positives": 431,
+      "negatives": 1501
+    },
+    "warm": {
+      "items": 14217,
+      "items_with_positive": 14041,
+      "ratings": 53355828,
+      "positives": 29065457,
+      "negatives": 5697254
+    }
+  },
+  "candidates": {
+    "count": 358,
+    "by_min_positives": {
+      ">=1": 342,
+      ">=10": 304,
+      ">=50": 279,
+      ">=100": 256,
+      ">=500": 186,
+      ">=1000": 157,
+      ">=5000": 78
+    },
+    "by_min_negatives": {
+      ">=1": 351,
+      ">=10": 318,
+      ">=50": 288,
+      ">=100": 273
+    },
+    "positives": {
+      "min": 0,
+      "p10": 2.0,
+      "p25": 75.5,
+      "median": 596.0,
+      "p75": 4195.25,
+      "p90": 10164.2,
+      "max": 66430,
+      "mean": 3976.5
+    },
+    "negatives": {
+      "min": 0,
+      "p10": 6.0,
+      "p25": 106.5,
+      "median": 383.5,
+      "p75": 960.75,
+      "p90": 1903.9000000000003,
+      "max": 6024,
+      "mean": 732.02
+    },
+    "unique_users_per_item": {
+      "min": 1,
+      "p10": 15.0,
+      "p25": 501.0,
+      "median": 2276.5,
+      "p75": 9755.5,
+      "p90": 19189.600000000006,
+      "max": 77999,
+      "mean": 7251.88
+    },
+    "positive_share_of_ratings": 0.5483,
+    "top10_share_of_positives": 0.3262,
+    "sequel_share_of_items": 0.3212,
+    "sequel_share_of_positives": 0.3767,
+    "with_anilist_id": 339,
+    "anilist_format": {
+      "TV": 259,
+      "TV_SHORT": 65,
+      "no AniList entry": 19,
+      "ONA": 15
+    },
+    "mal_ids_split_across_anilist_entries": 0,
+    "premiere_date_gap_anilist_minus_mal": {
+      "same_day": 331,
+      "within_1_day": 3,
+      "2_to_7_days": 2,
+      "more_than_7_days": 3,
+      "anilist_earlier": 5,
+      "anilist_later": 3
+    }
+  },
+  "candidates_by_season": {
+    "2019Q1": {
+      "items": 47,
+      "items_50_pos": 38,
+      "ratings": 461823,
+      "positives": 296326,
+      "negatives": 33590,
+      "median_users": 1693.0
+    },
+    "2019Q2": {
+      "items": 56,
+      "items_50_pos": 38,
+      "ratings": 441199,
+      "positives": 260919,
+      "negatives": 41389,
+      "median_users": 1438.5
+    },
+    "2019Q3": {
+      "items": 41,
+      "items_50_pos": 33,
+      "ratings": 382523,
+      "positives": 196931,
+      "negatives": 44931,
+      "median_users": 6541.0
+    },
+    "2019Q4": {
+      "items": 55,
+      "items_50_pos": 44,
+      "ratings": 384502,
+      "positives": 198369,
+      "negatives": 40981,
+      "median_users": 2779.0
+    },
+    "2020Q1": {
+      "items": 44,
+      "items_50_pos": 38,
+      "ratings": 273334,
+      "positives": 138590,
+      "negatives": 26967,
+      "median_users": 2969.0
+    },
+    "2020Q2": {
+      "items": 43,
+      "items_50_pos": 32,
+      "ratings": 235553,
+      "positives": 128531,
+      "negatives": 22981,
+      "median_users": 1205.0
+    },
+    "2020Q3": {
+      "items": 24,
+      "items_50_pos": 20,
+      "ratings": 222816,
+      "positives": 111055,
+      "negatives": 28692,
+      "median_users": 3338.0
+    },
+    "2020Q4": {
+      "items": 48,
+      "items_50_pos": 36,
+      "ratings": 194422,
+      "positives": 92865,
+      "negatives": 22532,
+      "median_users": 1858.0
+    }
+  },
+  "users": {
+    "warm_positives_per_user": {
+      "min": 0,
+      "p10": 8.0,
+      "p25": 25.0,
+      "median": 60.0,
+      "p75": 122.0,
+      "p90": 215.0,
+      "max": 13488,
+      "mean": 93.74
+    },
+    "warm_ratings_per_user": {
+      "min": 0,
+      "p10": 10.0,
+      "p25": 40.0,
+      "median": 105.0,
+      "p75": 220.0,
+      "p90": 398.0,
+      "max": 13488,
+      "mean": 172.08
+    },
+    "with_warm_history": {
+      ">=5": 288960,
+      ">=10": 273721,
+      ">=20": 246550,
+      ">=50": 175350
+    },
+    "with_warm_history_and_1_candidate_positive": {
+      ">=5": 133118,
+      ">=10": 130988,
+      ">=20": 124690,
+      ">=50": 98750
+    },
+    "with_warm_history_and_3_candidate_positives": {
+      ">=5": 103285,
+      ">=10": 102620,
+      ">=20": 99425,
+      ">=50": 81434
+    }
+  },
+  "splits": {
+    "cold_train": {
+      "items": 144,
+      "items_with_50_positives": 109,
+      "ratings": 1285545,
+      "positives": 754176,
+      "negatives": 119910,
+      "warm>=5": {
+        "eligible_users": 127067,
+        "eligible_users_with_3_positives": 89336,
+        "eligible_users_with_pos_and_neg": 36953,
+        "positives_from_eligible": 752460,
+        "negatives_from_eligible": 112502,
+        "positives_per_eligible_user": {
+          "min": 1,
+          "p10": 1.0,
+          "p25": 2.0,
+          "median": 4.0,
+          "p75": 8.0,
+          "p90": 12.0,
+          "max": 127,
+          "mean": 5.92
+        },
+        "rated_share_of_user_item_grid": 0.06908,
+        "positive_share_of_user_item_grid": 0.04112
+      },
+      "warm>=10": {
+        "eligible_users": 125345,
+        "eligible_users_with_3_positives": 89026,
+        "eligible_users_with_pos_and_neg": 36779,
+        "positives_from_eligible": 749455,
+        "negatives_from_eligible": 112148,
+        "positives_per_eligible_user": {
+          "min": 1,
+          "p10": 1.0,
+          "p25": 2.0,
+          "median": 5.0,
+          "p75": 8.0,
+          "p90": 12.0,
+          "max": 127,
+          "mean": 5.98
+        },
+        "rated_share_of_user_item_grid": 0.06979,
+        "positive_share_of_user_item_grid": 0.04152
+      },
+      "warm>=20": {
+        "eligible_users": 119670,
+        "eligible_users_with_3_positives": 87046,
+        "eligible_users_with_pos_and_neg": 35797,
+        "positives_from_eligible": 736086,
+        "negatives_from_eligible": 110055,
+        "positives_per_eligible_user": {
+          "min": 1,
+          "p10": 1.0,
+          "p25": 2.0,
+          "median": 5.0,
+          "p75": 8.0,
+          "p90": 13.0,
+          "max": 127,
+          "mean": 6.15
+        },
+        "rated_share_of_user_item_grid": 0.07188,
+        "positive_share_of_user_item_grid": 0.04272
+      },
+      "warm>=50": {
+        "eligible_users": 95237,
+        "eligible_users_with_3_positives": 72680,
+        "eligible_users_with_pos_and_neg": 29450,
+        "positives_from_eligible": 649022,
+        "negatives_from_eligible": 94831,
+        "positives_per_eligible_user": {
+          "min": 1,
+          "p10": 1.0,
+          "p25": 3.0,
+          "median": 5.0,
+          "p75": 9.0,
+          "p90": 14.0,
+          "max": 127,
+          "mean": 6.81
+        },
+        "rated_share_of_user_item_grid": 0.07968,
+        "positive_share_of_user_item_grid": 0.04733
+      },
+      "top10_share_of_positives": 0.5935
+    },
+    "cold_val": {
+      "items": 99,
+      "items_with_50_positives": 82,
+      "ratings": 657836,
+      "positives": 336959,
+      "negatives": 67948,
+      "warm>=5": {
+        "eligible_users": 90375,
+        "eligible_users_with_3_positives": 43382,
+        "eligible_users_with_pos_and_neg": 22098,
+        "positives_from_eligible": 336364,
+        "negatives_from_eligible": 57532,
+        "positives_per_eligible_user": {
+          "min": 1,
+          "p10": 1.0,
+          "p25": 1.0,
+          "median": 2.0,
+          "p75": 5.0,
+          "p90": 8.0,
+          "max": 81,
+          "mean": 3.72
+        },
+        "rated_share_of_user_item_grid": 0.06944,
+        "positive_share_of_user_item_grid": 0.03759
+      },
+      "warm>=10": {
+        "eligible_users": 89706,
+        "eligible_users_with_3_positives": 43343,
+        "eligible_users_with_pos_and_neg": 22048,
+        "positives_from_eligible": 335487,
+        "negatives_from_eligible": 57435,
+        "positives_per_eligible_user": {
+          "min": 1,
+          "p10": 1.0,
+          "p25": 1.0,
+          "median": 2.0,
+          "p75": 5.0,
+          "p90": 8.0,
+          "max": 81,
+          "mean": 3.74
+        },
+        "rated_share_of_user_item_grid": 0.06982,
+        "positive_share_of_user_item_grid": 0.03778
+      },
+      "warm>=20": {
+        "eligible_users": 87171,
+        "eligible_users_with_3_positives": 43066,
+        "eligible_users_with_pos_and_neg": 21697,
+        "positives_from_eligible": 331593,
+        "negatives_from_eligible": 56691,
+        "positives_per_eligible_user": {
+          "min": 1,
+          "p10": 1.0,
+          "p25": 1.0,
+          "median": 2.0,
+          "p75": 5.0,
+          "p90": 8.0,
+          "max": 81,
+          "mean": 3.8
+        },
+        "rated_share_of_user_item_grid": 0.07111,
+        "positive_share_of_user_item_grid": 0.03842
+      },
+      "warm>=50": {
+        "eligible_users": 72774,
+        "eligible_users_with_3_positives": 39881,
+        "eligible_users_with_pos_and_neg": 18620,
+        "positives_from_eligible": 303891,
+        "negatives_from_eligible": 50518,
+        "positives_per_eligible_user": {
+          "min": 1,
+          "p10": 1.0,
+          "p25": 1.0,
+          "median": 3.0,
+          "p75": 5.0,
+          "p90": 9.0,
+          "max": 81,
+          "mean": 4.18
+        },
+        "rated_share_of_user_item_grid": 0.07791,
+        "positive_share_of_user_item_grid": 0.04218
+      },
+      "top10_share_of_positives": 0.4975
+    },
+    "cold_test": {
+      "items": 67,
+      "items_with_50_positives": 52,
+      "ratings": 458369,
+      "positives": 239586,
+      "negatives": 51673,
+      "warm>=5": {
+        "eligible_users": 73281,
+        "eligible_users_with_3_positives": 33683,
+        "eligible_users_with_pos_and_neg": 18593,
+        "positives_from_eligible": 239115,
+        "negatives_from_eligible": 42874,
+        "positives_per_eligible_user": {
+          "min": 1,
+          "p10": 1.0,
+          "p25": 1.0,
+          "median": 2.0,
+          "p75": 4.0,
+          "p90": 7.0,
+          "max": 47,
+          "mean": 3.26
+        },
+        "rated_share_of_user_item_grid": 0.0875,
+        "positive_share_of_user_item_grid": 0.0487
+      },
+      "warm>=10": {
+        "eligible_users": 72777,
+        "eligible_users_with_3_positives": 33644,
+        "eligible_users_with_pos_and_neg": 18546,
+        "positives_from_eligible": 238414,
+        "negatives_from_eligible": 42776,
+        "positives_per_eligible_user": {
+          "min": 1,
+          "p10": 1.0,
+          "p25": 1.0,
+          "median": 2.0,
+          "p75": 4.0,
+          "p90": 7.0,
+          "max": 47,
+          "mean": 3.28
+        },
+        "rated_share_of_user_item_grid": 0.0879,
+        "positive_share_of_user_item_grid": 0.04889
+      },
+      "warm>=20": {
+        "eligible_users": 70774,
+        "eligible_users_with_3_positives": 33329,
+        "eligible_users_with_pos_and_neg": 18224,
+        "positives_from_eligible": 235041,
+        "negatives_from_eligible": 42194,
+        "positives_per_eligible_user": {
+          "min": 1,
+          "p10": 1.0,
+          "p25": 1.0,
+          "median": 2.0,
+          "p75": 4.0,
+          "p90": 7.0,
+          "max": 47,
+          "mean": 3.32
+        },
+        "rated_share_of_user_item_grid": 0.08923,
+        "positive_share_of_user_item_grid": 0.04957
+      },
+      "warm>=50": {
+        "eligible_users": 59284,
+        "eligible_users_with_3_positives": 30256,
+        "eligible_users_with_pos_and_neg": 15554,
+        "positives_from_eligible": 211400,
+        "negatives_from_eligible": 36892,
+        "positives_per_eligible_user": {
+          "min": 1,
+          "p10": 1.0,
+          "p25": 1.0,
+          "median": 3.0,
+          "p75": 5.0,
+          "p90": 7.0,
+          "max": 47,
+          "mean": 3.57
+        },
+        "rated_share_of_user_item_grid": 0.0957,
+        "positive_share_of_user_item_grid": 0.05322
+      },
+      "top10_share_of_positives": 0.6764
+    },
+    "cold_censored": {
+      "items": 48,
+      "items_with_50_positives": 36,
+      "ratings": 194422,
+      "positives": 92865,
+      "negatives": 22532,
+      "warm>=5": {
+        "eligible_users": 39793,
+        "eligible_users_with_3_positives": 11357,
+        "eligible_users_with_pos_and_neg": 7192,
+        "positives_from_eligible": 92665,
+        "negatives_from_eligible": 15826,
+        "positives_per_eligible_user": {
+          "min": 1,
+          "p10": 1.0,
+          "p25": 1.0,
+          "median": 1.0,
+          "p75": 3.0,
+          "p90": 5.0,
+          "max": 29,
+          "mean": 2.33
+        },
+        "rated_share_of_user_item_grid": 0.08856,
+        "positive_share_of_user_item_grid": 0.04851
+      },
+      "warm>=10": {
+        "eligible_users": 39615,
+        "eligible_users_with_3_positives": 11338,
+        "eligible_users_with_pos_and_neg": 7178,
+        "positives_from_eligible": 92405,
+        "negatives_from_eligible": 15794,
+        "positives_per_eligible_user": {
+          "min": 1,
+          "p10": 1.0,
+          "p25": 1.0,
+          "median": 1.0,
+          "p75": 3.0,
+          "p90": 5.0,
+          "max": 29,
+          "mean": 2.33
+        },
+        "rated_share_of_user_item_grid": 0.08876,
+        "positive_share_of_user_item_grid": 0.0486
+      },
+      "warm>=20": {
+        "eligible_users": 38944,
+        "eligible_users_with_3_positives": 11271,
+        "eligible_users_with_pos_and_neg": 7105,
+        "positives_from_eligible": 91433,
+        "negatives_from_eligible": 15655,
+        "positives_per_eligible_user": {
+          "min": 1,
+          "p10": 1.0,
+          "p25": 1.0,
+          "median": 1.0,
+          "p75": 3.0,
+          "p90": 5.0,
+          "max": 29,
+          "mean": 2.35
+        },
+        "rated_share_of_user_item_grid": 0.08949,
+        "positive_share_of_user_item_grid": 0.04891
+      },
+      "warm>=50": {
+        "eligible_users": 34149,
+        "eligible_users_with_3_positives": 10755,
+        "eligible_users_with_pos_and_neg": 6379,
+        "positives_from_eligible": 84203,
+        "negatives_from_eligible": 14192,
+        "positives_per_eligible_user": {
+          "min": 1,
+          "p10": 1.0,
+          "p25": 1.0,
+          "median": 2.0,
+          "p75": 3.0,
+          "p90": 5.0,
+          "max": 29,
+          "mean": 2.47
+        },
+        "rated_share_of_user_item_grid": 0.0944,
+        "positive_share_of_user_item_grid": 0.05137
+      },
+      "top10_share_of_positives": 0.7514
+    }
+  },
+  "als_training_set_for_this_design": {
+    "positives": 29065457,
+    "users_with_1_positive": 307829,
+    "items_with_1_positive": 14041,
+    "share_of_all_catalog_positives": 0.9414,
+    "positives_removed": {
+      "cold_train": 754176,
+      "cold_val": 336959,
+      "cold_test": 239586,
+      "cold_censored": 92865,
+      "post_cutoff_other": 385936,
+      "undated": 431
+    }
+  }
+}

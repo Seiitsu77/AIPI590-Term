@@ -1,0 +1,5 @@
+.venv/
+__pycache__/
+*.pyc
+# AniList API responses from the 10-title look; kept out of the public repository.
+data/api_sample/

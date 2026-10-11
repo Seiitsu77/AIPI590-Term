@@ -1,0 +1,25 @@
+{
+  "ratings_file": "C:\\Study\\Toy project\\archive\\rating_complete.csv",
+  "serving_catalog": "C:\\Study\\Toy project\\data\\processed\\anime_catalog_serving.json",
+  "has_timestamps": false,
+  "rows_scanned": 57633278,
+  "rows_in_catalog": 56726861,
+  "rows_outside_catalog": 906417,
+  "positive_threshold": 8,
+  "positives_in_catalog": 30875410,
+  "users": 310059,
+  "users_with_min_positives": 289601,
+  "catalog_items": 18064,
+  "catalog_items_with_ratings": 15550,
+  "catalog_items_with_positives": 15269,
+  "catalog_items_without_any_rating": 2514,
+  "items_by_positive_count": {
+    ">=1": 15269,
+    ">=5": 11582,
+    ">=20": 8693,
+    ">=50": 7393,
+    ">=100": 6428,
+    ">=1000": 3253
+  },
+  "catalog_items_with_full_premiere_date": 13796
+}

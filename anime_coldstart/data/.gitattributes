@@ -1,0 +1,2 @@
+# Inputs of the personalized cold-start experiment are pinned by SHA-256; store them byte-exact.
+* -text

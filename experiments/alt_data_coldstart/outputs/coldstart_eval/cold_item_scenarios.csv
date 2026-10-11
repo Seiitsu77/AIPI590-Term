@@ -1,0 +1,6 @@
+scenario,cold_items,cold_items_with_1_positive,cold_items_with_10_positives,cold_items_with_50_positives,cold_items_with_100_positives,warm_items_with_1_positive,warm_items_with_20_positives,warm_positives,cold_positives,share_of_positives_hidden,users_with_warm_history,users_with_warm_history_and_1_cold_positive,users_with_warm_history_and_3_cold_positives,evaluable_user_item_positives,cold_positives_per_eligible_user_median,evaluable_positives_per_cold_item_min,evaluable_positives_per_cold_item_p25,evaluable_positives_per_cold_item_median,evaluable_positives_per_cold_item_p75,evaluable_positives_per_cold_item_max
+"premiere 2020, all types",488,451,329,242,204,14818,8407,30294970,580440,0.0188,289459,96760,60144,579685,4.0,0,6.0,47.0,465.5,36358
+"premiere 2019-2020, all types",1143,1053,779,573,484,14216,7999,29070007,1805403,0.0585,288960,136803,109823,1801928,8.0,0,5.0,50.0,554.5,66150
+"premiere 2019-2020, TV",358,342,304,279,256,14927,8397,29451824,1423586,0.0461,289080,133199,103315,1420889,7.0,0,74.5,596.0,4192.25,66170
+"premiere 2016-2020, TV",1133,1094,932,856,808,14175,7788,25677124,5198286,0.1684,287037,197692,174889,5183094,16.0,0,52.0,652.0,4064.0,86044
+random 20% of 2016-2020 TV (seed 590),227,222,188,175,167,15047,8511,29898722,976688,0.0316,289272,170776,108698,975321,4.0,0,80.5,779.0,4234.0,81323

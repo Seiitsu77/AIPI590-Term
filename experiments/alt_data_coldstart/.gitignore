@@ -1,0 +1,10 @@
+cache/
+__pycache__/
+*.pyc
+# AniList API data and tables derived from it title by title stay local: the API terms
+# forbid using it as a data store, and this repository is public.
+outputs/**/*.parquet
+outputs/personalized_coldstart/candidate_anilist_meta.csv
+outputs/personalized_coldstart/candidate_trend_audit.csv
+outputs/stage1_10titles/prerelease_features.csv
+outputs/stage1_10titles/historical_signal_audit.csv

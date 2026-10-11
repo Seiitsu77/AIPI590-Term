@@ -1,0 +1,203 @@
+{
+  "titles": 10,
+  "rows": 22672,
+  "pages": 457,
+  "all_timestamps_on_jst_midnight": true,
+  "duplicate_days": 25,
+  "conflicting_duplicate_days": 0,
+  "titles_with_episode_marker_before_premiere": 1,
+  "fetched_utc": {
+    "first": "2026-10-08T03:32:25+00:00",
+    "newest_row_day": "2026-10-08"
+  },
+  "min_trending_in_any_row": 0,
+  "rows_with_zero_trending": 21,
+  "paging_reaches_newest_row": 10,
+  "date_filter_matches_full_history": 10,
+  "titles_with_premiere_day": 10,
+  "titles_with_any_pre_release_row": 9,
+  "titles_with_rows_in_window": {
+    "90d": 9,
+    "30d": 9,
+    "7d": 9
+  },
+  "titles_with_popularity_in_window": {
+    "90d": 4,
+    "30d": 4,
+    "7d": 4
+  },
+  "earliest_day_with_popularity": "2018-03-20",
+  "earliest_day_with_inProgress": "2017-01-13",
+  "newest_row_seen_twice": [
+    {
+      "anilist_id": 21349,
+      "row_day": "2026-10-08",
+      "seen_at": "2026-10-08T03:32:25+00:00",
+      "seen_again_at": "2026-10-08T03:58:26+00:00",
+      "then": {
+        "trending": 2,
+        "popularity": 26087,
+        "inProgress": 1643
+      },
+      "later": {
+        "trending": 2,
+        "popularity": 26087,
+        "inProgress": 1643
+      },
+      "changed": false
+    },
+    {
+      "anilist_id": 21390,
+      "row_day": "2026-10-08",
+      "seen_at": "2026-10-08T03:32:34+00:00",
+      "seen_again_at": "2026-10-08T03:58:29+00:00",
+      "then": {
+        "trending": 11,
+        "popularity": 104689,
+        "inProgress": 3394
+      },
+      "later": {
+        "trending": 11,
+        "popularity": 104689,
+        "inProgress": 3394
+      },
+      "changed": false
+    },
+    {
+      "anilist_id": 21459,
+      "row_day": "2026-10-08",
+      "seen_at": "2026-10-08T03:32:46+00:00",
+      "seen_again_at": "2026-10-08T03:58:32+00:00",
+      "then": {
+        "trending": 223,
+        "popularity": 879894,
+        "inProgress": 54950
+      },
+      "later": {
+        "trending": 223,
+        "popularity": 879894,
+        "inProgress": 54950
+      },
+      "changed": false
+    },
+    {
+      "anilist_id": 21476,
+      "row_day": "2026-10-08",
+      "seen_at": "2026-10-08T03:32:58+00:00",
+      "seen_again_at": "2026-10-08T03:58:35+00:00",
+      "then": {
+        "trending": 2,
+        "popularity": 10375,
+        "inProgress": 541
+      },
+      "later": {
+        "trending": 2,
+        "popularity": 10375,
+        "inProgress": 541
+      },
+      "changed": false
+    },
+    {
+      "anilist_id": 21820,
+      "row_day": "2026-10-07",
+      "seen_at": "2026-10-08T03:33:07+00:00",
+      "seen_again_at": "2026-10-08T03:58:38+00:00",
+      "then": {
+        "trending": 3,
+        "popularity": 4928,
+        "inProgress": 401
+      },
+      "later": {
+        "trending": 3,
+        "popularity": 4928,
+        "inProgress": 401
+      },
+      "changed": false
+    },
+    {
+      "anilist_id": 104004,
+      "row_day": "2026-09-29",
+      "seen_at": "2026-10-08T03:33:16+00:00",
+      "seen_again_at": "2026-10-08T03:58:41+00:00",
+      "then": {
+        "trending": 1,
+        "popularity": 228,
+        "inProgress": 17
+      },
+      "later": {
+        "trending": 1,
+        "popularity": 228,
+        "inProgress": 17
+      },
+      "changed": false
+    },
+    {
+      "anilist_id": 107346,
+      "row_day": "2026-10-08",
+      "seen_at": "2026-10-08T03:33:25+00:00",
+      "seen_again_at": "2026-10-08T03:58:44+00:00",
+      "then": {
+        "trending": 2,
+        "popularity": 19501,
+        "inProgress": 1503
+      },
+      "later": {
+        "trending": 2,
+        "popularity": 19501,
+        "inProgress": 1503
+      },
+      "changed": false
+    },
+    {
+      "anilist_id": 110178,
+      "row_day": "2026-10-08",
+      "seen_at": "2026-10-08T03:33:37+00:00",
+      "seen_again_at": "2026-10-08T03:58:47+00:00",
+      "then": {
+        "trending": 8,
+        "popularity": 68400,
+        "inProgress": 3337
+      },
+      "later": {
+        "trending": 8,
+        "popularity": 68400,
+        "inProgress": 3337
+      },
+      "changed": false
+    },
+    {
+      "anilist_id": 110788,
+      "row_day": "2026-10-07",
+      "seen_at": "2026-10-08T03:33:49+00:00",
+      "seen_again_at": "2026-10-08T03:58:50+00:00",
+      "then": {
+        "trending": 1,
+        "popularity": 1673,
+        "inProgress": 228
+      },
+      "later": {
+        "trending": 1,
+        "popularity": 1673,
+        "inProgress": 228
+      },
+      "changed": false
+    },
+    {
+      "anilist_id": 121199,
+      "row_day": "2026-09-21",
+      "seen_at": "2026-10-08T03:33:55+00:00",
+      "seen_again_at": "2026-10-08T03:58:53+00:00",
+      "then": {
+        "trending": 1,
+        "popularity": 86,
+        "inProgress": 5
+      },
+      "later": {
+        "trending": 1,
+        "popularity": 86,
+        "inProgress": 5
+      },
+      "changed": false
+    }
+  ]
+}

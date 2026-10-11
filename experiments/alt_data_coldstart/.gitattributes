@@ -1,0 +1,2 @@
+# Pinned by SHA-256 in the personalized cold-start manifest; store it byte-exact.
+outputs/personalized_coldstart/candidate_items.csv -text

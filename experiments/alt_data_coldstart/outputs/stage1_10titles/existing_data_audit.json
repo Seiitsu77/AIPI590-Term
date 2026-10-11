@@ -1,0 +1,237 @@
+{
+  "anilist_csv": {
+    "rows": 10,
+    "columns": 48,
+    "unique_anilist_id": 10,
+    "unique_mal_id": 10,
+    "null_mal_id": 0,
+    "columns_fully_populated": 30,
+    "columns_with_missing": {
+      "season": 1,
+      "seasonYear": 1,
+      "seasonInt": 1,
+      "averageScore": 2,
+      "hashtag": 2,
+      "bannerImage": 3,
+      "nextAiringEpisode": 10,
+      "title_english": 2,
+      "synonyms": 4,
+      "tags": 1,
+      "studios_other": 4,
+      "relations": 1,
+      "external_sites": 1,
+      "rankings": 2,
+      "trailer": 2,
+      "next_airing_episode": 10,
+      "staff_top": 1,
+      "characters_top": 2
+    },
+    "value_kinds": {
+      "text": 18,
+      "integer": 13,
+      "joined list": 10,
+      "JSON object": 3,
+      "boolean": 2,
+      "number": 1,
+      "JSON array": 1
+    },
+    "leakage_grades": {
+      "low": 19,
+      "high": 15,
+      "medium": 7,
+      "none": 5,
+      "dated": 2
+    },
+    "description_chars": {
+      "min": 35,
+      "median": 528.0,
+      "max": 928
+    },
+    "descriptions_containing_html": 9
+  },
+  "media_fields_csv": {
+    "rows": 55,
+    "unique_field": 55,
+    "requested": 40,
+    "not_requested": [
+      "airingSchedule",
+      "autoCreateForumThread",
+      "chapters",
+      "isFavourite",
+      "isFavouriteBlocked",
+      "isLocked",
+      "isRecommendationBlocked",
+      "isReviewBlocked",
+      "mediaListEntry",
+      "modNotes",
+      "recommendations",
+      "reviews",
+      "streamingEpisodes",
+      "type",
+      "volumes"
+    ],
+    "missing_description": 1,
+    "list_or_connection_fields": 14
+  },
+  "id_match": {
+    "titles": 10,
+    "found_in_mal_catalog": 10,
+    "one_to_one": true,
+    "start_date_equal": 10,
+    "episodes_equal": 10,
+    "format_equal": 7,
+    "title_equal_ignoring_case_and_punctuation": 8,
+    "found_in_ratings": 10,
+    "found_in_serving_catalog": 10
+  },
+  "trends_first_rows": {
+    "titles_with_rows": 10,
+    "rows_total": 30,
+    "rows_per_title_min": 3,
+    "rows_per_title_max": 3,
+    "earliest_date_in_file": "2015-09-11",
+    "latest_date_in_file": "2020-07-15",
+    "non_null_by_field": {
+      "trending": 30,
+      "popularity": 15,
+      "inProgress": 4,
+      "averageScore": 10,
+      "episode": 0
+    },
+    "limit_comes_from": "the query in peek_anilist_jikan.py: trends(sort: DATE, perPage: 3)",
+    "date_note": "dates in this column are UTC calendar days; AniList stamps each row at 15:00 UTC, which is 00:00 in Japan on the next day"
+  },
+  "raw_response_available": true,
+  "nested_fields": [
+    {
+      "field": "title",
+      "shape": "{romaji, english, native}",
+      "titles_with_at_least_one": 10,
+      "elements_min": 2,
+      "elements_median": 3.0,
+      "elements_max": 3,
+      "capped_by_query_at": null,
+      "titles_at_cap": null
+    },
+    {
+      "field": "synonyms",
+      "shape": "[str]",
+      "titles_with_at_least_one": 6,
+      "elements_min": 0,
+      "elements_median": 1.0,
+      "elements_max": 13,
+      "capped_by_query_at": null,
+      "titles_at_cap": null
+    },
+    {
+      "field": "genres",
+      "shape": "[str]",
+      "titles_with_at_least_one": 10,
+      "elements_min": 1,
+      "elements_median": 3.0,
+      "elements_max": 6,
+      "capped_by_query_at": null,
+      "titles_at_cap": null
+    },
+    {
+      "field": "tags",
+      "shape": "[{name, category, rank, isMediaSpoiler}]",
+      "titles_with_at_least_one": 9,
+      "elements_min": 0,
+      "elements_median": 10.5,
+      "elements_max": 22,
+      "capped_by_query_at": null,
+      "titles_at_cap": null
+    },
+    {
+      "field": "studios",
+      "shape": "{edges: [{isMain, node: {name, isAnimationStudio}}]}",
+      "titles_with_at_least_one": 10,
+      "elements_min": 1,
+      "elements_median": 2.0,
+      "elements_max": 8,
+      "capped_by_query_at": null,
+      "titles_at_cap": null
+    },
+    {
+      "field": "relations",
+      "shape": "{edges: [{relationType, node: {idMal, type, format}}]}",
+      "titles_with_at_least_one": 9,
+      "elements_min": 0,
+      "elements_median": 3.0,
+      "elements_max": 8,
+      "capped_by_query_at": null,
+      "titles_at_cap": null
+    },
+    {
+      "field": "staff",
+      "shape": "{edges: [{role, node: {name: {full}}}]}",
+      "titles_with_at_least_one": 9,
+      "elements_min": 0,
+      "elements_median": 5.0,
+      "elements_max": 5,
+      "capped_by_query_at": 5,
+      "titles_at_cap": 8
+    },
+    {
+      "field": "characters",
+      "shape": "{edges: [{role, node: {name: {full}}}]}",
+      "titles_with_at_least_one": 8,
+      "elements_min": 0,
+      "elements_median": 3.0,
+      "elements_max": 3,
+      "capped_by_query_at": 3,
+      "titles_at_cap": 8
+    },
+    {
+      "field": "externalLinks",
+      "shape": "[{site, type, language}]",
+      "titles_with_at_least_one": 9,
+      "elements_min": 0,
+      "elements_median": 3.0,
+      "elements_max": 8,
+      "capped_by_query_at": null,
+      "titles_at_cap": null
+    },
+    {
+      "field": "rankings",
+      "shape": "[{rank, type, allTime, year, season, context}]",
+      "titles_with_at_least_one": 8,
+      "elements_min": 0,
+      "elements_median": 3.0,
+      "elements_max": 6,
+      "capped_by_query_at": null,
+      "titles_at_cap": null
+    },
+    {
+      "field": "trends",
+      "shape": "{nodes: [{date, popularity, trending, averageScore, inProgress, releasing, episode}]}",
+      "titles_with_at_least_one": 10,
+      "elements_min": 3,
+      "elements_median": 3.0,
+      "elements_max": 3,
+      "capped_by_query_at": 3,
+      "titles_at_cap": 10
+    },
+    {
+      "field": "stats.scoreDistribution",
+      "shape": "[{score, amount}]",
+      "titles_with_at_least_one": 10,
+      "elements_min": 6,
+      "elements_median": 10.0,
+      "elements_max": 10,
+      "capped_by_query_at": null,
+      "titles_at_cap": null
+    },
+    {
+      "field": "stats.statusDistribution",
+      "shape": "[{status, amount}]",
+      "titles_with_at_least_one": 10,
+      "elements_min": 5,
+      "elements_median": 5.0,
+      "elements_max": 5,
+      "capped_by_query_at": null,
+      "titles_at_cap": null
+    }
+  ]
+}

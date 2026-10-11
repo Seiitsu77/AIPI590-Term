@@ -1,0 +1,11 @@
+anilist_id,mal_id,title_romaji,format_anilist,episodes_anilist,start_date_anilist,anilist_rows_with_this_mal_id,title_mal,type_mal,episodes_mal,premiere_mal,in_mal_catalog,title_equal_ignoring_case_and_punctuation,start_date_equal,episodes_equal,format_equal,in_serving_catalog,n_ratings,n_pos,in_ratings,match_method
+21349,31588,ALL OUT!!,TV,25,2016-10-07,1,All Out!!,TV,25,2016-10-07,True,True,True,True,True,True,6800,2542,True,idMal exact
+21390,31737,Gakusen Toshi Asterisk 2,TV,12,2016-04-02,1,Gakusen Toshi Asterisk 2nd Season,TV,12,2016-04-02,True,False,True,True,True,True,27674,10689,True,idMal exact
+21459,31964,Boku no Hero Academia,TV,13,2016-04-03,1,Boku no Hero Academia,TV,13,2016-04-03,True,True,True,True,True,True,121108,86545,True,idMal exact
+21476,32038,SHOW BY ROCK!!#,TV,12,2016-10-02,1,Show By Rock!! #,TV,12,2016-10-02,True,True,True,True,True,True,2049,683,True,idMal exact
+21820,33314,Digimon Universe: Appli Monsters,TV,52,2016-10-01,1,Digimon Universe: Appli Monsters,TV,52,2016-10-01,True,True,True,True,True,True,645,193,True,idMal exact
+104004,38147,Hoshi no Shima no Nyanko,TV_SHORT,26,2018-10-06,1,Hoshi no Shima no Nyanko,TV,26,2018-10-06,True,True,True,True,False,True,6,0,True,idMal exact
+107346,36587,GRANBLUE FANTASY The Animation Season 2,TV,12,2019-10-05,1,Granblue Fantasy The Animation Season 2,TV,12,2019-10-05,True,True,True,True,True,True,2779,646,True,idMal exact
+110178,39988,Isekai Quartet 2,TV_SHORT,12,2020-01-15,1,Isekai Quartet 2,TV,12,2020-01-15,True,True,True,True,False,True,13195,5695,True,idMal exact
+110788,40166,Zoids Wild ZERO,TV,50,2019-10-04,1,Zoids Wild Zero,TV,50,2019-10-04,True,True,True,True,True,True,21,5,True,idMal exact
+121199,42144,Jinju Mao: Xinnian de Maoxian,ONA,52,2017-07-10,1,Jingju Mao Zhi Xinnian de Maoxian,TV,52,2017-07-10,True,False,True,True,False,True,1,0,True,idMal exact

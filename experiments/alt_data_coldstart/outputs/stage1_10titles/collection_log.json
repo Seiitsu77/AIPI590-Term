@@ -1,0 +1,29 @@
+{
+  "endpoint": "https://graphql.anilist.co",
+  "configured_requests_per_minute": 20,
+  "http_requests": 505,
+  "outcomes": {
+    "ok": 505
+  },
+  "succeeded": 505,
+  "failed_or_retried": 0,
+  "success_rate": 1.0,
+  "http_429": 0,
+  "requests_by_kind": {
+    "full": 457,
+    "latest": 10,
+    "window": 28,
+    "recheck": 10
+  },
+  "cache_hits": 978,
+  "first_request_utc": "2026-10-08T03:32:22+00:00",
+  "last_request_utc": "2026-10-08T03:58:53+00:00",
+  "active_minutes": 25.3,
+  "observed_requests_per_minute": 19.9,
+  "rate_limit_header_values": [
+    "30"
+  ],
+  "lowest_remaining_header": 10,
+  "median_response_seconds": 0.31,
+  "terms_of_use": "https://docs.anilist.co/guide/terms-of-use (read 2026-10-07): free for non-commercial use; hoarding or mass collection prohibited, lenient for purely educational projects"
+}
