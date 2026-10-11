@@ -1,3 +1,8 @@
 # Files whose SHA-256 is pinned in the manifest must stay byte-exact on every checkout.
 manifest/* -text
 requirements.lock -text
+# These two were written on Windows, and their digests were pinned on CRLF bytes, while
+# git stored them with LF. Checking them out with CRLF reproduces the pinned digests on
+# every platform. The stored content is unchanged.
+manifest/split_manifest.json text eol=crlf
+manifest/wikipedia_article_audit.json text eol=crlf
